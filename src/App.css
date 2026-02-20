@@ -249,3 +249,43 @@ select:focus {
     background: white !important;
   }
 }
+
+/* RTL Support for Arabic */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .testimonial-quote {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+[dir="rtl"] .testimonial-quote::before {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .gold-line::after {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+[dir="rtl"] .hero-section::before {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .package-highlight::before {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .btn-shine::after {
+  left: auto;
+  right: -50%;
+}
+
+[dir="rtl"] .btn-shine:hover::after {
+  transform: rotate(30deg) translate(-50%, 50%);
+}
