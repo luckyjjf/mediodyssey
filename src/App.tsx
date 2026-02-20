@@ -122,7 +122,7 @@ const translations = {
         package: 'Interested Package',
         placeholder: 'Select...',
         options: ['Discovery (3 days)', 'Renewal (7 days) - Most Popular', 'Royal (14 days)', 'Need recommendation'],
-        message: 'Message',
+        message: 'Message/Contact',
         submit: 'Submit Inquiry'
       }
     },
@@ -236,7 +236,7 @@ const translations = {
         package: '感兴趣的套餐',
         placeholder: '请选择...',
         options: ['探索之旅 (3天)', '焕新之旅 (7天) - 最受欢迎', '皇家之旅 (14天)', '需要顾问推荐'],
-        message: '留言',
+        message: '留言/联系方式',
         submit: '提交咨询'
       }
     },
@@ -350,7 +350,7 @@ const translations = {
         package: 'الباقة المهتم بها',
         placeholder: 'اختر...',
         options: ['الاكتشاف (3 أيام)', 'التجديد (7 أيام) - الأكثر شعبية', 'الملكية (14 يوماً)', 'بحاجة لتوصية'],
-        message: 'الرسالة',
+        message: 'الرسالة / معلومات الاتصال',
         submit: 'إرسال الاستفسار'
       }
     },
