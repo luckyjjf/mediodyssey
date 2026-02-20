@@ -16,7 +16,8 @@ import {
   X,
   ChevronRight,
   Calendar,
-  Languages
+  Languages,
+  Send
 } from 'lucide-react';
 
 // Translations
@@ -112,6 +113,7 @@ const translations = {
       phone: 'Phone',
       email: 'Email',
       wechat: 'WeChat',
+      telegram: 'Telegram',
       form: {
         name: 'Name *',
         email: 'Email *',
@@ -225,6 +227,7 @@ const translations = {
       phone: '电话咨询',
       email: '电子邮件',
       wechat: '微信咨询',
+      telegram: 'Telegram',
       form: {
         name: '姓名 *',
         email: '邮箱 *',
@@ -338,6 +341,7 @@ const translations = {
       phone: 'الهاتف',
       email: 'البريد الإلكتروني',
       wechat: 'ويتشات',
+      telegram: 'تلغرام',
       form: {
         name: 'الاسم *',
         email: 'البريد الإلكتروني *',
@@ -760,7 +764,25 @@ function App() {
                   </div>
                   <div>
                     <p className="font-semibold text-primary">{t.contact.wechat}</p>
-                    <p className="text-gray-600">MediOdyssey</p>
+                    <p className="text-gray-600">stay7967</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Send className="text-white w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-primary">{t.contact.telegram}</p>
+                    <p className="text-gray-600">
+                      <a 
+                        href="https://t.me/MediOdyssey_bot" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-secondary transition"
+                      >
+                        @MediOdyssey_bot
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -789,20 +811,11 @@ function App() {
                 <div className="grid grid-cols-3 gap-4">
                   <div>
                     <label className="block text-gray-700 font-medium mb-2">{t.contact.form.countryCode}</label>
-                    <select 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent"
-                    >
-                      <option value="+86">🇨🇳 +86</option>
-                      <option value="+852">🇭🇰 +852</option>
-                      <option value="+1">🇺🇸 +1</option>
-                      <option value="+44">🇬🇧 +44</option>
-                      <option value="+81">🇯🇵 +81</option>
-                      <option value="+82">🇰🇷 +82</option>
-                      <option value="+65">🇸🇬 +65</option>
-                      <option value="+61">🇦🇺 +61</option>
-                      <option value="+971">🇦🇪 +971</option>
-                      <option value="+966">🇸🇦 +966</option>
-                    </select>
+                    <input 
+                      type="text" 
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" 
+                      placeholder="+86"
+                    />
                   </div>
                   <div className="col-span-2">
                     <label className="block text-gray-700 font-medium mb-2">{t.contact.form.phoneNumber}</label>
