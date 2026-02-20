@@ -43,3 +43,43 @@
     background: linear-gradient(135deg, #d69e2e 0%, #ecc94b 100%);
   }
 }
+
+/* RTL Support */
+.rtl {
+  direction: rtl;
+}
+
+.rtl .space-x-2 > * + * {
+  --tw-space-x-reverse: 1;
+}
+
+.rtl .space-x-4 > * + * {
+  --tw-space-x-reverse: 1;
+}
+
+.rtl .space-x-6 > * + * {
+  --tw-space-x-reverse: 1;
+}
+
+.rtl .space-x-8 > * + * {
+  --tw-space-x-reverse: 1;
+}
+
+.rtl .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+.rtl .mr-3 {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}
+
+.rtl .ml-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.rtl .text-left {
+  text-align: right;
+}
