@@ -2,8 +2,8 @@ import React from 'react';
 import { 
   Heart, 
   Microscope, 
-  YinYang, 
-  Torii, 
+  Activity,
+  Landmark,
   ConciergeBell,
   Globe,
   Check,
@@ -544,7 +544,7 @@ function App() {
 
             <div className="pillar-card rounded-2xl p-8 card-hover border border-gray-100">
               <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
-                <YinYang className="text-secondary w-8 h-8" />
+                <Activity className="text-secondary w-8 h-8" />
               </div>
               <h3 className="font-serif text-xl font-bold text-primary mb-3">{t.services.pillar2.title}</h3>
               <p className="text-gray-600 mb-4">{t.services.pillar2.desc}</p>
@@ -557,7 +557,7 @@ function App() {
 
             <div className="pillar-card rounded-2xl p-8 card-hover border border-gray-100">
               <div className="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
-                <Torii className="text-accent w-8 h-8" />
+                <Landmark className="text-accent w-8 h-8" />
               </div>
               <h3 className="font-serif text-xl font-bold text-primary mb-3">{t.services.pillar3.title}</h3>
               <p className="text-gray-600 mb-4">{t.services.pillar3.desc}</p>
