@@ -1,56 +1,56 @@
-# MediOdyssey
+# MediOdyssey Website
 
-Premium Health Tourism Website - Combining Western Medicine, TCM Wellness, and Cultural Experience in China.
+一个为医疗旅游服务设计的现代化网站。
 
-## 🚀 Deploy to Vercel
+## 部署到 Vercel
 
-### Option 1: One-Click Deploy (Recommended)
+### 方法一：直接上传（最简单）
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/mediodyssey)
+1. 访问 https://vercel.com/new
+2. 选择 "Import Git Repository" 或直接用 "Upload" 功能
+3. 上传本文件夹
+4. 点击 Deploy
 
-### Option 2: Manual Deploy
-
-1. **Fork/Clone this repository**
-2. **Go to [Vercel Dashboard](https://vercel.com/dashboard)**
-3. **Click "Add New Project"**
-4. **Import your GitHub repository**
-5. **Framework Preset: Vite**
-6. **Click Deploy**
-
-## 📁 Project Structure
-
-```
-├── public/           # Static assets
-├── src/             # Source code
-│   ├── App.tsx      # Main application
-│   ├── App.css      # Styles
-│   └── ...
-├── index.html       # Entry HTML
-├── package.json     # Dependencies
-├── vite.config.ts   # Vite configuration
-├── tailwind.config.js  # Tailwind CSS config
-└── vercel.json      # Vercel deployment config
-```
-
-## 🛠️ Local Development
+### 方法二：使用 Git
 
 ```bash
-# Install dependencies
-npm install
+# 初始化 git 仓库
+git init
+git add .
+git commit -m "Initial commit"
 
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
+# 推送到 GitHub/GitLab
+# 然后在 Vercel 中导入该仓库
 ```
 
-## 📞 Contact
+### 方法三：使用 Vercel CLI
 
-- Email: jiangjingfu@mediodyssey.com
-- Phone: +86 13396457967 / +852 47436719
-- Location: Shanghai, China
+```bash
+# 安装 Vercel CLI
+npm i -g vercel
 
-## 📄 License
+# 登录
+vercel login
 
-All rights reserved.
+# 部署
+vercel --prod
+```
+
+## 文件结构
+
+```
+├── index.html          # 主页面
+├── package.json        # Vercel 配置文件
+└── README.md          # 本文件
+```
+
+## 技术栈
+
+- HTML5
+- Tailwind CSS (CDN)
+- Font Awesome Icons
+- Google Fonts
+
+## 自定义配置
+
+如需修改，编辑 `index.html` 中的内容即可。
