@@ -115,7 +115,8 @@ const translations = {
       form: {
         name: 'Name *',
         email: 'Email *',
-        phone: 'Phone',
+        countryCode: 'Country Code',
+        phoneNumber: 'Phone Number',
         package: 'Interested Package',
         placeholder: 'Select...',
         options: ['Discovery (3 days)', 'Renewal (7 days) - Most Popular', 'Royal (14 days)', 'Need recommendation'],
@@ -227,7 +228,8 @@ const translations = {
       form: {
         name: '姓名 *',
         email: '邮箱 *',
-        phone: '电话',
+        countryCode: '国家区号',
+        phoneNumber: '电话号码',
         package: '感兴趣的套餐',
         placeholder: '请选择...',
         options: ['探索之旅 (3天)', '焕新之旅 (7天) - 最受欢迎', '皇家之旅 (14天)', '需要顾问推荐'],
@@ -339,7 +341,8 @@ const translations = {
       form: {
         name: 'الاسم *',
         email: 'البريد الإلكتروني *',
-        phone: 'الهاتف',
+        countryCode: 'رمز الدولة',
+        phoneNumber: 'رقم الهاتف',
         package: 'الباقة المهتم بها',
         placeholder: 'اختر...',
         options: ['الاكتشاف (3 أيام)', 'التجديد (7 أيام) - الأكثر شعبية', 'الملكية (14 يوماً)', 'بحاجة لتوصية'],
@@ -783,13 +786,32 @@ function App() {
                     />
                   </div>
                 </div>
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">{t.contact.form.phone}</label>
-                  <input 
-                    type="tel" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" 
-                    placeholder="+86"
-                  />
+                <div className="grid grid-cols-3 gap-4">
+                  <div>
+                    <label className="block text-gray-700 font-medium mb-2">{t.contact.form.countryCode}</label>
+                    <select 
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent"
+                    >
+                      <option value="+86">🇨🇳 +86</option>
+                      <option value="+852">🇭🇰 +852</option>
+                      <option value="+1">🇺🇸 +1</option>
+                      <option value="+44">🇬🇧 +44</option>
+                      <option value="+81">🇯🇵 +81</option>
+                      <option value="+82">🇰🇷 +82</option>
+                      <option value="+65">🇸🇬 +65</option>
+                      <option value="+61">🇦🇺 +61</option>
+                      <option value="+971">🇦🇪 +971</option>
+                      <option value="+966">🇸🇦 +966</option>
+                    </select>
+                  </div>
+                  <div className="col-span-2">
+                    <label className="block text-gray-700 font-medium mb-2">{t.contact.form.phoneNumber}</label>
+                    <input 
+                      type="tel" 
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" 
+                      placeholder={language === 'ar' ? '123456789' : language === 'zh' ? '手机号码' : 'Phone number'}
+                    />
+                  </div>
                 </div>
                 <div>
                   <label className="block text-gray-700 font-medium mb-2">{t.contact.form.package}</label>
