@@ -87,22 +87,25 @@ const translations = {
       package1: {
         name: 'Discovery Journey',
         duration: '3 days · Intro to Eastern Medicine',
-        price: '¥28,000',
-        items: ['Basic health screening', 'TCM constitution diagnosis', 'Tea ceremony intro', '4-star hotel', 'Airport transfers']
+        price: '$3,900',
+        items: ['Basic health screening', 'TCM constitution diagnosis', 'Tea ceremony intro', '4-star hotel', 'Airport transfers'],
+        docUrl: '/docs/package-discovery-en.pdf'
       },
       package2: {
         name: 'Renewal Journey',
         duration: '7 days · Deep mind-body therapy',
-        price: '¥68,000',
+        price: '$9,500',
         popular: 'Most Popular',
         items: ['Full screening + MRI/CT', 'Expert diagnosis + meridian test', 'Private tea + Tai Chi + Guqin', '5-star hotel', 'Private car + advisor'],
-        cta: 'Book Now'
+        cta: 'Book Now',
+        docUrl: '/docs/package-renewal-en.pdf'
       },
       package3: {
         name: 'Royal Journey',
         duration: '14 days · Ultimate bespoke experience',
-        price: '¥168,000',
-        items: ['Full genome + PET-CT', 'Master physician consultation', 'Royal cultural experience', 'Luxury suite', 'Private jet optional']
+        price: '$23,500',
+        items: ['Full genome + PET-CT', 'Master physician consultation', 'Royal cultural experience', 'Luxury suite', 'Private jet optional'],
+        docUrl: '/docs/package-royal-en.pdf'
       },
       viewDetails: 'View Details'
     },
@@ -202,7 +205,8 @@ const translations = {
         name: '探索之旅',
         duration: '3天2晚 · 初识东方医疗',
         price: '¥28,000',
-        items: ['基础全面体检', '中医体质辨识', '茶道入门体验', '四星级酒店', '机场接送服务']
+        items: ['基础全面体检', '中医体质辨识', '茶道入门体验', '四星级酒店', '机场接送服务'],
+        docUrl: '/docs/package-discovery-zh.pdf'
       },
       package2: {
         name: '焕新之旅',
@@ -210,13 +214,15 @@ const translations = {
         price: '¥68,000',
         popular: '最受欢迎',
         items: ['全面体检 + MRI/CT', '专家诊断 + 经络检测', '私人茶道 + 太极 + 古琴', '五星级酒店', '专车 + 专属顾问'],
-        cta: '立即预订'
+        cta: '立即预订',
+        docUrl: '/docs/package-renewal-zh.pdf'
       },
       package3: {
         name: '皇家之旅',
         duration: '14天13晚 · 顶级定制体验',
         price: '¥168,000',
-        items: ['全基因组测序 + PET-CT', '国医大师亲诊', '皇室级文化体验', '奢华套房酒店', '私人飞机可选']
+        items: ['全基因组测序 + PET-CT', '国医大师亲诊', '皇室级文化体验', '奢华套房酒店', '私人飞机可选'],
+        docUrl: '/docs/package-royal-zh.pdf'
       },
       viewDetails: '查看详情'
     },
@@ -315,22 +321,25 @@ const translations = {
       package1: {
         name: 'رحلة الاكتشاف',
         duration: '3 أيام · مقدمة للطب الشرقي',
-        price: '¥28,000',
-        items: ['فحص صحي أساسي', 'تشخيص تكوين الطب الصيني', 'مقدمة لطقوس الشاي', 'فندق 4 نجوم', 'نقل المطار']
+        price: '$3,900',
+        items: ['فحص صحي أساسي', 'تشخيص تكوين الطب الصيني', 'مقدمة لطقوس الشاي', 'فندق 4 نجوم', 'نقل المطار'],
+        docUrl: '/docs/package-discovery-ar.pdf'
       },
       package2: {
         name: 'رحلة التجديد',
         duration: '7 أيام · علاج عميق للجسد والعقل',
-        price: '¥68,000',
+        price: '$9,500',
         popular: 'الأكثر شعبية',
         items: ['فحص شامل + MRI/CT', 'تشخيص خبير + اختبار المريديان', 'شاي خاص + تايتشي + قيتشين', 'فندق 5 نجوم', 'سيارة خاصة + مستشار'],
-        cta: 'احجز الآن'
+        cta: 'احجز الآن',
+        docUrl: '/docs/package-renewal-ar.pdf'
       },
       package3: {
         name: 'الرحلة الملكية',
         duration: '14 يوماً · تجربة فاخرة مخصصة',
-        price: '¥168,000',
-        items: ['الجينوم الكامل + PET-CT', 'استشارة طبيب خبير', 'تجربة ثقافية ملكية', 'جناح فاخر', 'طائرة خاصة اختياري']
+        price: '$23,500',
+        items: ['الجينوم الكامل + PET-CT', 'استشارة طبيب خبير', 'تجربة ثقافية ملكية', 'جناح فاخر', 'طائرة خاصة اختياري'],
+        docUrl: '/docs/package-royal-ar.pdf'
       },
       viewDetails: 'عرض التفاصيل'
     },
@@ -671,9 +680,14 @@ function App() {
                     <li key={idx} className="flex items-center text-gray-600"><Check className="text-secondary w-5 h-5 mr-3" />{item}</li>
                   ))}
                 </ul>
-                <button className="w-full border-2 border-primary text-primary py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition">
+                <a 
+                  href={t.packages.package1.docUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center border-2 border-primary text-primary py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition"
+                >
                   {t.packages.viewDetails}
-                </button>
+                </a>
               </div>
             </div>
 
@@ -696,9 +710,14 @@ function App() {
                     <li key={idx} className="flex items-center text-gray-600"><Check className="text-secondary w-5 h-5 mr-3" />{item}</li>
                   ))}
                 </ul>
-                <button className="w-full bg-accent text-primary py-3 rounded-full font-semibold hover:bg-yellow-400 transition shadow-lg">
+                <a
+                  href={t.packages.package2.docUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center bg-accent text-primary py-3 rounded-full font-semibold hover:bg-yellow-400 transition shadow-lg"
+                >
                   {t.packages.package2.cta}
-                </button>
+                </a>
               </div>
             </div>
 
@@ -718,9 +737,14 @@ function App() {
                     <li key={idx} className="flex items-center text-gray-600"><Check className="text-secondary w-5 h-5 mr-3" />{item}</li>
                   ))}
                 </ul>
-                <button className="w-full border-2 border-primary text-primary py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition">
+                <a
+                  href={t.packages.package3.docUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center border-2 border-primary text-primary py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition"
+                >
                   {t.packages.viewDetails}
-                </button>
+                </a>
               </div>
             </div>
           </div>
