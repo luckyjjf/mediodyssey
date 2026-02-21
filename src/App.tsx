@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { 
   Heart, 
   Microscope, 
@@ -397,6 +397,25 @@ function App() {
     setLangMenuOpen(false);
   };
 
+  // Load PayPal SDK for Package 1
+  useEffect(() => {
+    const existingScript = document.getElementById('paypal-script');
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.id = 'paypal-script';
+      script.src = 'https://www.paypal.com/sdk/js?client-id=BAAMkzXjQ-Az2R2yBDRxEjBRXV6jyvZnIzxEhSyLJVT2Q5XwugbNRXTpsUkYWx_lAW468dLzobLEmnvuww&components=hosted-buttons&disable-funding=venmo&currency=USD';
+      script.async = true;
+      script.onload = () => {
+        if ((window as any).paypal) {
+          (window as any).paypal.HostedButtons({
+            hostedButtonId: 'PCVZMAHAUCLEE',
+          }).render('#paypal-container-PCVZMAHAUCLEE');
+        }
+      };
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <div className={`min-h-screen bg-cream ${isRTL ? 'rtl' : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
       {/* Navigation */}
@@ -698,14 +717,7 @@ function App() {
                   >
                     {t.packages.viewDetails}
                   </a>
-                  <a 
-                    href={t.packages.package1.paypalUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center bg-secondary text-white py-3 rounded-full font-semibold hover:bg-green-600 transition"
-                  >
-                    {t.packages.book}
-                  </a>
+                  <div id="paypal-container-PCVZMAHAUCLEE"></div>
                 </div>
               </div>
             </div>
