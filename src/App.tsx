@@ -87,7 +87,7 @@ const translations = {
       package0: {
         name: 'Tea Subscription',
         duration: 'Monthly · 30 wellness tea bags',
-        price: '$99',
+        price: '$29',
         popular: 'Best Value',
         items: ['30 premium wellness tea bags', 'Personalized TCM formula', '365-day online TCM consultation', 'Monthly health tips', 'Free shipping worldwide'],
         docUrl: '/docs/tea-subscription-en.pdf',
@@ -216,7 +216,7 @@ const translations = {
       package0: {
         name: '养生茶饮订阅',
         duration: '每月 · 30包健康茶饮',
-        price: '¥699',
+        price: '¥199',
         popular: '超值优选',
         items: ['30包精选健康茶饮', '个性化中医配方', '365天线上中医咨询', '每月健康贴士', '全球免邮'],
         docUrl: '/docs/tea-subscription-zh.pdf',
@@ -345,7 +345,7 @@ const translations = {
       package0: {
         name: 'اشتراك الشاي الصحي',
         duration: 'شهرياً · 30 كيس شاي صحي',
-        price: '$99',
+        price: '$29',
         popular: 'أفضل قيمة',
         items: ['30 كيس شاي صحي متميز', 'وصفة الطب الصيني التقليدي المخصصة', 'استشارة الطب الصيني التقليدي لمدة 365 يوماً', 'نصائح صحية شهرية', 'شحن مجاني عالمياً'],
         docUrl: '/docs/tea-subscription-ar.pdf',
