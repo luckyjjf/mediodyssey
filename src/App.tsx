@@ -84,11 +84,20 @@ const translations = {
       badge: 'Packages',
       title: 'Choose Your Health Journey',
       desc: 'Three carefully designed packages for different health goals and budgets',
+      package0: {
+        name: 'Tea Subscription',
+        duration: 'Monthly · 30 wellness tea bags',
+        price: '$99',
+        popular: 'Best Value',
+        items: ['30 premium wellness tea bags', 'Personalized TCM formula', '365-day online TCM consultation', 'Monthly health tips', 'Free shipping worldwide'],
+        docUrl: '/docs/tea-subscription-en.pdf',
+        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/99'
+      },
       package1: {
         name: 'Discovery Journey',
         duration: '3 days · Intro to Eastern Medicine',
         price: '$3,900',
-        items: ['Basic health screening', 'TCM constitution diagnosis', 'Tea ceremony intro', '4-star hotel', 'Airport transfers'],
+        items: ['Basic health screening', 'TCM constitution diagnosis', 'Tea ceremony intro', '4-star hotel', 'Airport transfers', '365-day online TCM consultation'],
         docUrl: '/docs/package-discovery-en.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/3900'
       },
@@ -97,7 +106,7 @@ const translations = {
         duration: '7 days · Deep mind-body therapy',
         price: '$9,500',
         popular: 'Most Popular',
-        items: ['Full screening + MRI/CT', 'Expert diagnosis + meridian test', 'Private tea + Tai Chi + Guqin', '5-star hotel', 'Private car + advisor'],
+        items: ['Full screening + MRI/CT', 'Expert diagnosis + meridian test', 'Private tea + Tai Chi + Guqin', '5-star hotel', 'Private car + advisor', '365-day online TCM consultation'],
         docUrl: '/docs/package-renewal-en.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/9500'
       },
@@ -105,7 +114,7 @@ const translations = {
         name: 'Royal Journey',
         duration: '14 days · Ultimate bespoke experience',
         price: '$23,500',
-        items: ['Full genome + PET-CT', 'Master physician consultation', 'Royal cultural experience', 'Luxury suite', 'Private jet optional'],
+        items: ['Full genome + PET-CT', 'Master physician consultation', 'Royal cultural experience', 'Luxury suite', 'Private jet optional', '365-day online TCM consultation'],
         docUrl: '/docs/package-royal-en.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/23500'
       },
@@ -204,11 +213,20 @@ const translations = {
       badge: 'Packages',
       title: '选择您的健康之旅',
       desc: '三种精心设计的套餐，满足不同健康目标和预算',
+      package0: {
+        name: '养生茶饮订阅',
+        duration: '每月 · 30包健康茶饮',
+        price: '¥699',
+        popular: '超值优选',
+        items: ['30包精选健康茶饮', '个性化中医配方', '365天线上中医咨询', '每月健康贴士', '全球免邮'],
+        docUrl: '/docs/tea-subscription-zh.pdf',
+        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/99'
+      },
       package1: {
         name: '探索之旅',
         duration: '3天2晚 · 初识东方医疗',
         price: '¥28,000',
-        items: ['基础全面体检', '中医体质辨识', '茶道入门体验', '四星级酒店', '机场接送服务'],
+        items: ['基础全面体检', '中医体质辨识', '茶道入门体验', '四星级酒店', '机场接送服务', '365天线上中医咨询'],
         docUrl: '/docs/package-discovery-zh.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/3900'
       },
@@ -217,7 +235,7 @@ const translations = {
         duration: '7天6晚 · 深度身心调理',
         price: '¥68,000',
         popular: '最受欢迎',
-        items: ['全面体检 + MRI/CT', '专家诊断 + 经络检测', '私人茶道 + 太极 + 古琴', '五星级酒店', '专车 + 专属顾问'],
+        items: ['全面体检 + MRI/CT', '专家诊断 + 经络检测', '私人茶道 + 太极 + 古琴', '五星级酒店', '专车 + 专属顾问', '365天线上中医咨询'],
         docUrl: '/docs/package-renewal-zh.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/9500'
       },
@@ -225,7 +243,7 @@ const translations = {
         name: '皇家之旅',
         duration: '14天13晚 · 顶级定制体验',
         price: '¥168,000',
-        items: ['全基因组测序 + PET-CT', '国医大师亲诊', '皇室级文化体验', '奢华套房酒店', '私人飞机可选'],
+        items: ['全基因组测序 + PET-CT', '国医大师亲诊', '皇室级文化体验', '奢华套房酒店', '私人飞机可选', '365天线上中医咨询'],
         docUrl: '/docs/package-royal-zh.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/23500'
       },
@@ -323,12 +341,21 @@ const translations = {
     packages: {
       badge: 'الباقات',
       title: 'اختر رحلتك الصحية',
-      desc: 'ثلاث باقات مصممة بعناية لأهداف وميزانيات صحية مختلفة',
+      desc: 'أربع باقات مصممة بعناية لأهداف وميزانيات صحية مختلفة',
+      package0: {
+        name: 'اشتراك الشاي الصحي',
+        duration: 'شهرياً · 30 كيس شاي صحي',
+        price: '$99',
+        popular: 'أفضل قيمة',
+        items: ['30 كيس شاي صحي متميز', 'وصفة الطب الصيني التقليدي المخصصة', 'استشارة الطب الصيني التقليدي لمدة 365 يوماً', 'نصائح صحية شهرية', 'شحن مجاني عالمياً'],
+        docUrl: '/docs/tea-subscription-ar.pdf',
+        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/99'
+      },
       package1: {
         name: 'رحلة الاكتشاف',
         duration: '3 أيام · مقدمة للطب الشرقي',
         price: '$3,900',
-        items: ['فحص صحي أساسي', 'تشخيص تكوين الطب الصيني', 'مقدمة لطقوس الشاي', 'فندق 4 نجوم', 'نقل المطار'],
+        items: ['فحص صحي أساسي', 'تشخيص تكوين الطب الصيني', 'مقدمة لطقوس الشاي', 'فندق 4 نجوم', 'نقل المطار', 'استشارة الطب الصيني التقليدي لمدة 365 يوماً'],
         docUrl: '/docs/package-discovery-ar.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/3900'
       },
@@ -337,7 +364,7 @@ const translations = {
         duration: '7 أيام · علاج عميق للجسد والعقل',
         price: '$9,500',
         popular: 'الأكثر شعبية',
-        items: ['فحص شامل + MRI/CT', 'تشخيص خبير + اختبار المريديان', 'شاي خاص + تايتشي + قيتشين', 'فندق 5 نجوم', 'سيارة خاصة + مستشار'],
+        items: ['فحص شامل + MRI/CT', 'تشخيص خبير + اختبار المريديان', 'شاي خاص + تايتشي + قيتشين', 'فندق 5 نجوم', 'سيارة خاصة + مستشار', 'استشارة الطب الصيني التقليدي لمدة 365 يوماً'],
         docUrl: '/docs/package-renewal-ar.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/9500'
       },
@@ -345,7 +372,7 @@ const translations = {
         name: 'الرحلة الملكية',
         duration: '14 يوماً · تجربة فاخرة مخصصة',
         price: '$23,500',
-        items: ['الجينوم الكامل + PET-CT', 'استشارة طبيب خبير', 'تجربة ثقافية ملكية', 'جناح فاخر', 'طائرة خاصة اختياري'],
+        items: ['الجينوم الكامل + PET-CT', 'استشارة طبيب خبير', 'تجربة ثقافية ملكية', 'جناح فاخر', 'طائرة خاصة اختياري', 'استشارة الطب الصيني التقليدي لمدة 365 يوماً'],
         docUrl: '/docs/package-royal-ar.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/23500'
       },
@@ -691,7 +718,50 @@ function App() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-4 gap-8">
+            {/* Package 0 - Tea Subscription */}
+            <div className="package-card rounded-2xl overflow-hidden card-hover border-2 border-secondary relative">
+              <div className="popular-badge bg-secondary text-white text-center py-2 font-semibold">
+                <Star className="inline w-4 h-4 mr-2" />{t.packages.package0.popular}
+              </div>
+              <div className="h-48 bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
+                <svg className="text-white w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20 3H4a2 2 0 00-2 2v14a2 2 0 002 2h16a2 2 0 002-2V5a2 2 0 00-2-2zm-9 14H5v-2h6v2zm6-4H5v-2h12v2zm0-4H5V7h12v2z"/>
+                  <path d="M17 8c0-1.1-.9-2-2-2H9v2h6v6h2V8z"/>
+                </svg>
+              </div>
+              <div className="p-8">
+                <h3 className="font-serif text-2xl font-bold text-primary mb-2">{t.packages.package0.name}</h3>
+                <p className="text-gray-500 mb-4">{t.packages.package0.duration}</p>
+                <div className="text-4xl font-bold text-primary mb-6">
+                  {t.packages.package0.price}<span className="text-lg font-normal text-gray-500">{language === 'zh' ? '/月' : '/month'}</span>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {t.packages.package0.items.map((item, idx) => (
+                    <li key={idx} className="flex items-center text-gray-600"><Check className="text-secondary w-5 h-5 mr-3" />{item}</li>
+                  ))}
+                </ul>
+                <div className="space-y-3">
+                  <a 
+                    href={t.packages.package0.docUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-center border-2 border-primary text-primary py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition"
+                  >
+                    {t.packages.viewDetails}
+                  </a>
+                  <a 
+                    href={t.packages.package0.paypalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-center bg-secondary text-white py-3 rounded-full font-semibold hover:bg-green-600 transition"
+                  >
+                    {t.packages.book}
+                  </a>
+                </div>
+              </div>
+            </div>
+
             {/* Package 1 */}
             <div className="package-card rounded-2xl overflow-hidden card-hover border border-gray-200">
               <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
@@ -990,7 +1060,7 @@ function App() {
                 <li className="flex items-center"><Phone className="w-4 h-4 mr-2" />+86 133-9645-7967</li>
                 <li className="flex items-center"><Phone className="w-4 h-4 mr-2" />+852 4743-6719</li>
                 <li className="flex items-center"><Mail className="w-4 h-4 mr-2" />jiangjingfu@mediodyssey.com</li>
-                <li className="flex items-center"><MapPin className="w-4 h-4 mr-2" />{language === 'zh' ? '北京市朝阳区建国路88号' : '88 Jianguo Road, Chaoyang, Beijing'}</li>
+                <li className="flex items-center"><MapPin className="w-4 h-4 mr-2" />{language === 'zh' ? '上海市徐汇区古宜路186号西岸创意园4号楼' : language === 'ar' ? 'مبنى 4، حديقة ويست بوند الإبداعية، رقم 186 شارع جوي، منطقة شيهوي، شنغهاي' : 'Building 4, West Bund Creative Park, 186 Guyi Road, Xuhui District, Shanghai'}</li>
               </ul>
             </div>
           </div>
