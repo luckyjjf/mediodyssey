@@ -446,7 +446,7 @@ function App() {
   return (
     <div className={`min-h-screen bg-cream ${isRTL ? 'rtl' : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
       {/* Navigation */}
-      <nav className="fixed w-full z-50 glass-effect border-b border-gray-200">
+      <nav className="fixed w-full z-[100] bg-white/95 border-b border-gray-200 shadow-sm" style={{ position: 'fixed', top: 0, left: 0, right: 0, WebkitBackdropFilter: 'blur(10px)', backdropFilter: 'blur(10px)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
