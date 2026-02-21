@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { 
-  Heart, 
+  Heart,
   Microscope, 
   Activity,
   Landmark,
@@ -12,13 +12,11 @@ import {
   Mail,
   MessageCircle,
   MapPin,
-  Menu,
-  X,
   ChevronRight,
   Calendar,
-  Languages,
   Send
 } from 'lucide-react';
+import Navbar from './components/Navbar';
 
 // Translations
 const translations = {
@@ -412,25 +410,22 @@ const translations = {
 };
 
 function App() {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [language, setLanguage] = React.useState<'en' | 'zh' | 'ar'>('en');
-  const [langMenuOpen, setLangMenuOpen] = React.useState(false);
   
   const t = translations[language];
   const isRTL = language === 'ar';
 
   const handleLanguageChange = (lang: 'en' | 'zh' | 'ar') => {
     setLanguage(lang);
-    setLangMenuOpen(false);
   };
 
-  // Load PayPal SDK for Package 1
+  // Load PayPal SDK for Package 1 (Discovery Journey)
   useEffect(() => {
     try {
-      const existingScript = document.getElementById('paypal-script');
+      const existingScript = document.getElementById('paypal-script-hosted');
       if (!existingScript) {
         const script = document.createElement('script');
-        script.id = 'paypal-script';
+        script.id = 'paypal-script-hosted';
         script.src = 'https://www.paypal.com/sdk/js?client-id=BAAMkzXjQ-Az2R2yBDRxEjBRXV6jyvZnIzxEhSyLJVT2Q5XwugbNRXTpsUkYWx_lAW468dLzobLEmnvuww&components=hosted-buttons&disable-funding=venmo&currency=USD';
         script.async = true;
         script.onload = () => {
@@ -441,111 +436,72 @@ function App() {
               }).render('#paypal-container-PCVZMAHAUCLEE');
             }
           } catch (err) {
-            console.error('PayPal button render error:', err);
+            console.error('PayPal hosted button render error:', err);
           }
         };
         script.onerror = () => {
-          console.error('PayPal script failed to load');
+          console.error('PayPal hosted script failed to load');
         };
         document.body.appendChild(script);
       }
     } catch (err) {
-      console.error('PayPal initialization error:', err);
+      console.error('PayPal hosted initialization error:', err);
+    }
+  }, []);
+
+  // Load PayPal Subscription SDK for Package 0 (Tea Subscription)
+  useEffect(() => {
+    try {
+      const existingScript = document.getElementById('paypal-script-subscription');
+      if (!existingScript) {
+        const script = document.createElement('script');
+        script.id = 'paypal-script-subscription';
+        script.src = 'https://www.paypal.com/sdk/js?client-id=AdE_Z_W7TwFrNJbYftxbWO4LI_oFydXRUsmPigyTQu4oKWe_G_UWBvoMO1e5gFBj8iPKb17GS7h9IL4W&vault=true&intent=subscription';
+        script.async = true;
+        script.setAttribute('data-sdk-integration-source', 'button-factory');
+        script.onload = () => {
+          try {
+            if ((window as any).paypal && (window as any).paypal.Buttons) {
+              (window as any).paypal.Buttons({
+                style: {
+                  shape: 'pill',
+                  color: 'gold',
+                  layout: 'vertical',
+                  label: 'paypal'
+                },
+                createSubscription: function(_data: any, actions: any) {
+                  return actions.subscription.create({
+                    plan_id: 'P-46T13876K0925810UNGMVWUQ'
+                  });
+                },
+                onApprove: function(_data: any) {
+                  alert('Subscription successful! ID: ' + _data.subscriptionID);
+                }
+              }).render('#paypal-button-container-P-46T13876K0925810UNGMVWUQ');
+            }
+          } catch (err) {
+            console.error('PayPal subscription button render error:', err);
+          }
+        };
+        script.onerror = () => {
+          console.error('PayPal subscription script failed to load');
+        };
+        document.body.appendChild(script);
+      }
+    } catch (err) {
+      console.error('PayPal subscription initialization error:', err);
     }
   }, []);
 
   return (
     <div className={`min-h-screen bg-cream ${isRTL ? 'rtl' : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
       {/* Navigation */}
-      <nav style={{ 
-        position: 'fixed', 
-        top: 0, 
-        left: 0, 
-        right: 0, 
-        zIndex: 9999, 
-        backgroundColor: 'white',
-        borderBottom: '1px solid #e5e7eb',
-        boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
-      }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <div className="flex items-center">
-              <a href="#" className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                  <Heart className="text-white w-6 h-6" />
-                </div>
-                <span className="font-serif text-2xl font-bold text-primary">MediOdyssey</span>
-              </a>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-dark hover:text-secondary transition">{t.nav.services}</a>
-              <a href="#packages" className="text-dark hover:text-secondary transition">{t.nav.packages}</a>
-              <a href="#stories" className="text-dark hover:text-secondary transition">{t.nav.stories}</a>
-              <a href="#contact" className="text-dark hover:text-secondary transition">{t.nav.contact}</a>
-              
-              {/* Language Switcher */}
-              <div className="relative">
-                <button 
-                  onClick={() => setLangMenuOpen(!langMenuOpen)}
-                  className="flex items-center space-x-1 text-sm font-medium text-primary hover:text-secondary transition"
-                >
-                  <Languages className="w-4 h-4" />
-                  <span>{language.toUpperCase()}</span>
-                </button>
-                {langMenuOpen && (
-                  <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[100px]">
-                    <button 
-                      onClick={() => handleLanguageChange('en')}
-                      className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${language === 'en' ? 'text-secondary font-medium' : 'text-dark'}`}
-                    >
-                      English
-                    </button>
-                    <button 
-                      onClick={() => handleLanguageChange('zh')}
-                      className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${language === 'zh' ? 'text-secondary font-medium' : 'text-dark'}`}
-                    >
-                      中文
-                    </button>
-                    <button 
-                      onClick={() => handleLanguageChange('ar')}
-                      className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${language === 'ar' ? 'text-secondary font-medium' : 'text-dark'}`}
-                    >
-                      العربية
-                    </button>
-                  </div>
-                )}
-              </div>
-              
-              <a href="#contact" className="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-blue-800 transition font-medium">
-                {t.nav.freeConsult}
-              </a>
-            </div>
-            <button 
-              className="md:hidden text-dark"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-        
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200 py-4">
-            <div className="flex flex-col space-y-4 px-4">
-              <a href="#services" className="text-dark hover:text-secondary transition">{t.nav.services}</a>
-              <a href="#packages" className="text-dark hover:text-secondary transition">{t.nav.packages}</a>
-              <a href="#stories" className="text-dark hover:text-secondary transition">{t.nav.stories}</a>
-              <a href="#contact" className="text-dark hover:text-secondary transition">{t.nav.contact}</a>
-              <div className="flex space-x-4 pt-2 border-t">
-                <button onClick={() => handleLanguageChange('en')} className={`text-sm ${language === 'en' ? 'text-secondary font-medium' : 'text-dark'}`}>EN</button>
-                <button onClick={() => handleLanguageChange('zh')} className={`text-sm ${language === 'zh' ? 'text-secondary font-medium' : 'text-dark'}`}>中</button>
-                <button onClick={() => handleLanguageChange('ar')} className={`text-sm ${language === 'ar' ? 'text-secondary font-medium' : 'text-dark'}`}>عربي</button>
-              </div>
-            </div>
-          </div>
-        )}
-      </nav>
+      <Navbar 
+        language={language} 
+        onLanguageChange={handleLanguageChange} 
+        t={t} 
+        isRTL={isRTL} 
+      />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -770,14 +726,7 @@ function App() {
                   >
                     {t.packages.viewDetails}
                   </a>
-                  <a 
-                    href={t.packages.package0.paypalUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center bg-secondary text-white py-3 rounded-full font-semibold hover:bg-green-600 transition"
-                  >
-                    {t.packages.book}
-                  </a>
+                  <div id="paypal-button-container-P-46T13876K0925810UNGMVWUQ"></div>
                 </div>
               </div>
             </div>
