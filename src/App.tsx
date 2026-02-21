@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { 
   Heart,
   Microscope, 
@@ -16,7 +16,7 @@ import {
   Calendar,
   Send
 } from 'lucide-react';
-import Navbar from './components/Navbar';
+
 
 // Translations
 const translations = {
@@ -419,6 +419,8 @@ function App() {
     setLanguage(lang);
   };
 
+  // PayPal scripts temporarily disabled for navbar debugging
+  /*
   // Load PayPal SDK for Package 1 (Discovery Journey)
   useEffect(() => {
     try {
@@ -492,18 +494,44 @@ function App() {
       console.error('PayPal subscription initialization error:', err);
     }
   }, []);
+  */
 
   return (
     <div className={`min-h-screen bg-cream ${isRTL ? 'rtl' : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
       {/* Navigation */}
-      <Navbar 
-        language={language} 
-        onLanguageChange={handleLanguageChange} 
-        t={t}
-      />
+      <nav style={{position: 'fixed', top: 0, left: 0, right: 0, zIndex: 99999, backgroundColor: 'white', borderBottom: '1px solid #e5e7eb'}}>
+        <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 24px'}}>
+          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px'}}>
+            <a href="#" style={{display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none'}}>
+              <div style={{width: '40px', height: '40px', backgroundColor: '#1a365d', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <Heart style={{color: 'white', width: '24px', height: '24px'}} />
+              </div>
+              <span style={{fontSize: '24px', fontWeight: 'bold', color: '#1a365d'}}>MediOdyssey</span>
+            </a>
+            <div style={{display: 'flex', alignItems: 'center', gap: '32px'}}>
+              <a href="#services" style={{color: '#2d3748', textDecoration: 'none'}}>{t.nav.services}</a>
+              <a href="#packages" style={{color: '#2d3748', textDecoration: 'none'}}>{t.nav.packages}</a>
+              <a href="#stories" style={{color: '#2d3748', textDecoration: 'none'}}>{t.nav.stories}</a>
+              <a href="#contact" style={{color: '#2d3748', textDecoration: 'none'}}>{t.nav.contact}</a>
+              <select 
+                value={language} 
+                onChange={(e) => handleLanguageChange(e.target.value as 'en' | 'zh' | 'ar')}
+                style={{padding: '4px 8px', borderRadius: '4px', border: '1px solid #ccc'}}
+              >
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+                <option value="ar">العربية</option>
+              </select>
+              <a href="#contact" style={{backgroundColor: '#1a365d', color: 'white', padding: '10px 24px', borderRadius: '9999px', textDecoration: 'none'}}>
+                {t.nav.freeConsult}
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Hero Section - added pt-20 (80px) to account for fixed navbar */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0">
           <img 
             src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1920&q=80" 
