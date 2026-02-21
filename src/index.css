@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Force nav visibility */
+nav {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

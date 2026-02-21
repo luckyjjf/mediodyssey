@@ -426,27 +426,47 @@ function App() {
 
   // Load PayPal SDK for Package 1
   useEffect(() => {
-    const existingScript = document.getElementById('paypal-script');
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = 'paypal-script';
-      script.src = 'https://www.paypal.com/sdk/js?client-id=BAAMkzXjQ-Az2R2yBDRxEjBRXV6jyvZnIzxEhSyLJVT2Q5XwugbNRXTpsUkYWx_lAW468dLzobLEmnvuww&components=hosted-buttons&disable-funding=venmo&currency=USD';
-      script.async = true;
-      script.onload = () => {
-        if ((window as any).paypal) {
-          (window as any).paypal.HostedButtons({
-            hostedButtonId: 'PCVZMAHAUCLEE',
-          }).render('#paypal-container-PCVZMAHAUCLEE');
-        }
-      };
-      document.body.appendChild(script);
+    try {
+      const existingScript = document.getElementById('paypal-script');
+      if (!existingScript) {
+        const script = document.createElement('script');
+        script.id = 'paypal-script';
+        script.src = 'https://www.paypal.com/sdk/js?client-id=BAAMkzXjQ-Az2R2yBDRxEjBRXV6jyvZnIzxEhSyLJVT2Q5XwugbNRXTpsUkYWx_lAW468dLzobLEmnvuww&components=hosted-buttons&disable-funding=venmo&currency=USD';
+        script.async = true;
+        script.onload = () => {
+          try {
+            if ((window as any).paypal && (window as any).paypal.HostedButtons) {
+              (window as any).paypal.HostedButtons({
+                hostedButtonId: 'PCVZMAHAUCLEE',
+              }).render('#paypal-container-PCVZMAHAUCLEE');
+            }
+          } catch (err) {
+            console.error('PayPal button render error:', err);
+          }
+        };
+        script.onerror = () => {
+          console.error('PayPal script failed to load');
+        };
+        document.body.appendChild(script);
+      }
+    } catch (err) {
+      console.error('PayPal initialization error:', err);
     }
   }, []);
 
   return (
     <div className={`min-h-screen bg-cream ${isRTL ? 'rtl' : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
       {/* Navigation */}
-      <nav className="fixed w-full z-[100] bg-white/95 border-b border-gray-200 shadow-sm" style={{ position: 'fixed', top: 0, left: 0, right: 0, WebkitBackdropFilter: 'blur(10px)', backdropFilter: 'blur(10px)' }}>
+      <nav style={{ 
+        position: 'fixed', 
+        top: 0, 
+        left: 0, 
+        right: 0, 
+        zIndex: 9999, 
+        backgroundColor: 'white',
+        borderBottom: '1px solid #e5e7eb',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+      }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
