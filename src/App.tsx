@@ -499,8 +499,7 @@ function App() {
       <Navbar 
         language={language} 
         onLanguageChange={handleLanguageChange} 
-        t={t} 
-        isRTL={isRTL} 
+        t={t}
       />
 
       {/* Hero Section */}

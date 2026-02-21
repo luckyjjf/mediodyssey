@@ -5,10 +5,9 @@ interface NavbarProps {
   language: 'en' | 'zh' | 'ar';
   onLanguageChange: (lang: 'en' | 'zh' | 'ar') => void;
   t: any;
-  isRTL: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ language, onLanguageChange, t, isRTL }) => {
+const Navbar: React.FC<NavbarProps> = ({ language, onLanguageChange, t }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langMenuOpen, setLangMenuOpen] = useState(false);
 
