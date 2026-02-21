@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { 
   Heart,
   Microscope, 
@@ -419,11 +419,9 @@ function App() {
     setLanguage(lang);
   };
 
-  // PayPal scripts temporarily disabled for navbar debugging
-  /*
-  // Load PayPal SDK for Package 1 (Discovery Journey)
+  // Load PayPal SDK for Package 1 (Discovery Journey) - $1500
   useEffect(() => {
-    try {
+    const loadPayPalHosted = () => {
       const existingScript = document.getElementById('paypal-script-hosted');
       if (!existingScript) {
         const script = document.createElement('script');
@@ -431,29 +429,28 @@ function App() {
         script.src = 'https://www.paypal.com/sdk/js?client-id=BAAMkzXjQ-Az2R2yBDRxEjBRXV6jyvZnIzxEhSyLJVT2Q5XwugbNRXTpsUkYWx_lAW468dLzobLEmnvuww&components=hosted-buttons&disable-funding=venmo&currency=USD';
         script.async = true;
         script.onload = () => {
-          try {
-            if ((window as any).paypal && (window as any).paypal.HostedButtons) {
-              (window as any).paypal.HostedButtons({
-                hostedButtonId: 'PCVZMAHAUCLEE',
-              }).render('#paypal-container-PCVZMAHAUCLEE');
-            }
-          } catch (err) {
-            console.error('PayPal hosted button render error:', err);
+          if ((window as any).paypal?.HostedButtons) {
+            (window as any).paypal.HostedButtons({
+              hostedButtonId: 'PCVZMAHAUCLEE',
+            }).render('#paypal-container-PCVZMAHAUCLEE');
           }
         };
-        script.onerror = () => {
-          console.error('PayPal hosted script failed to load');
-        };
         document.body.appendChild(script);
+      } else if ((window as any).paypal?.HostedButtons) {
+        // Script already loaded, just render
+        (window as any).paypal.HostedButtons({
+          hostedButtonId: 'PCVZMAHAUCLEE',
+        }).render('#paypal-container-PCVZMAHAUCLEE');
       }
-    } catch (err) {
-      console.error('PayPal hosted initialization error:', err);
-    }
+    };
+    
+    // Delay to ensure DOM is ready
+    setTimeout(loadPayPalHosted, 100);
   }, []);
 
   // Load PayPal Subscription SDK for Package 0 (Tea Subscription)
   useEffect(() => {
-    try {
+    const loadPayPalSubscription = () => {
       const existingScript = document.getElementById('paypal-script-subscription');
       if (!existingScript) {
         const script = document.createElement('script');
@@ -462,39 +459,50 @@ function App() {
         script.async = true;
         script.setAttribute('data-sdk-integration-source', 'button-factory');
         script.onload = () => {
-          try {
-            if ((window as any).paypal && (window as any).paypal.Buttons) {
-              (window as any).paypal.Buttons({
-                style: {
-                  shape: 'pill',
-                  color: 'gold',
-                  layout: 'vertical',
-                  label: 'paypal'
-                },
-                createSubscription: function(_data: any, actions: any) {
-                  return actions.subscription.create({
-                    plan_id: 'P-46T13876K0925810UNGMVWUQ'
-                  });
-                },
-                onApprove: function(_data: any) {
-                  alert('Subscription successful! ID: ' + _data.subscriptionID);
-                }
-              }).render('#paypal-button-container-P-46T13876K0925810UNGMVWUQ');
-            }
-          } catch (err) {
-            console.error('PayPal subscription button render error:', err);
+          if ((window as any).paypal?.Buttons) {
+            (window as any).paypal.Buttons({
+              style: {
+                shape: 'pill',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal'
+              },
+              createSubscription: function(_data: any, actions: any) {
+                return actions.subscription.create({
+                  plan_id: 'P-46T13876K0925810UNGMVWUQ'
+                });
+              },
+              onApprove: function(_data: any) {
+                alert('Subscription successful! ID: ' + _data.subscriptionID);
+              }
+            }).render('#paypal-button-container-P-46T13876K0925810UNGMVWUQ');
           }
         };
-        script.onerror = () => {
-          console.error('PayPal subscription script failed to load');
-        };
         document.body.appendChild(script);
+      } else if ((window as any).paypal?.Buttons) {
+        // Script already loaded, just render
+        (window as any).paypal.Buttons({
+          style: {
+            shape: 'pill',
+            color: 'gold',
+            layout: 'vertical',
+            label: 'paypal'
+          },
+          createSubscription: function(_data: any, actions: any) {
+            return actions.subscription.create({
+              plan_id: 'P-46T13876K0925810UNGMVWUQ'
+            });
+          },
+          onApprove: function(_data: any) {
+            alert('Subscription successful! ID: ' + _data.subscriptionID);
+          }
+        }).render('#paypal-button-container-P-46T13876K0925810UNGMVWUQ');
       }
-    } catch (err) {
-      console.error('PayPal subscription initialization error:', err);
-    }
+    };
+    
+    // Delay to ensure DOM is ready
+    setTimeout(loadPayPalSubscription, 200);
   }, []);
-  */
 
   return (
     <div className={`min-h-screen bg-cream ${isRTL ? 'rtl' : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
