@@ -812,7 +812,7 @@ function App() {
           {/* Other Packages Grid */}
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Package 1 */}
-            <div className="package-card rounded-2xl overflow-hidden card-hover border border-gray-200">
+            <div className="package-card rounded-2xl overflow-hidden card-hover border border-gray-200 hover-lift">
               <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
                 <Globe className="text-white w-16 h-16" />
               </div>
@@ -845,8 +845,8 @@ function App() {
             </div>
 
             {/* Package 2 - Popular */}
-            <div className="package-card rounded-2xl overflow-hidden card-hover border-2 border-accent relative transform scale-105">
-              <div className="popular-badge text-white text-center py-2 font-semibold">
+            <div className="package-card rounded-2xl overflow-hidden card-hover border-2 border-accent relative transform hover:scale-105 transition-all duration-500 hover:shadow-2xl animate-pulse-glow">
+              <div className="popular-badge text-white text-center py-2 font-semibold shadow-lg">
                 <Star className="inline w-4 h-4 mr-2" />{t.packages.package2.popular}
               </div>
               <div className="h-48 bg-gradient-to-br from-secondary to-green-600 flex items-center justify-center">
@@ -888,7 +888,7 @@ function App() {
             </div>
 
             {/* Package 3 */}
-            <div className="package-card rounded-2xl overflow-hidden card-hover border border-gray-200">
+            <div className="package-card rounded-2xl overflow-hidden card-hover border border-gray-200 hover-lift">
               <div className="h-48 bg-gradient-to-br from-accent to-yellow-600 flex items-center justify-center">
                 <Star className="text-white w-16 h-16" />
               </div>
