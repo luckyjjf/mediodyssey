@@ -94,7 +94,7 @@ const WhyChina = ({ t }: WhyChinaProps) => {
           {/* Right Image */}
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=800&q=80"
+              src="./tea-product.jpg"
               alt="Modern medical facility"
               className="rounded-2xl shadow-2xl"
             />

@@ -67,7 +67,7 @@ const Hero = ({ t }: HeroProps) => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1920&q=80"
+          src="./hero-bg.jpg"
           alt="China Landscape"
           className="w-full h-full object-cover"
         />
