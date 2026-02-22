@@ -92,14 +92,6 @@ const translations = {
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/99'
       },
       package1: {
-        name: 'Discovery Journey',
-        duration: '3 days · Intro to Eastern Medicine',
-        price: '$3,900',
-        items: ['Basic health screening', 'TCM constitution diagnosis', 'Tea ceremony intro', '4-star hotel', 'Airport transfers', '365-day online TCM consultation'],
-        docUrl: '/docs/package-discovery-en.pdf',
-        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/3900'
-      },
-      package2: {
         name: 'Experience Package',
         duration: 'Half-day · 3-4 hours',
         price: '$199',
@@ -108,10 +100,20 @@ const translations = {
         docUrl: '/docs/package-experience-en.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/199'
       },
+      package2: {
+        name: 'Discovery Journey',
+        duration: '3 days · Intro to Eastern Medicine',
+        price: '$3,900',
+        popular: 'Classic',
+        items: ['Basic health screening', 'TCM constitution diagnosis', 'Tea ceremony intro', '4-star hotel', 'Airport transfers', '365-day online TCM consultation'],
+        docUrl: '/docs/package-discovery-en.pdf',
+        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/3900'
+      },
       package3: {
         name: 'Royal Journey',
         duration: '14 days · Ultimate bespoke experience',
         price: '$23,500',
+        popular: 'Luxury',
         items: ['Full genome + PET-CT', 'Master physician consultation', 'Royal cultural experience', 'Luxury suite', 'Private jet optional', '365-day online TCM consultation'],
         docUrl: '/docs/package-royal-en.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/23500'
@@ -221,14 +223,6 @@ const translations = {
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/99'
       },
       package1: {
-        name: '探索之旅',
-        duration: '3天2晚 · 初识东方医疗',
-        price: '¥28,000',
-        items: ['基础全面体检', '中医体质辨识', '茶道入门体验', '四星级酒店', '机场接送服务', '365天线上中医咨询'],
-        docUrl: '/docs/package-discovery-zh.pdf',
-        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/3900'
-      },
-      package2: {
         name: '体验套餐',
         duration: '半天 · 3-4小时',
         price: '¥1,399',
@@ -237,10 +231,20 @@ const translations = {
         docUrl: '/docs/package-experience-zh.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/199'
       },
+      package2: {
+        name: '探索之旅',
+        duration: '3天2晚 · 初识东方医疗',
+        price: '¥28,000',
+        popular: '经典之选',
+        items: ['基础全面体检', '中医体质辨识', '茶道入门体验', '四星级酒店', '机场接送服务', '365天线上中医咨询'],
+        docUrl: '/docs/package-discovery-zh.pdf',
+        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/3900'
+      },
       package3: {
         name: '皇家之旅',
         duration: '14天13晚 · 顶级定制体验',
         price: '¥168,000',
+        popular: '奢华尊享',
         items: ['全基因组测序 + PET-CT', '国医大师亲诊', '皇室级文化体验', '奢华套房酒店', '私人飞机可选', '365天线上中医咨询'],
         docUrl: '/docs/package-royal-zh.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/23500'
@@ -350,14 +354,6 @@ const translations = {
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/99'
       },
       package1: {
-        name: 'رحلة الاكتشاف',
-        duration: '3 أيام · مقدمة للطب الشرقي',
-        price: '$3,900',
-        items: ['فحص صحي أساسي', 'تشخيص تكوين الطب الصيني', 'مقدمة لطقوس الشاي', 'فندق 4 نجوم', 'نقل المطار', 'استشارة الطب الصيني التقليدي لمدة 365 يوماً'],
-        docUrl: '/docs/package-discovery-ar.pdf',
-        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/3900'
-      },
-      package2: {
         name: 'باقة التجربة',
         duration: 'نصف يوم · 3-4 ساعات',
         price: '$199',
@@ -366,10 +362,20 @@ const translations = {
         docUrl: '/docs/package-experience-ar.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/199'
       },
+      package2: {
+        name: 'رحلة الاكتشاف',
+        duration: '3 أيام · مقدمة للطب الشرقي',
+        price: '$3,900',
+        popular: 'كلاسيكي',
+        items: ['فحص صحي أساسي', 'تشخيص تكوين الطب الصيني', 'مقدمة لطقوس الشاي', 'فندق 4 نجوم', 'نقل المطار', 'استشارة الطب الصيني التقليدي لمدة 365 يوماً'],
+        docUrl: '/docs/package-discovery-ar.pdf',
+        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/3900'
+      },
       package3: {
         name: 'الرحلة الملكية',
         duration: '14 يوماً · تجربة فاخرة مخصصة',
         price: '$23,500',
+        popular: 'فاخر',
         items: ['الجينوم الكامل + PET-CT', 'استشارة طبيب خبير', 'تجربة ثقافية ملكية', 'جناح فاخر', 'طائرة خاصة اختياري', 'استشارة الطب الصيني التقليدي لمدة 365 يوماً'],
         docUrl: '/docs/package-royal-ar.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/23500'
