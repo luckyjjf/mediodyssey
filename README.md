@@ -1,16 +1,74 @@
-# MediOdyssey Website
+# MediOdyssey - 医疗奥德赛
 
-基于 Vite + React + TypeScript + Tailwind CSS 构建的现代化医疗旅游网站。
+**西方精准 × 东方智慧**
 
-## 技术栈
+MediOdyssey 是一个全球医疗旅游品牌，融合西方精准医疗与东方传统智慧，为客户提供精密体检、中医调理和文化沉浸的全方位健康服务。
 
-- **Vite** - 构建工具
-- **React 18** - UI 框架
-- **TypeScript** - 类型安全
-- **Tailwind CSS** - 样式框架
-- **Lucide React** - 图标库
+## 🌐 在线预览
 
-## 本地开发
+[https://mediodyssey.vercel.app](https://mediodyssey.vercel.app)
+
+## ✨ 功能特性
+
+- 🌍 **多语言支持**：英文、中文、阿拉伯语
+- 🎨 **现代化设计**：深青色主调 + 优雅字体
+- 💳 **PayPal支付**：支持订阅和一次性支付
+- 📱 **响应式布局**：完美适配各种设备
+- ✨ **流畅动画**：GSAP驱动的滚动动画
+
+## 🏗️ 页面结构
+
+```
+src/
+├── components/
+│   └── Navbar.tsx          # 导航栏（多语言切换）
+├── sections/
+│   ├── Hero.tsx            # 主视觉区域
+│   ├── Services.tsx        # 四大支柱服务
+│   ├── WhyChina.tsx        # 为什么选择中国
+│   ├── Packages.tsx        # 套餐展示
+│   ├── Contact.tsx         # 联系表单
+│   └── Footer.tsx          # 页脚
+├── translations.ts         # 多语言翻译
+├── App.tsx                 # 主应用
+└── index.css               # 全局样式
+```
+
+## 🚀 部署指南
+
+### 1. 部署到 Vercel（推荐）
+
+#### 方式一：通过 GitHub 自动部署
+
+1. **Fork 或克隆本仓库到 GitHub**
+   ```bash
+   git clone https://github.com/yourusername/mediodyssey.git
+   cd mediodyssey
+   ```
+
+2. **在 Vercel 创建项目**
+   - 访问 [vercel.com](https://vercel.com)
+   - 点击 "Add New Project"
+   - 选择你的 GitHub 仓库
+   - 框架预设选择 "Vite"
+   - 点击 "Deploy"
+
+3. **完成！** Vercel 会自动构建并部署
+
+#### 方式二：通过 Vercel CLI 部署
+
+```bash
+# 安装 Vercel CLI
+npm i -g vercel
+
+# 登录
+vercel login
+
+# 部署
+vercel
+```
+
+### 2. 本地开发
 
 ```bash
 # 安装依赖
@@ -26,54 +84,29 @@ npm run build
 npm run preview
 ```
 
-## 部署到 Vercel
+## 📝 技术栈
 
-### 方法一：GitHub 集成（推荐）
+- **框架**: React 19 + TypeScript
+- **构建工具**: Vite 7
+- **样式**: Tailwind CSS 3.4
+- **动画**: GSAP 3
+- **图标**: Lucide React
+- **UI组件**: shadcn/ui
 
-1. 在 GitHub 上创建新仓库
-2. 将本文件夹推送到 GitHub：
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/你的用户名/仓库名.git
-   git push -u origin main
-   ```
-3. 访问 https://vercel.com/new
-4. 选择你的 GitHub 仓库
-5. 点击 Deploy
+## 🎨 设计规范
 
-### 方法二：Vercel CLI
+| 元素 | 值 |
+|------|-----|
+| 主色调 | `#1a5f5a` (深青色) |
+| 强调色 | `#2a9d8f` (活力青) |
+| 金色 | `#d69e2e` |
+| 标题字体 | Fraunces (衬线) |
+| 正文字体 | Figtree (无衬线) |
 
-```bash
-# 安装 Vercel CLI
-npm i -g vercel
+## 📄 许可证
 
-# 登录
-vercel login
+MIT License
 
-# 部署
-vercel --prod
-```
+---
 
-## 项目结构
-
-```
-├── index.html          # 入口 HTML
-├── package.json        # 依赖配置
-├── tsconfig.json       # TypeScript 配置
-├── tailwind.config.js  # Tailwind 配置
-├── vite.config.ts      # Vite 配置
-├── vercel.json         # Vercel 路由配置
-└── src/
-    ├── main.tsx        # 应用入口
-    ├── App.tsx         # 主组件
-    └── index.css       # 全局样式
-```
-
-## 自定义配置
-
-- 修改颜色：编辑 `tailwind.config.js`
-- 修改内容：编辑 `src/App.tsx`
-- 添加组件：在 `src/components/` 创建新文件
+**MediOdyssey** - 改变生命质量的旅程

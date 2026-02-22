@@ -1,0 +1,97 @@
+/* App-specific styles */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure sections have proper spacing */
+section {
+  position: relative;
+}
+
+/* Custom selection color */
+::selection {
+  background-color: rgba(42, 157, 143, 0.3);
+  color: #164f4a;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #2a9d8f;
+  outline-offset: 2px;
+}
+
+/* Button hover lift effect */
+button, a {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:active, a:active {
+  transform: scale(0.98);
+}
+
+/* Image loading placeholder */
+img {
+  background-color: #f0fdfa;
+}
+
+/* RTL Support */
+.rtl {
+  direction: rtl;
+}
+
+.rtl .space-x-2 > * + * {
+  --tw-space-x-reverse: 1;
+}
+
+.rtl .space-x-4 > * + * {
+  --tw-space-x-reverse: 1;
+}
+
+.rtl .space-x-6 > * + * {
+  --tw-space-x-reverse: 1;
+}
+
+.rtl .space-x-8 > * + * {
+  --tw-space-x-reverse: 1;
+}
+
+.rtl .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+.rtl .mr-3 {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}
+
+.rtl .ml-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.rtl .text-left {
+  text-align: right;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size: 18px;
+  }
+}
