@@ -121,6 +121,58 @@ const translations = {
       viewDetails: 'View Details',
       book: 'Book Now'
     },
+    testimonials: {
+      badge: 'Testimonials',
+      title: 'What Our Experience Officers Say',
+      desc: 'Real reviews from our certified experience officers',
+      rating: '4.8/5',
+      recommendRate: '94%',
+      officers: [
+        {
+          name: 'Sarah Mitchell',
+          country: 'United Kingdom',
+          avatar: 'avatar-european-female.jpg',
+          rating: 5,
+          pros: 'The AI tongue diagnosis was incredibly accurate. The tea quality is exceptional and the monthly health tips are very practical.',
+          cons: 'Would love more flavor variety in the tea subscription.',
+          package: 'Tea Subscription'
+        },
+        {
+          name: 'Hans Mueller',
+          country: 'Germany',
+          avatar: 'avatar-european-male.jpg',
+          rating: 5,
+          pros: 'The $199 Experience Package exceeded expectations. Professional medical interpreter, top-notch facilities, and the acupuncture session relieved my chronic back pain.',
+          cons: 'The half-day felt a bit rushed. Would prefer a full day option.',
+          package: 'Experience Package'
+        },
+        {
+          name: 'Fatima Al-Rashid',
+          country: 'UAE',
+          avatar: 'avatar-middleeast-female.jpg',
+          rating: 4,
+          pros: 'The cultural immersion with Tai Chi and tea ceremony was transformative. Luxury accommodations and VIP treatment throughout.',
+          cons: 'The Discovery Journey is quite expensive, though worth it for the comprehensive care.',
+          package: 'Discovery Journey'
+        },
+        {
+          name: 'Omar Hassan',
+          country: 'Saudi Arabia',
+          avatar: 'avatar-middleeast-male.jpg',
+          rating: 5,
+          pros: 'Exceptional value for money. The 365-day online consultation is invaluable. I\'ve saved thousands compared to local TCM treatments.',
+          cons: 'Initial shipping took longer than expected, but now it arrives promptly every month.',
+          package: 'Tea Subscription'
+        }
+      ],
+      prosLabel: 'What They Loved',
+      consLabel: 'Areas for Improvement',
+      stats: {
+        satisfaction: '4.8/5',
+        recommend: '94%',
+        renewal: '67%'
+      }
+    },
     contact: {
       badge: 'Contact Us',
       title: 'Start Your Health Journey',
@@ -252,6 +304,58 @@ const translations = {
       viewDetails: '查看详情',
       book: '立即预订'
     },
+    testimonials: {
+      badge: '体验官评价',
+      title: '体验官真实反馈',
+      desc: '来自我们认证体验官的真实评价',
+      rating: '4.8/5',
+      recommendRate: '94%',
+      officers: [
+        {
+          name: 'Sarah Mitchell',
+          country: '英国',
+          avatar: 'avatar-european-female.jpg',
+          rating: 5,
+          pros: 'AI舌诊的准确度令人惊讶。茶叶品质卓越，每月的健康建议非常实用。',
+          cons: '希望茶包能有更多口味选择。',
+          package: '会员订阅'
+        },
+        {
+          name: 'Hans Mueller',
+          country: '德国',
+          avatar: 'avatar-european-male.jpg',
+          rating: 5,
+          pros: '¥1,399的体验套餐物超所值。专业的医疗翻译、一流的设施，针灸治疗缓解了我的慢性背痛。',
+          cons: '半天体验有点仓促，希望能有全天选项。',
+          package: '体验套餐'
+        },
+        {
+          name: 'Fatima Al-Rashid',
+          country: '阿联酋',
+          avatar: 'avatar-middleeast-female.jpg',
+          rating: 4,
+          pros: '太极和茶道的文化沉浸体验令人身心蜕变。全程VIP待遇，豪华住宿体验。',
+          cons: '探索之旅价格较高，但考虑到全面的医疗服务还是值得的。',
+          package: '探索之旅'
+        },
+        {
+          name: 'Omar Hassan',
+          country: '沙特阿拉伯',
+          avatar: 'avatar-middleeast-male.jpg',
+          rating: 5,
+          pros: '性价比极高。365天线上咨询服务非常宝贵，相比当地的中医治疗节省了数千元。',
+          cons: '首次配送耗时较长，但现在每月都准时送达。',
+          package: '会员订阅'
+        }
+      ],
+      prosLabel: '满意之处',
+      consLabel: '改进建议',
+      stats: {
+        satisfaction: '4.8/5',
+        recommend: '94%',
+        renewal: '67%'
+      }
+    },
     contact: {
       badge: 'Contact Us',
       title: '开启您的健康之旅',
@@ -382,6 +486,58 @@ const translations = {
       },
       viewDetails: 'عرض التفاصيل',
       book: 'احجز الآن'
+    },
+    testimonials: {
+      badge: 'آراء العملاء',
+      title: 'ماذا يقول ضباط التجربة لدينا',
+      desc: 'تقييمات حقيقية من ضباط التجربة المعتمدين لدينا',
+      rating: '4.8/5',
+      recommendRate: '94%',
+      officers: [
+        {
+          name: 'سارة ميتشيل',
+          country: 'المملكة المتحدة',
+          avatar: 'avatar-european-female.jpg',
+          rating: 5,
+          pros: 'كان تشخيص لسان الذكاء الاصطناعي دقيقاً للغاية. جودة الشاي استثنائية، والنصائح الصحية الشهرية عملية للغاية.',
+          cons: 'أتمنى المزيد من تنوع النكهات في اشتراك الشاي.',
+          package: 'اشتراك العضوية'
+        },
+        {
+          name: 'هانز مولر',
+          country: 'ألمانيا',
+          avatar: 'avatar-european-male.jpg',
+          rating: 5,
+          pros: 'تجاوزت باقة التجربة بقيمة 199 دولار التوقعات. مترجم طبي محترف، ومرافق من الدرجة الأولى، وجلسة الوخز بالإبر خففت آلام ظهري المزمنة.',
+          cons: 'شعرت أن نصف اليوم كان قصيراً بعض الشيء. أفضل خيار يوم كامل.',
+          package: 'باقة التجربة'
+        },
+        {
+          name: 'فاطمة الرشيد',
+          country: 'الإمارات العربية المتحدة',
+          avatar: 'avatar-middleeast-female.jpg',
+          rating: 4,
+          pros: 'كان الغمر الثقافي مع تايتشي وطقوس الشاي محولاً. إقامة فاخرة ومعاملة VIP على مدار الرحلة.',
+          cons: 'رحلة الاكتشاف مرتفعة الثمن، لكنها تستحق ذلك نظراً للرعاية الشاملة.',
+          package: 'رحلة الاكتشاف'
+        },
+        {
+          name: 'عمر حسن',
+          country: 'المملكة العربية السعودية',
+          avatar: 'avatar-middleeast-male.jpg',
+          rating: 5,
+          pros: 'قيمة استثنائية مقابل المال. استشارة مدة 365 يوم عبر الإنترنت لا تقدر بثمن. وفرت آلاف الدولارات مقارنة بالعلاج الصيني المحلي.',
+          cons: 'استغرقت الشحنة الأولى وقتاً أطول من المتوقع، لكن الآن تصل في موعدها كل شهر.',
+          package: 'اشتراك العضوية'
+        }
+      ],
+      prosLabel: 'ما أعجبهم',
+      consLabel: 'مجالات التحسين',
+      stats: {
+        satisfaction: '4.8/5',
+        recommend: '94%',
+        renewal: '67%'
+      }
     },
     contact: {
       badge: 'اتصل بنا',
@@ -926,6 +1082,81 @@ function App() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <span className="text-secondary font-semibold tracking-wider uppercase text-sm">{t.testimonials.badge}</span>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mt-3 mb-4">{t.testimonials.title}</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">{t.testimonials.desc}</p>
+            
+            {/* Stats */}
+            <div className="flex flex-wrap justify-center gap-8 mt-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary">{t.testimonials.stats.satisfaction}</div>
+                <div className="text-gray-500 text-sm">Average Rating</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-secondary">{t.testimonials.stats.recommend}</div>
+                <div className="text-gray-500 text-sm">Recommend Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-accent">{t.testimonials.stats.renewal}</div>
+                <div className="text-gray-500 text-sm">Renewal Rate</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Testimonials Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {t.testimonials.officers.map((officer, index) => (
+              <div key={index} className="bg-cream rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                {/* Header */}
+                <div className="flex items-start gap-4 mb-6">
+                  <img 
+                    src={officer.avatar} 
+                    alt={officer.name}
+                    className="w-16 h-16 rounded-full object-cover border-2 border-secondary"
+                  />
+                  <div className="flex-1">
+                    <h4 className="font-serif text-xl font-bold text-primary">{officer.name}</h4>
+                    <p className="text-gray-500 text-sm">{officer.country}</p>
+                    <div className="flex items-center gap-1 mt-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star 
+                          key={i} 
+                          className={`w-4 h-4 ${i < officer.rating ? 'text-accent fill-accent' : 'text-gray-300'}`}
+                        />
+                      ))}
+                      <span className="text-sm text-gray-600 ml-2">{officer.package}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="font-semibold text-secondary mb-2 flex items-center gap-2">
+                      <Check className="w-4 h-4" />
+                      {t.testimonials.prosLabel}
+                    </h5>
+                    <p className="text-gray-600 text-sm leading-relaxed">{officer.pros}</p>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-gray-400 mb-2 flex items-center gap-2">
+                      <span className="w-4 h-4 rounded-full border border-gray-400 flex items-center justify-center text-xs">!</span>
+                      {t.testimonials.consLabel}
+                    </h5>
+                    <p className="text-gray-500 text-sm leading-relaxed">{officer.cons}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
