@@ -16,6 +16,7 @@ import {
   Calendar,
   Send
 } from 'lucide-react';
+import { loadPayPalHostedButton, loadPayPalSubscriptionButton } from './utils/paypal';
 
 
 // Translations
@@ -581,94 +582,29 @@ function App() {
     setLanguage(lang);
   };
 
-  // Load PayPal SDK for Package 1 (Discovery Journey) - $1500
+  // Load PayPal buttons
   useEffect(() => {
-    const loadPayPalHosted = () => {
-      const existingScript = document.getElementById('paypal-script-hosted');
-      if (!existingScript) {
-        const script = document.createElement('script');
-        script.id = 'paypal-script-hosted';
-        script.src = 'https://www.paypal.com/sdk/js?client-id=BAAMkzXjQ-Az2R2yBDRxEjBRXV6jyvZnIzxEhSyLJVT2Q5XwugbNRXTpsUkYWx_lAW468dLzobLEmnvuww&components=hosted-buttons&disable-funding=venmo&currency=USD';
-        script.async = true;
-        script.onload = () => {
-          if ((window as any).paypal?.HostedButtons) {
-            (window as any).paypal.HostedButtons({
-              hostedButtonId: 'PCVZMAHAUCLEE',
-            }).render('#paypal-container-PCVZMAHAUCLEE');
-          }
-        };
-        document.body.appendChild(script);
-      } else if ((window as any).paypal?.HostedButtons) {
-        // Script already loaded, just render
-        (window as any).paypal.HostedButtons({
-          hostedButtonId: 'PCVZMAHAUCLEE',
-        }).render('#paypal-container-PCVZMAHAUCLEE');
-      }
-    };
+    // Discovery Journey - Hosted Button
+    loadPayPalHostedButton(
+      'PCVZMAHAUCLEE',
+      'paypal-container-PCVZMAHAUCLEE',
+      'BAAMkzXjQ-Az2R2yBDRxEjBRXV6jyvZnIzxEhSyLJVT2Q5XwugbNRXTpsUkYWx_lAW468dLzobLEmnvuww'
+    );
     
-    // Delay to ensure DOM is ready
-    setTimeout(loadPayPalHosted, 100);
-  }, []);
-
-  // Load PayPal Subscription SDK for Package 0 (Tea Subscription)
-  useEffect(() => {
-    const loadPayPalSubscription = () => {
-      const existingScript = document.getElementById('paypal-script-subscription');
-      if (!existingScript) {
-        const script = document.createElement('script');
-        script.id = 'paypal-script-subscription';
-        script.src = 'https://www.paypal.com/sdk/js?client-id=AdE_Z_W7TwFrNJbYftxbWO4LI_oFydXRUsmPigyTQu4oKWe_G_UWBvoMO1e5gFBj8iPKb17GS7h9IL4W&vault=true&intent=subscription';
-        script.async = true;
-        script.setAttribute('data-sdk-integration-source', 'button-factory');
-        script.onload = () => {
-          if ((window as any).paypal?.Buttons) {
-            (window as any).paypal.Buttons({
-              style: {
-                shape: 'pill',
-                color: 'gold',
-                layout: 'vertical',
-                label: 'paypal'
-              },
-              createSubscription: function(_data: any, actions: any) {
-                return actions.subscription.create({
-                  plan_id: 'P-46T13876K0925810UNGMVWUQ'
-                });
-              },
-              onApprove: function(_data: any) {
-                alert('Subscription successful! ID: ' + _data.subscriptionID);
-              }
-            }).render('#paypal-button-container-P-46T13876K0925810UNGMVWUQ');
-          }
-        };
-        document.body.appendChild(script);
-      } else if ((window as any).paypal?.Buttons) {
-        // Script already loaded, just render
-        (window as any).paypal.Buttons({
-          style: {
-            shape: 'pill',
-            color: 'gold',
-            layout: 'vertical',
-            label: 'paypal'
-          },
-          createSubscription: function(_data: any, actions: any) {
-            return actions.subscription.create({
-              plan_id: 'P-46T13876K0925810UNGMVWUQ'
-            });
-          },
-          onApprove: function(_data: any) {
-            alert('Subscription successful! ID: ' + _data.subscriptionID);
-          }
-        }).render('#paypal-button-container-P-46T13876K0925810UNGMVWUQ');
+    // Tea Subscription - Subscription Button
+    loadPayPalSubscriptionButton(
+      'P-46T13876K0925810UNGMVWUQ',
+      'paypal-button-container-P-46T13876K0925810UNGMVWUQ',
+      'AdE_Z_W7TwFrNJbYftxbWO4LI_oFydXRUsmPigyTQu4oKWe_G_UWBvoMO1e5gFBj8iPKb17GS7h9IL4W',
+      (subscriptionId) => {
+        console.log('Subscription successful:', subscriptionId);
       }
-    };
-    
-    // Delay to ensure DOM is ready
-    setTimeout(loadPayPalSubscription, 200);
+    );
   }, []);
 
   return (
     <div className={`min-h-screen bg-cream ${isRTL ? 'rtl' : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
-      {/* Navigation */}
+      {}
       <nav style={{position: 'fixed', top: 0, left: 0, right: 0, zIndex: 99999, backgroundColor: 'white', borderBottom: '1px solid #e5e7eb'}}>
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 24px'}}>
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px'}}>
@@ -700,68 +636,85 @@ function App() {
         </div>
       </nav>
 
-      {/* Hero Section - added pt-20 (80px) to account for fixed navbar */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1920&q=80" 
-            alt="China Landscape" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 hero-gradient"></div>
+      {}
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-teal-900 via-teal-800 to-black">
+          <div className="absolute inset-0 opacity-30" style={{
+            backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.3) 0%, transparent 50%)',
+          }}></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white pt-20">
-          <div className="mb-6">
-            <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur rounded-full text-sm font-medium tracking-wider">
-              <Globe className="inline w-4 h-4 mr-2" />{t.hero.badge}
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl animate-float-apple"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float-apple" style={{animationDelay: '2s'}}></div>
+        </div>
+        
+        {/* Hero Content */}
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center pt-32 pb-20">
+          {/* Badge */}
+          <div className="mb-8">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur rounded-full text-sm font-medium text-teal-300 border border-white/10">
+              <Globe className="w-4 h-4" />
+              {t.hero.badge}
             </span>
           </div>
-          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 text-shadow leading-tight">
-            {t.hero.title}
+          
+          {/* Main Title */}
+          <h1 className="apple-headline text-white mb-6 tracking-tight">
+            <span className="block">{t.hero.title}</span>
           </h1>
-          <p className="text-2xl md:text-3xl font-light mb-4 text-shadow">
+          
+          {/* Subtitle */}
+          <p className="apple-subhead text-gray-400 mb-6 max-w-3xl mx-auto">
             {t.hero.subtitle}
           </p>
-          <p className="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto">
+          
+          {/* Description */}
+          <p className="text-lg md:text-xl text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed">
             {t.hero.description}
           </p>
+          
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#packages" className="bg-accent text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#b45309] hover:text-white transition shadow-lg flex items-center">
-              {t.hero.viewPackages} <ChevronRight className="ml-2 w-5 h-5" />
+            <a href="#packages" className="group bg-teal-500 hover:bg-teal-400 text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 flex items-center shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40">
+              {t.hero.viewPackages} 
+              <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#contact" className="bg-white/20 backdrop-blur text-white border-2 border-white/50 px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/30 transition flex items-center">
-              <Calendar className="mr-2 w-5 h-5" />{t.hero.bookConsult}
+            <a href="#contact" className="group bg-white/10 hover:bg-white/20 text-white backdrop-blur px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 flex items-center border border-white/20">
+              <Calendar className="mr-2 w-5 h-5" />
+              {t.hero.bookConsult}
             </a>
           </div>
         </div>
 
-        {/* Trust Badges */}
-        <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur py-6">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-              <div className="flex items-center space-x-2 text-gray-600">
-                <Star className="text-secondary w-6 h-6" />
-                <span className="font-medium">{t.trust.jci}</span>
+        {/* Trust Badges - Minimal */}
+        <div className="relative z-10 w-full bg-black/50 backdrop-blur border-t border-white/10">
+          <div className="max-w-6xl mx-auto px-6 py-8">
+            <div className="flex flex-wrap items-center justify-center gap-12">
+              <div className="flex items-center gap-3 text-gray-400">
+                <Star className="text-teal-400 w-5 h-5" />
+                <span className="text-sm font-medium">{t.trust.jci}</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-600">
-                <Star className="text-secondary w-6 h-6" />
-                <span className="font-medium">{t.trust.gha}</span>
+              <div className="flex items-center gap-3 text-gray-400">
+                <Star className="text-teal-400 w-5 h-5" />
+                <span className="text-sm font-medium">{t.trust.gha}</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-600">
-                <Heart className="text-secondary w-6 h-6" />
-                <span className="font-medium">{t.trust.hospital}</span>
+              <div className="flex items-center gap-3 text-gray-400">
+                <Heart className="text-teal-400 w-5 h-5" />
+                <span className="text-sm font-medium">{t.trust.hospital}</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-600">
-                <Globe className="text-secondary w-6 h-6" />
-                <span className="font-medium">{t.trust.cases}</span>
+              <div className="flex items-center gap-3 text-gray-400">
+                <Globe className="text-teal-400 w-5 h-5" />
+                <span className="text-sm font-medium">{t.trust.cases}</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Four Pillars Section */}
+      {}
       <section id="services" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -828,7 +781,7 @@ function App() {
         </div>
       </section>
 
-      {/* Why China Section */}
+      {}
       <section className="py-24 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -880,213 +833,133 @@ function App() {
         </div>
       </section>
 
-      {/* Packages Section */}
-      <section id="packages" className="py-24 bg-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-secondary font-semibold tracking-wider uppercase">{t.packages.badge}</span>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mt-3 mb-4">{t.packages.title}</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+      {}
+      <section id="packages" className="py-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <span className="text-teal-600 font-semibold tracking-wider uppercase text-sm">{t.packages.badge}</span>
+            <h2 className="apple-headline text-gray-900 mt-4 mb-6">{t.packages.title}</h2>
+            <p className="apple-subhead max-w-2xl mx-auto">
               {t.packages.desc}
             </p>
           </div>
 
-          {/* Featured Subscription Package */}
-          <div className="mb-12">
-            <div className="relative bg-gradient-to-br from-sage to-cream rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-500 hover:shadow-3xl border-2 border-secondary/30">
-              {/* Animated background pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, #059669 1px, transparent 0)', backgroundSize: '40px 40px'}}></div>
+          {/* Bento Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Featured Package - Large Card */}
+            <div className="lg:col-span-2 bg-gradient-to-br from-teal-600 to-teal-800 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden card-hover glow-effect">
+              <div className="absolute top-4 right-4">
+                <span className="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm font-medium">
+                  {t.packages.package0.popular}
+                </span>
               </div>
-              
-              {/* Popular badge with pulse animation */}
-              <div className="absolute top-4 right-4 z-10">
-                <div className="popular-badge bg-secondary text-white px-4 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg animate-pulse">
-                  <Star className="w-4 h-4" />
-                  <span>{t.packages.package0.popular}</span>
+              <div className="relative z-10 max-w-lg">
+                <h3 className="text-3xl md:text-4xl font-bold mb-4">{t.packages.package0.name}</h3>
+                <p className="text-teal-100 text-lg mb-6">{t.packages.package0.duration}</p>
+                <div className="flex items-baseline gap-2 mb-8">
+                  <span className="text-5xl md:text-6xl font-bold">{t.packages.package0.price}</span>
+                  <span className="text-teal-200">{language === 'zh' ? '/月' : '/month'}</span>
                 </div>
-              </div>
-
-              <div className="relative grid lg:grid-cols-2 gap-0">
-                {/* Left side - Visual */}
-                <div className="relative h-64 lg:h-auto bg-gradient-to-br from-secondary/20 to-jade/20 flex items-center justify-center overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent"></div>
-                  <div className="relative z-10 text-center p-8">
-                    <div className="w-24 h-24 mx-auto mb-4 bg-secondary rounded-2xl flex items-center justify-center shadow-xl transform hover:rotate-12 transition-transform duration-500">
-                      <svg className="text-white w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20 3H4a2 2 0 00-2 2v14a2 2 0 002 2h16a2 2 0 002-2V5a2 2 0 00-2-2zm-9 14H5v-2h6v2zm6-4H5v-2h12v2zm0-4H5V7h12v2z"/>
-                        <path d="M17 8c0-1.1-.9-2-2-2H9v2h6v6h2V8z"/>
-                      </svg>
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  {t.packages.package0.items.slice(0, 4).map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-2 text-sm text-teal-50">
+                      <Check className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <span>{item.split(' - ')[0]}</span>
                     </div>
-                    <h3 className="font-serif text-3xl font-bold text-primary mb-2">{t.packages.package0.name}</h3>
-                    <p className="text-gray-600">{t.packages.package0.duration}</p>
-                  </div>
-                  {/* Decorative circles */}
-                  <div className="absolute -top-20 -left-20 w-40 h-40 bg-secondary/20 rounded-full blur-3xl"></div>
-                  <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-jade/20 rounded-full blur-3xl"></div>
+                  ))}
                 </div>
+                <a href={t.packages.package0.paypalUrl} className="inline-flex items-center gap-2 bg-white text-teal-700 px-6 py-3 rounded-full font-semibold hover:bg-teal-50 transition">
+                  {t.packages.book} <ChevronRight className="w-4 h-4" />
+                </a>
+              </div>
+              {/* Background Decoration */}
+              <div className="absolute right-0 bottom-0 w-1/2 h-full opacity-20">
+                <div className="absolute right-10 bottom-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+              </div>
+            </div>
 
-                {/* Right side - Content */}
-                <div className="p-8 lg:p-10">
+            {/* Experience Package */}
+            <div className="bg-white rounded-3xl p-8 border border-gray-200 card-hover">
+              <div className="mb-6">
+                <span className="inline-block bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                  {t.packages.package1.popular}
+                </span>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.packages.package1.name}</h3>
+                <p className="text-gray-500">{t.packages.package1.duration}</p>
+              </div>
+              <div className="mb-6">
+                <span className="text-4xl font-bold text-gray-900">{t.packages.package1.price}</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                {t.packages.package1.items.slice(0, 3).map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-sm text-gray-600">
+                    <Check className="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" />
+                    <span>{item.replace('[Assessment]', '').replace('[Screening]', '').replace('[Therapy]', '').split(':')[0]}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href={t.packages.package1.paypalUrl} className="block w-full text-center bg-gray-900 text-white py-3 rounded-full font-medium hover:bg-gray-800 transition">
+                {t.packages.book}
+              </a>
+            </div>
+
+            {/* Discovery Journey */}
+            <div className="bg-white rounded-3xl p-8 border border-gray-200 card-hover">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.packages.package2.name}</h3>
+                <p className="text-gray-500">{t.packages.package2.duration}</p>
+              </div>
+              <div className="mb-6">
+                <span className="text-4xl font-bold text-gray-900">{t.packages.package2.price}</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                {t.packages.package2.items.slice(1, 4).map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-sm text-gray-600">
+                    <Check className="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" />
+                    <span>{item.replace('+ ', '').split(':')[0]}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href={t.packages.package2.paypalUrl} className="block w-full text-center border-2 border-gray-900 text-gray-900 py-3 rounded-full font-medium hover:bg-gray-50 transition">
+                {t.packages.viewDetails}
+              </a>
+            </div>
+
+            {/* Royal Journey - Wide Card */}
+            <div className="md:col-span-2 bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden card-hover">
+              <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+                <div className="max-w-xl">
+                  <span className="inline-block bg-amber-500/20 text-amber-300 px-4 py-1 rounded-full text-sm font-medium mb-4">
+                    {t.packages.package3.popular}
+                  </span>
+                  <h3 className="text-3xl md:text-4xl font-bold mb-4">{t.packages.package3.name}</h3>
+                  <p className="text-gray-400 mb-6">{t.packages.package3.duration}</p>
                   <div className="flex items-baseline gap-2 mb-6">
-                    <span className="text-5xl font-bold text-primary">{t.packages.package0.price}</span>
-                    <span className="text-xl text-gray-500">{language === 'zh' ? '/月' : '/month'}</span>
+                    <span className="text-4xl md:text-5xl font-bold">{t.packages.package3.price}</span>
                   </div>
-
-                  <div className="grid sm:grid-cols-2 gap-4 mb-8">
-                    {t.packages.package0.items.slice(0, 4).map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-white/60 hover:bg-white transition-colors duration-300">
-                        <Check className="text-secondary w-5 h-5 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-700 leading-snug">{item}</span>
-                      </div>
+                </div>
+                <div className="flex-1 max-w-md">
+                  <ul className="space-y-3 mb-8">
+                    {t.packages.package3.items.slice(2, 5).map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-sm text-gray-300">
+                        <Star className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                        <span>{item.replace('+ ', '').split(':')[0]}</span>
+                      </li>
                     ))}
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <a 
-                      href={t.packages.package0.docUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 text-center border-2 border-primary text-primary py-4 rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-300 hover:shadow-lg"
-                    >
-                      {t.packages.viewDetails}
-                    </a>
-                    <div id="paypal-button-container-P-46T13876K0925810UNGMVWUQ" className="flex-1"></div>
-                  </div>
-
-                  {/* Additional items */}
-                  <div className="mt-6 pt-6 border-t border-gray-200">
-                    <p className="text-sm text-gray-500">
-                      {t.packages.package0.items[4]} • {t.packages.package0.items[5]} • {t.packages.package0.items[6]}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Other Packages Grid */}
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Package 1 */}
-            <div className="package-card rounded-2xl overflow-hidden card-hover border border-gray-200 hover-lift">
-              <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-                <Globe className="text-white w-16 h-16" />
-              </div>
-              <div className="p-8">
-                <h3 className="font-serif text-2xl font-bold text-primary mb-2">{t.packages.package1.name}</h3>
-                <p className="text-gray-500 mb-4">{t.packages.package1.duration}</p>
-                <div className="text-4xl font-bold text-primary mb-6">
-                  {t.packages.package1.price}<span className="text-lg font-normal text-gray-500">{language === 'zh' ? '起' : ''}</span>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {t.packages.package1.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start text-gray-600">
-                      <Check className="text-secondary w-5 h-5 mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="flex-1">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="space-y-3">
-                  <a 
-                    href={t.packages.package1.docUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center border-2 border-primary text-primary py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition"
-                  >
-                    {t.packages.viewDetails}
-                  </a>
-                  <div id="paypal-container-PCVZMAHAUCLEE"></div>
-                </div>
-              </div>
-            </div>
-
-            {/* Package 2 - Popular */}
-            <div className="package-card rounded-2xl overflow-hidden card-hover border-2 border-accent relative transform hover:scale-105 transition-all duration-500 hover:shadow-2xl animate-pulse-glow">
-              <div className="popular-badge text-white text-center py-2 font-semibold shadow-lg">
-                <Star className="inline w-4 h-4 mr-2" />{t.packages.package2.popular}
-              </div>
-              <div className="h-48 bg-gradient-to-br from-secondary to-green-600 flex items-center justify-center">
-                <Heart className="text-white w-16 h-16" />
-              </div>
-              <div className="p-8">
-                <h3 className="font-serif text-2xl font-bold text-primary mb-2">{t.packages.package2.name}</h3>
-                <p className="text-gray-500 mb-4">{t.packages.package2.duration}</p>
-                <div className="text-4xl font-bold text-primary mb-6">
-                  {t.packages.package2.price}<span className="text-lg font-normal text-gray-500">{language === 'zh' ? '起' : ''}</span>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {t.packages.package2.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start text-gray-600">
-                      <Check className="text-secondary w-5 h-5 mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="flex-1">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="space-y-3">
-                  <a 
-                    href={t.packages.package2.docUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center border-2 border-primary text-primary py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition"
-                  >
-                    {t.packages.viewDetails}
-                  </a>
-                  <a 
-                    href={t.packages.package2.paypalUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center bg-accent text-white py-3 rounded-full font-semibold hover:bg-[#b45309] transition shadow-lg"
-                  >
-                    {t.packages.book}
+                  </ul>
+                  <a href={t.packages.package3.paypalUrl} className="inline-flex items-center gap-2 bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition">
+                    {t.packages.book} <ChevronRight className="w-5 h-5" />
                   </a>
                 </div>
               </div>
-            </div>
-
-            {/* Package 3 */}
-            <div className="package-card rounded-2xl overflow-hidden card-hover border border-gray-200 hover-lift">
-              <div className="h-48 bg-gradient-to-br from-accent to-yellow-600 flex items-center justify-center">
-                <Star className="text-white w-16 h-16" />
-              </div>
-              <div className="p-8">
-                <h3 className="font-serif text-2xl font-bold text-primary mb-2">{t.packages.package3.name}</h3>
-                <p className="text-gray-500 mb-4">{t.packages.package3.duration}</p>
-                <div className="text-4xl font-bold text-primary mb-6">
-                  {t.packages.package3.price}<span className="text-lg font-normal text-gray-500">{language === 'zh' ? '起' : ''}</span>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {t.packages.package3.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start text-gray-600">
-                      <Check className="text-secondary w-5 h-5 mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="flex-1">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="space-y-3">
-                  <a 
-                    href={t.packages.package3.docUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center border-2 border-primary text-primary py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition"
-                  >
-                    {t.packages.viewDetails}
-                  </a>
-                  <a 
-                    href={t.packages.package3.paypalUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center bg-secondary text-white py-3 rounded-full font-semibold hover:bg-[#047857] transition"
-                  >
-                    {t.packages.book}
-                  </a>
-                </div>
-              </div>
+              {/* Background Gradient */}
+              <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-amber-500/10 to-transparent"></div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Testimonials Section - Customer Experience */}
+      {}
       <section id="stories" className="py-24 bg-white" style={{minHeight: '600px'}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
@@ -1161,7 +1034,7 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {}
       <section id="contact" className="py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
@@ -1309,7 +1182,7 @@ function App() {
         </svg>
       </a>
 
-      {/* Footer */}
+      {}
       <footer className="bg-dark text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
