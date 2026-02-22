@@ -104,7 +104,7 @@ const translations = {
         duration: '7 days · Deep mind-body therapy',
         price: '$9,500',
         popular: 'Most Popular',
-        items: ['Full screening + MRI/CT', 'Expert diagnosis + meridian test', 'Private tea + Tai Chi + Guqin', '5-star hotel', 'Private car + advisor', '365-day online TCM consultation'],
+        items: ['AI tongue diagnosis + smart pulse diagnostic + constitution survey', '10-min senior TCM doctor consultation (10+ years experience)', '20-min precision acupuncture with disposable sterile needles', '20-min soothing massage (TCM points + fascia technique)', '10-min cupping with Olympic-themed photo props', 'Free airport/hotel transfer with brand video', 'Dedicated medical interpreter (medical background)', '7-day online health manager follow-up', 'TCM gift set: mugwort sachet + acupressure comb + handbook', 'Healing moment photography: 3 edited photos', 'Wellness tea break: seasonal herbal tea + snacks', '365-day online TCM consultation'],
         docUrl: '/docs/package-renewal-en.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/9500'
       },
@@ -233,7 +233,7 @@ const translations = {
         duration: '7天6晚 · 深度身心调理',
         price: '¥68,000',
         popular: '最受欢迎',
-        items: ['全面体检 + MRI/CT', '专家诊断 + 经络检测', '私人茶道 + 太极 + 古琴', '五星级酒店', '专车 + 专属顾问', '365天线上中医咨询'],
+        items: ['智慧中医体检：AI舌诊+智能脉诊仪+体质问卷', '名医一对一：10年+临床经验资深中医师咨询', '定制针灸：20分钟精准取穴，一次性无菌针现场拆封', '舒缓推拿：20分钟肩颈放松，中式穴位+西式筋膜手法', '火罐印记：10分钟走罐/留罐，提供奥运同款拍照道具', '免费机场/酒店接送：车内播放品牌介绍视频', '专属医疗翻译：医学背景双语专员全程陪诊', '7天在线健康管家：微信/WhatsApp随访', '中医伴手礼：艾草香囊+穴位按摩梳+英文养生手册', '疗愈时刻摄影：专业拍摄精修3张社交分享图', '养生茶歇：候诊时享用当季药膳茶+中式茶点', '365天线上中医咨询'],
         docUrl: '/docs/package-renewal-zh.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/9500'
       },
@@ -362,7 +362,7 @@ const translations = {
         duration: '7 أيام · علاج عميق للجسد والعقل',
         price: '$9,500',
         popular: 'الأكثر شعبية',
-        items: ['فحص شامل + MRI/CT', 'تشخيص خبير + اختبار المريديان', 'شاي خاص + تايتشي + قيتشين', 'فندق 5 نجوم', 'سيارة خاصة + مستشار', 'استشارة الطب الصيني التقليدي لمدة 365 يوماً'],
+        items: ['تشخيص الذكاء الاصطناعي للسان + جهاز قياس النبض الذكي + استبيان التكوين', 'استشارة فردية مع طبيب TCM كبير (10+ سنوات خبرة)', 'وخز إبر مخصص 20 دقيقة بإبر معقمة يمكن التخلص منها', 'مساج استرخاء 20 دقيقة للرقبة والكتفين', 'علامات الحجامة 10 دقائق مع دعامات صور أولمبية', 'نقل مجاني من/إلى المطار/الفندق', 'مترجم طبي مخصص (خلفية طبية)', 'مدير صحة متابع عبر الإنترنت لمدة 7 أيام', 'طقم هدايا TCM: كيس العشب + مشط الضغط + كتيب', 'تصوير لحظات الشفاء: 3 صور مُحسّنة', 'استراحة شاي العافية: شاي أعشاب موسمي + وجبات خفيفة', 'استشارة الطب الصيني التقليدي لمدة 365 يوماً'],
         docUrl: '/docs/package-renewal-ar.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/9500'
       },
