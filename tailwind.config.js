@@ -7,14 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#0d5c53',
-        secondary: '#14b8a6',
-        accent: '#d97706',
-        cream: '#faf9f6',
-        dark: '#1e3a3a',
-        jade: '#0f766e',
-        amber: '#b45309',
+        primary: '#0d9488',
+        secondary: '#2dd4bf',
+        accent: '#f59e0b',
+        cream: '#fafafa',
+        dark: '#1f2937',
+        jade: '#14b8a6',
+        amber: '#d97706',
         sage: '#f0fdfa',
+        light: '#f8fafc',
         teal: {
           50: '#f0fdfa',
           100: '#ccfbf1',

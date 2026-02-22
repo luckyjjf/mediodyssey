@@ -637,52 +637,52 @@ function App() {
       </nav>
 
       {}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-teal-900 via-teal-800 to-black">
-          <div className="absolute inset-0 opacity-30" style={{
-            backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.3) 0%, transparent 50%)',
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 opacity-40" style={{
+            backgroundImage: 'radial-gradient(circle at 50% 30%, rgba(45, 212, 191, 0.15) 0%, transparent 60%)',
           }}></div>
         </div>
         
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl animate-float-apple"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float-apple" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-teal-200/30 rounded-full blur-3xl animate-float-apple"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl animate-float-apple" style={{animationDelay: '2s'}}></div>
         </div>
         
         {/* Hero Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center pt-32 pb-20">
           {/* Badge */}
           <div className="mb-8">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur rounded-full text-sm font-medium text-teal-300 border border-white/10">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-teal-50 rounded-full text-sm font-medium text-teal-600 border border-teal-100">
               <Globe className="w-4 h-4" />
               {t.hero.badge}
             </span>
           </div>
           
           {/* Main Title */}
-          <h1 className="apple-headline text-white mb-6 tracking-tight">
+          <h1 className="apple-headline text-slate-900 mb-6 tracking-tight">
             <span className="block">{t.hero.title}</span>
           </h1>
           
           {/* Subtitle */}
-          <p className="apple-subhead text-gray-400 mb-6 max-w-3xl mx-auto">
+          <p className="apple-subhead text-slate-600 mb-6 max-w-3xl mx-auto">
             {t.hero.subtitle}
           </p>
           
           {/* Description */}
-          <p className="text-lg md:text-xl text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-500 mb-12 max-w-2xl mx-auto leading-relaxed">
             {t.hero.description}
           </p>
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#packages" className="group bg-teal-500 hover:bg-teal-400 text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 flex items-center shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40">
+            <a href="#packages" className="group bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 flex items-center shadow-lg shadow-teal-500/20 hover:shadow-teal-500/30">
               {t.hero.viewPackages} 
               <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#contact" className="group bg-white/10 hover:bg-white/20 text-white backdrop-blur px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 flex items-center border border-white/20">
+            <a href="#contact" className="group bg-white hover:bg-slate-50 text-slate-700 px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 flex items-center border border-slate-200 shadow-sm">
               <Calendar className="mr-2 w-5 h-5" />
               {t.hero.bookConsult}
             </a>
@@ -690,23 +690,23 @@ function App() {
         </div>
 
         {/* Trust Badges - Minimal */}
-        <div className="relative z-10 w-full bg-black/50 backdrop-blur border-t border-white/10">
+        <div className="relative z-10 w-full bg-white/80 backdrop-blur border-t border-slate-200">
           <div className="max-w-6xl mx-auto px-6 py-8">
             <div className="flex flex-wrap items-center justify-center gap-12">
-              <div className="flex items-center gap-3 text-gray-400">
-                <Star className="text-teal-400 w-5 h-5" />
+              <div className="flex items-center gap-3 text-slate-600">
+                <Star className="text-teal-500 w-5 h-5" />
                 <span className="text-sm font-medium">{t.trust.jci}</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-400">
-                <Star className="text-teal-400 w-5 h-5" />
+              <div className="flex items-center gap-3 text-slate-600">
+                <Star className="text-teal-500 w-5 h-5" />
                 <span className="text-sm font-medium">{t.trust.gha}</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-400">
-                <Heart className="text-teal-400 w-5 h-5" />
+              <div className="flex items-center gap-3 text-slate-600">
+                <Heart className="text-teal-500 w-5 h-5" />
                 <span className="text-sm font-medium">{t.trust.hospital}</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-400">
-                <Globe className="text-teal-400 w-5 h-5" />
+              <div className="flex items-center gap-3 text-slate-600">
+                <Globe className="text-teal-500 w-5 h-5" />
                 <span className="text-sm font-medium">{t.trust.cases}</span>
               </div>
             </div>
@@ -782,32 +782,32 @@ function App() {
       </section>
 
       {}
-      <section className="py-24 bg-primary text-white">
+      <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-accent font-semibold tracking-wider uppercase">{t.whyChina.badge}</span>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mt-3 mb-6">{t.whyChina.title}</h2>
-              <p className="text-white/80 text-lg mb-8">
+              <span className="text-teal-600 font-semibold tracking-wider uppercase">{t.whyChina.badge}</span>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mt-3 mb-6">{t.whyChina.title}</h2>
+              <p className="text-slate-600 text-lg mb-8">
                 {t.whyChina.desc}
               </p>
               
               <div className="grid grid-cols-2 gap-6">
-                <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-                  <div className="text-4xl font-bold text-accent mb-2">1/3</div>
-                  <p className="text-white/80">{t.whyChina.stat1}</p>
+                <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
+                  <div className="text-4xl font-bold text-teal-600 mb-2">1/3</div>
+                  <p className="text-slate-600">{t.whyChina.stat1}</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-                  <div className="text-4xl font-bold text-accent mb-2">#1</div>
-                  <p className="text-white/80">{t.whyChina.stat2}</p>
+                <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
+                  <div className="text-4xl font-bold text-teal-600 mb-2">#1</div>
+                  <p className="text-slate-600">{t.whyChina.stat2}</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-                  <div className="text-4xl font-bold text-accent mb-2">5000+</div>
-                  <p className="text-white/80">{t.whyChina.stat3}</p>
+                <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
+                  <div className="text-4xl font-bold text-teal-600 mb-2">5000+</div>
+                  <p className="text-slate-600">{t.whyChina.stat3}</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-                  <div className="text-4xl font-bold text-accent mb-2">100%</div>
-                  <p className="text-white/80">{t.whyChina.stat4}</p>
+                <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
+                  <div className="text-4xl font-bold text-teal-600 mb-2">100%</div>
+                  <p className="text-slate-600">{t.whyChina.stat4}</p>
                 </div>
               </div>
             </div>
