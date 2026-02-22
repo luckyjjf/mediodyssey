@@ -84,10 +84,10 @@ const translations = {
       desc: 'Three carefully designed packages for different health goals and budgets',
       package0: {
         name: 'Tea Subscription',
-        duration: 'Monthly · 30 wellness tea bags',
+        duration: 'Monthly · $29',
         price: '$29',
         popular: 'Best Value',
-        items: ['30 premium wellness tea bags', 'Personalized TCM formula', '365-day online TCM consultation', 'Monthly health tips', 'Free shipping worldwide'],
+        items: ['Personalized wellness tea bags (30 packs) - Value $25', 'Online TCM consultation (15 min) - Value $50', 'AI smart health assistant - Value $20', 'Exclusive member content - Value $15', 'Product discount benefits - Unlimited', 'Health records management - Value $10', 'Total value $120+ · Save 76%'],
         docUrl: '/docs/tea-subscription-en.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/99'
       },
@@ -214,11 +214,11 @@ const translations = {
       title: '选择您的健康之旅',
       desc: '三种精心设计的套餐，满足不同健康目标和预算',
       package0: {
-        name: '养生茶饮订阅',
-        duration: '每月 · 30包健康茶饮',
+        name: '会员订阅',
+        duration: '每月 · ¥199',
         price: '¥199',
         popular: '超值优选',
-        items: ['30包精选健康茶饮', '个性化中医配方', '365天线上中医咨询', '每月健康贴士', '全球免邮'],
+        items: ['个性化养生茶包（30包）- 价值¥175', '在线中医咨询（15分钟）- 价值¥350', 'AI智能健康助手 - 价值¥140', '专属会员内容 - 价值¥105', '产品折扣权益 - 无上限', '健康档案管理 - 价值¥70', '总价值¥840+ · 节省76%'],
         docUrl: '/docs/tea-subscription-zh.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/99'
       },
@@ -345,11 +345,11 @@ const translations = {
       title: 'اختر رحلتك الصحية',
       desc: 'أربع باقات مصممة بعناية لأهداف وميزانيات صحية مختلفة',
       package0: {
-        name: 'اشتراك الشاي الصحي',
-        duration: 'شهرياً · 30 كيس شاي صحي',
+        name: 'اشتراك العضوية',
+        duration: 'شهرياً · $29',
         price: '$29',
         popular: 'أفضل قيمة',
-        items: ['30 كيس شاي صحي متميز', 'وصفة الطب الصيني التقليدي المخصصة', 'استشارة الطب الصيني التقليدي لمدة 365 يوماً', 'نصائح صحية شهرية', 'شحن مجاني عالمياً'],
+        items: ['أكياس شاي العافية المخصصة (30 كيس) - قيمة $25', 'استشارة الطب الصيني عبر الإنترنت (15 دقيقة) - قيمة $50', 'مساعد الصحة الذكي بالذكاء الاصطناعي - قيمة $20', 'محتوى حصري للأعضاء - قيمة $15', 'خصومات على المنتجات - غير محدودة', 'إدارة السجلات الصحية - قيمة $10', 'القيمة الإجمالية $120+ · وفّر 76%'],
         docUrl: '/docs/tea-subscription-ar.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/99'
       },
