@@ -96,7 +96,7 @@ const translations = {
         duration: 'Half-day · 3-4 hours',
         price: '$199',
         popular: 'Most Popular',
-        items: ['TCM Constitution Assessment (45 min): AI tongue diagnosis, smart pulse diagnostic, 60+ question survey, personalized 9-type report', 'Basic Health Screening (30 min): 10-item blood panel, body composition, BP & heart rate monitoring', 'TCM Therapy Experience (60 min): 10-min senior TCM doctor consult, 20-min acupuncture, 20-min Tui Na massage, 10-min cupping', 'English-speaking medical interpreter', 'TCM gift set: mugwort sachet, acupressure comb, wellness handbook', '3 professionally edited photos', '365-day online TCM consultation access'],
+        items: ['[Assessment] TCM Constitution (45 min): AI tongue + smart pulse + 60+ survey', '[Screening] Basic Health Check (30 min): 10-item blood panel + body composition', '[Therapy] TCM Experience (60 min): Doctor consult + acupuncture + massage + cupping', '[Service] Medical interpreter + TCM gift set + 3 edited photos', '[Bonus] 365-day online TCM consultation'],
         docUrl: '/docs/package-experience-en.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/199'
       },
@@ -105,7 +105,7 @@ const translations = {
         duration: '3 days · Intro to Eastern Medicine',
         price: '$3,900',
         popular: 'Classic',
-        items: ['Basic health screening', 'TCM constitution diagnosis', 'Tea ceremony intro', '4-star hotel', 'Airport transfers', '365-day online TCM consultation'],
+        items: ['[Includes ALL Experience Package services]', '+ Full Health Screening: MRI/CT + comprehensive blood work', '+ Extended TCM Therapy: 3 sessions including acupuncture & massage', '+ Cultural Experience: Tea ceremony + Tai Chi + Guqin', '+ 4-star hotel accommodation (2 nights)', '+ Airport transfers included', '+ Extended 365-day online TCM consultation'],
         docUrl: '/docs/package-discovery-en.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/3900'
       },
@@ -114,7 +114,7 @@ const translations = {
         duration: '14 days · Ultimate bespoke experience',
         price: '$23,500',
         popular: 'Luxury',
-        items: ['Full genome + PET-CT', 'Master physician consultation', 'Royal cultural experience', 'Luxury suite', 'Private jet optional', '365-day online TCM consultation'],
+        items: ['[Includes ALL Discovery Journey services]', '+ Premium Health Screening: Full genome + PET-CT', '+ Master Physician Consultation (Top-tier specialist)', '+ Royal Cultural Experience: Exclusive access + VIP treatment', '+ Luxury suite accommodation (13 nights)', '+ Private car + Personal concierge', '+ Private jet transfer (optional)', '+ Lifetime VIP online TCM consultation'],
         docUrl: '/docs/package-royal-en.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/23500'
       },
