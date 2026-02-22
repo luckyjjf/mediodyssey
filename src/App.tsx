@@ -517,16 +517,16 @@ function App() {
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 24px'}}>
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px'}}>
             <a href="#" style={{display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none'}}>
-              <div style={{width: '40px', height: '40px', backgroundColor: '#1a365d', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+              <div style={{width: '40px', height: '40px', backgroundColor: '#1e3a5f', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                 <Heart style={{color: 'white', width: '24px', height: '24px'}} />
               </div>
-              <span style={{fontSize: '24px', fontWeight: 'bold', color: '#1a365d'}}>MediOdyssey</span>
+              <span style={{fontSize: '24px', fontWeight: 'bold', color: '#1e3a5f'}}>MediOdyssey</span>
             </a>
             <div style={{display: 'flex', alignItems: 'center', gap: '32px'}}>
-              <a href="#services" style={{color: '#2d3748', textDecoration: 'none'}}>{t.nav.services}</a>
-              <a href="#packages" style={{color: '#2d3748', textDecoration: 'none'}}>{t.nav.packages}</a>
-              <a href="#stories" style={{color: '#2d3748', textDecoration: 'none'}}>{t.nav.stories}</a>
-              <a href="#contact" style={{color: '#2d3748', textDecoration: 'none'}}>{t.nav.contact}</a>
+              <a href="#services" style={{color: '#1f2937', textDecoration: 'none'}}>{t.nav.services}</a>
+              <a href="#packages" style={{color: '#1f2937', textDecoration: 'none'}}>{t.nav.packages}</a>
+              <a href="#stories" style={{color: '#1f2937', textDecoration: 'none'}}>{t.nav.stories}</a>
+              <a href="#contact" style={{color: '#1f2937', textDecoration: 'none'}}>{t.nav.contact}</a>
               <select 
                 value={language} 
                 onChange={(e) => handleLanguageChange(e.target.value as 'en' | 'zh' | 'ar')}
@@ -536,7 +536,7 @@ function App() {
                 <option value="zh">中文</option>
                 <option value="ar">العربية</option>
               </select>
-              <a href="#contact" style={{backgroundColor: '#1a365d', color: 'white', padding: '10px 24px', borderRadius: '9999px', textDecoration: 'none'}}>
+              <a href="#contact" style={{backgroundColor: '#1e3a5f', color: 'white', padding: '10px 24px', borderRadius: '9999px', textDecoration: 'none'}}>
                 {t.nav.freeConsult}
               </a>
             </div>
@@ -571,7 +571,7 @@ function App() {
             {t.hero.description}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#packages" className="bg-accent text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-400 transition shadow-lg flex items-center">
+            <a href="#packages" className="bg-accent text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#b45309] hover:text-white transition shadow-lg flex items-center">
               {t.hero.viewPackages} <ChevronRight className="ml-2 w-5 h-5" />
             </a>
             <a href="#contact" className="bg-white/20 backdrop-blur text-white border-2 border-white/50 px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/30 transition flex items-center">
@@ -843,7 +843,7 @@ function App() {
                     href={t.packages.package2.paypalUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full text-center bg-accent text-primary py-3 rounded-full font-semibold hover:bg-yellow-400 transition shadow-lg"
+                    className="block w-full text-center bg-accent text-white py-3 rounded-full font-semibold hover:bg-[#b45309] transition shadow-lg"
                   >
                     {t.packages.book}
                   </a>
@@ -883,7 +883,7 @@ function App() {
                     href={t.packages.package3.paypalUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full text-center bg-secondary text-white py-3 rounded-full font-semibold hover:bg-green-600 transition"
+                    className="block w-full text-center bg-secondary text-white py-3 rounded-full font-semibold hover:bg-[#047857] transition"
                   >
                     {t.packages.book}
                   </a>
@@ -1019,7 +1019,7 @@ function App() {
                 </div>
                 <button 
                   type="submit" 
-                  className="w-full bg-primary text-white py-4 rounded-lg font-semibold text-lg hover:bg-blue-800 transition"
+                  className="w-full bg-primary text-white py-4 rounded-lg font-semibold text-lg hover:bg-[#152a47] transition"
                 >
                   {t.contact.form.submit}
                 </button>
@@ -1034,7 +1034,7 @@ function App() {
         href="https://work.weixin.qq.com/kfid/kfc840a16d52318ed05"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
+        className="fixed bottom-8 right-8 z-50 bg-[#059669] hover:bg-[#047857] text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
         title="微信客服"
       >
         <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
