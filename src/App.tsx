@@ -100,13 +100,13 @@ const translations = {
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/3900'
       },
       package2: {
-        name: 'Renewal Journey',
-        duration: '7 days · Deep mind-body therapy',
-        price: '$9,500',
+        name: 'Experience Package',
+        duration: 'Half-day · 3-4 hours',
+        price: '$199',
         popular: 'Most Popular',
-        items: ['AI tongue diagnosis + smart pulse diagnostic + constitution survey', '10-min senior TCM doctor consultation (10+ years experience)', '20-min precision acupuncture with disposable sterile needles', '20-min soothing massage (TCM points + fascia technique)', '10-min cupping with Olympic-themed photo props', 'Free airport/hotel transfer with brand video', 'Dedicated medical interpreter (medical background)', '7-day online health manager follow-up', 'TCM gift set: mugwort sachet + acupressure comb + handbook', 'Healing moment photography: 3 edited photos', 'Wellness tea break: seasonal herbal tea + snacks', '365-day online TCM consultation'],
-        docUrl: '/docs/package-renewal-en.pdf',
-        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/9500'
+        items: ['TCM Constitution Assessment (45 min): AI tongue diagnosis, smart pulse diagnostic, 60+ question survey, personalized 9-type report', 'Basic Health Screening (30 min): 10-item blood panel, body composition, BP & heart rate monitoring', 'TCM Therapy Experience (60 min): 10-min senior TCM doctor consult, 20-min acupuncture, 20-min Tui Na massage, 10-min cupping', 'English-speaking medical interpreter', 'TCM gift set: mugwort sachet, acupressure comb, wellness handbook', '3 professionally edited photos', '365-day online TCM consultation access'],
+        docUrl: '/docs/package-experience-en.pdf',
+        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/199'
       },
       package3: {
         name: 'Royal Journey',
@@ -134,7 +134,7 @@ const translations = {
         phoneNumber: 'Phone Number',
         package: 'Interested Package',
         placeholder: 'Select...',
-        options: ['Discovery (3 days)', 'Renewal (7 days) - Most Popular', 'Royal (14 days)', 'Need recommendation'],
+        options: ['Tea Subscription (Monthly) - Best Value', 'Discovery Journey (3 days)', 'Experience Package (Half-day) - Most Popular', 'Royal Journey (14 days)', 'Need recommendation'],
         message: 'Message/Contact',
         submit: 'Submit Inquiry'
       }
@@ -229,13 +229,13 @@ const translations = {
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/3900'
       },
       package2: {
-        name: '焕新之旅',
-        duration: '7天6晚 · 深度身心调理',
-        price: '¥68,000',
+        name: '体验套餐',
+        duration: '半天 · 3-4小时',
+        price: '¥1,399',
         popular: '最受欢迎',
-        items: ['智慧中医体检：AI舌诊+智能脉诊仪+体质问卷', '名医一对一：10年+临床经验资深中医师咨询', '定制针灸：20分钟精准取穴，一次性无菌针现场拆封', '舒缓推拿：20分钟肩颈放松，中式穴位+西式筋膜手法', '火罐印记：10分钟走罐/留罐，提供奥运同款拍照道具', '免费机场/酒店接送：车内播放品牌介绍视频', '专属医疗翻译：医学背景双语专员全程陪诊', '7天在线健康管家：微信/WhatsApp随访', '中医伴手礼：艾草香囊+穴位按摩梳+英文养生手册', '疗愈时刻摄影：专业拍摄精修3张社交分享图', '养生茶歇：候诊时享用当季药膳茶+中式茶点', '365天线上中医咨询'],
-        docUrl: '/docs/package-renewal-zh.pdf',
-        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/9500'
+        items: ['中医体质评估（45分钟）：AI舌诊、智能脉诊、60+体质问卷、九种体质报告', '基础健康筛查（30分钟）：10项血检、身体成分分析、血压心率监测', '中医理疗体验（60分钟）：资深中医师咨询10分钟、针灸20分钟、推拿20分钟、拔罐10分钟', '中英文医疗翻译全程陪同', '中医伴手礼：艾草香囊、穴位按摩梳、养生手册', '3张精修照片', '365天线上中医咨询服务'],
+        docUrl: '/docs/package-experience-zh.pdf',
+        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/199'
       },
       package3: {
         name: '皇家之旅',
@@ -263,7 +263,7 @@ const translations = {
         phoneNumber: '电话号码',
         package: '感兴趣的套餐',
         placeholder: '请选择...',
-        options: ['探索之旅 (3天)', '焕新之旅 (7天) - 最受欢迎', '皇家之旅 (14天)', '需要顾问推荐'],
+        options: ['养生茶饮订阅 (每月) - 超值优选', '探索之旅 (3天)', '体验套餐 (半天) - 最受欢迎', '皇家之旅 (14天)', '需要顾问推荐'],
         message: '留言/联系方式',
         submit: '提交咨询'
       }
@@ -358,13 +358,13 @@ const translations = {
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/3900'
       },
       package2: {
-        name: 'رحلة التجديد',
-        duration: '7 أيام · علاج عميق للجسد والعقل',
-        price: '$9,500',
+        name: 'باقة التجربة',
+        duration: 'نصف يوم · 3-4 ساعات',
+        price: '$199',
         popular: 'الأكثر شعبية',
-        items: ['تشخيص الذكاء الاصطناعي للسان + جهاز قياس النبض الذكي + استبيان التكوين', 'استشارة فردية مع طبيب TCM كبير (10+ سنوات خبرة)', 'وخز إبر مخصص 20 دقيقة بإبر معقمة يمكن التخلص منها', 'مساج استرخاء 20 دقيقة للرقبة والكتفين', 'علامات الحجامة 10 دقائق مع دعامات صور أولمبية', 'نقل مجاني من/إلى المطار/الفندق', 'مترجم طبي مخصص (خلفية طبية)', 'مدير صحة متابع عبر الإنترنت لمدة 7 أيام', 'طقم هدايا TCM: كيس العشب + مشط الضغط + كتيب', 'تصوير لحظات الشفاء: 3 صور مُحسّنة', 'استراحة شاي العافية: شاي أعشاب موسمي + وجبات خفيفة', 'استشارة الطب الصيني التقليدي لمدة 365 يوماً'],
-        docUrl: '/docs/package-renewal-ar.pdf',
-        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/9500'
+        items: ['تقييم تكوين الطب الصيني (45 دقيقة): تشخيص الذكاء الاصطناعي للسان، قياس النبض الذكي، 60+ سؤال استبيان', 'الفحص الصحي الأساسي (30 دقيقة): 10 تحليلات دم، تحليل التركيب الجسدي، مراقبة ضغط الدم والنبض', 'تجربة العلاج بالطب الصيني (60 دقيقة): استشارة طبيب كبير 10 دقائق، وخز إبر 20 دقيقة، تدليك 20 دقيقة، حجامة 10 دقائق', 'مترجم طبي ناطق بالإنجليزية', 'طقم هدايا الطب الصيني: كيس العشب، مشط الضغط، كتيب العافية', '3 صور مُحسّنة احترافياً', 'استشارة الطب الصيني عبر الإنترنت لمدة 365 يوماً'],
+        docUrl: '/docs/package-experience-ar.pdf',
+        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/199'
       },
       package3: {
         name: 'الرحلة الملكية',
@@ -392,7 +392,7 @@ const translations = {
         phoneNumber: 'رقم الهاتف',
         package: 'الباقة المهتم بها',
         placeholder: 'اختر...',
-        options: ['الاكتشاف (3 أيام)', 'التجديد (7 أيام) - الأكثر شعبية', 'الملكية (14 يوماً)', 'بحاجة لتوصية'],
+        options: ['اشتراك الشاي (شهرياً) - أفضل قيمة', 'الاكتشاف (3 أيام)', 'باقة التجربة (نصف يوم) - الأكثر شعبية', 'الملكية (14 يوماً)', 'بحاجة لتوصية'],
         message: 'الرسالة / معلومات الاتصال',
         submit: 'إرسال الاستفسار'
       }
