@@ -376,7 +376,7 @@ const translations = {
         duration: '14 يوماً · تجربة فاخرة مخصصة',
         price: '$23,500',
         popular: 'فاخر',
-        items: ['الجينوم الكامل + PET-CT', 'استشارة طبيب خبير', 'تجربة ثقافية ملكية', 'جناح فاخر', 'طائرة خاصة اختياري', 'استشارة الطب الصيني التقليدي لمدة 365 يوماً'],
+        items: ['[يشمل جميع خدمات رحلة الاكتشاف]', '+ فحص صحي ممتاز: الجينوم الكامل + PET-CT', '+ استشارة طبيب كبير (أفضل المتخصصين)', '+ تجربة ثقافية ملكية: وصول حصري + معاملة VIP', '+ إقامة في جناح فاخر (13 ليلة)', '+ سيارة خاصة + مساعد شخصي', '+ نقل بطائرة خاصة (اختياري)', '+ استشارة VIP مدى الحياة'],
         docUrl: '/docs/package-royal-ar.pdf',
         paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/23500'
       },
@@ -755,7 +755,10 @@ function App() {
                 </div>
                 <ul className="space-y-3 mb-8">
                   {t.packages.package0.items.map((item, idx) => (
-                    <li key={idx} className="flex items-center text-gray-600"><Check className="text-secondary w-5 h-5 mr-3" />{item}</li>
+                    <li key={idx} className="flex items-start text-gray-600">
+                      <Check className="text-secondary w-5 h-5 mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="flex-1">{item}</span>
+                    </li>
                   ))}
                 </ul>
                 <div className="space-y-3">
@@ -785,7 +788,10 @@ function App() {
                 </div>
                 <ul className="space-y-3 mb-8">
                   {t.packages.package1.items.map((item, idx) => (
-                    <li key={idx} className="flex items-center text-gray-600"><Check className="text-secondary w-5 h-5 mr-3" />{item}</li>
+                    <li key={idx} className="flex items-start text-gray-600">
+                      <Check className="text-secondary w-5 h-5 mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="flex-1">{item}</span>
+                    </li>
                   ))}
                 </ul>
                 <div className="space-y-3">
@@ -818,7 +824,10 @@ function App() {
                 </div>
                 <ul className="space-y-3 mb-8">
                   {t.packages.package2.items.map((item, idx) => (
-                    <li key={idx} className="flex items-center text-gray-600"><Check className="text-secondary w-5 h-5 mr-3" />{item}</li>
+                    <li key={idx} className="flex items-start text-gray-600">
+                      <Check className="text-secondary w-5 h-5 mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="flex-1">{item}</span>
+                    </li>
                   ))}
                 </ul>
                 <div className="space-y-3">
@@ -855,7 +864,10 @@ function App() {
                 </div>
                 <ul className="space-y-3 mb-8">
                   {t.packages.package3.items.map((item, idx) => (
-                    <li key={idx} className="flex items-center text-gray-600"><Check className="text-secondary w-5 h-5 mr-3" />{item}</li>
+                    <li key={idx} className="flex items-start text-gray-600">
+                      <Check className="text-secondary w-5 h-5 mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="flex-1">{item}</span>
+                    </li>
                   ))}
                 </ul>
                 <div className="space-y-3">
