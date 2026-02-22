@@ -735,46 +735,82 @@ function App() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-4 gap-8">
-            {/* Package 0 - Tea Subscription */}
-            <div className="package-card rounded-2xl overflow-hidden card-hover border-2 border-secondary relative">
-              <div className="popular-badge bg-secondary text-white text-center py-2 font-semibold">
-                <Star className="inline w-4 h-4 mr-2" />{t.packages.package0.popular}
+          {/* Featured Subscription Package */}
+          <div className="mb-12">
+            <div className="relative bg-gradient-to-br from-sage to-cream rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-500 hover:shadow-3xl border-2 border-secondary/30">
+              {/* Animated background pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, #059669 1px, transparent 0)', backgroundSize: '40px 40px'}}></div>
               </div>
-              <div className="h-48 bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
-                <svg className="text-white w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20 3H4a2 2 0 00-2 2v14a2 2 0 002 2h16a2 2 0 002-2V5a2 2 0 00-2-2zm-9 14H5v-2h6v2zm6-4H5v-2h12v2zm0-4H5V7h12v2z"/>
-                  <path d="M17 8c0-1.1-.9-2-2-2H9v2h6v6h2V8z"/>
-                </svg>
-              </div>
-              <div className="p-8">
-                <h3 className="font-serif text-2xl font-bold text-primary mb-2">{t.packages.package0.name}</h3>
-                <p className="text-gray-500 mb-4">{t.packages.package0.duration}</p>
-                <div className="text-4xl font-bold text-primary mb-6">
-                  {t.packages.package0.price}<span className="text-lg font-normal text-gray-500">{language === 'zh' ? '/月' : '/month'}</span>
+              
+              {/* Popular badge with pulse animation */}
+              <div className="absolute top-4 right-4 z-10">
+                <div className="popular-badge bg-secondary text-white px-4 py-2 rounded-full font-semibold flex items-center gap-2 shadow-lg animate-pulse">
+                  <Star className="w-4 h-4" />
+                  <span>{t.packages.package0.popular}</span>
                 </div>
-                <ul className="space-y-3 mb-8">
-                  {t.packages.package0.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start text-gray-600">
-                      <Check className="text-secondary w-5 h-5 mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="flex-1">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="space-y-3">
-                  <a 
-                    href={t.packages.package0.docUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center border-2 border-primary text-primary py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition"
-                  >
-                    {t.packages.viewDetails}
-                  </a>
-                  <div id="paypal-button-container-P-46T13876K0925810UNGMVWUQ"></div>
+              </div>
+
+              <div className="relative grid lg:grid-cols-2 gap-0">
+                {/* Left side - Visual */}
+                <div className="relative h-64 lg:h-auto bg-gradient-to-br from-secondary/20 to-jade/20 flex items-center justify-center overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent"></div>
+                  <div className="relative z-10 text-center p-8">
+                    <div className="w-24 h-24 mx-auto mb-4 bg-secondary rounded-2xl flex items-center justify-center shadow-xl transform hover:rotate-12 transition-transform duration-500">
+                      <svg className="text-white w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 3H4a2 2 0 00-2 2v14a2 2 0 002 2h16a2 2 0 002-2V5a2 2 0 00-2-2zm-9 14H5v-2h6v2zm6-4H5v-2h12v2zm0-4H5V7h12v2z"/>
+                        <path d="M17 8c0-1.1-.9-2-2-2H9v2h6v6h2V8z"/>
+                      </svg>
+                    </div>
+                    <h3 className="font-serif text-3xl font-bold text-primary mb-2">{t.packages.package0.name}</h3>
+                    <p className="text-gray-600">{t.packages.package0.duration}</p>
+                  </div>
+                  {/* Decorative circles */}
+                  <div className="absolute -top-20 -left-20 w-40 h-40 bg-secondary/20 rounded-full blur-3xl"></div>
+                  <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-jade/20 rounded-full blur-3xl"></div>
+                </div>
+
+                {/* Right side - Content */}
+                <div className="p-8 lg:p-10">
+                  <div className="flex items-baseline gap-2 mb-6">
+                    <span className="text-5xl font-bold text-primary">{t.packages.package0.price}</span>
+                    <span className="text-xl text-gray-500">{language === 'zh' ? '/月' : '/month'}</span>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                    {t.packages.package0.items.slice(0, 4).map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-white/60 hover:bg-white transition-colors duration-300">
+                        <Check className="text-secondary w-5 h-5 flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-gray-700 leading-snug">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a 
+                      href={t.packages.package0.docUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 text-center border-2 border-primary text-primary py-4 rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-300 hover:shadow-lg"
+                    >
+                      {t.packages.viewDetails}
+                    </a>
+                    <div id="paypal-button-container-P-46T13876K0925810UNGMVWUQ" className="flex-1"></div>
+                  </div>
+
+                  {/* Additional items */}
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <p className="text-sm text-gray-500">
+                      {t.packages.package0.items[4]} • {t.packages.package0.items[5]} • {t.packages.package0.items[6]}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
+          {/* Other Packages Grid */}
+          <div className="grid lg:grid-cols-3 gap-8">
             {/* Package 1 */}
             <div className="package-card rounded-2xl overflow-hidden card-hover border border-gray-200">
               <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
