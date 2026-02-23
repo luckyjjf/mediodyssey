@@ -463,7 +463,7 @@ function App() {
         
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-teal-200/30 rounded-full blur-3xl animate-float-apple"></div>
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-text-primary-light/30 rounded-full blur-3xl animate-float-apple"></div>
           <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl animate-float-apple" style={{animationDelay: '2s'}}></div>
         </div>
         
@@ -471,7 +471,7 @@ function App() {
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center pt-32 pb-20">
           {/* Badge */}
           <div className="mb-8">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-teal-50 rounded-full text-sm font-medium text-teal-600 border border-teal-100">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary border border-text-primary-light">
               <Globe className="w-4 h-4" />
               {t.hero.badge}
             </span>
@@ -494,7 +494,7 @@ function App() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#packages" className="group bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 flex items-center shadow-lg shadow-teal-500/20 hover:shadow-teal-500/30">
+            <a href="#packages" className="group bg-primary/100 hover:bg-primary text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 flex items-center shadow-lg shadow-text-primary/100/20 hover:shadow-text-primary/100/30">
               {t.hero.viewPackages} 
               <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
@@ -510,19 +510,19 @@ function App() {
           <div className="max-w-6xl mx-auto px-6 py-8">
             <div className="flex flex-wrap items-center justify-center gap-12">
               <div className="flex items-center gap-3 text-slate-600">
-                <Star className="text-teal-500 w-5 h-5" />
+                <Star className="text-primary w-5 h-5" />
                 <span className="text-sm font-medium">{t.trust.jci}</span>
               </div>
               <div className="flex items-center gap-3 text-slate-600">
-                <Star className="text-teal-500 w-5 h-5" />
+                <Star className="text-primary w-5 h-5" />
                 <span className="text-sm font-medium">{t.trust.gha}</span>
               </div>
               <div className="flex items-center gap-3 text-slate-600">
-                <Heart className="text-teal-500 w-5 h-5" />
+                <Heart className="text-primary w-5 h-5" />
                 <span className="text-sm font-medium">{t.trust.hospital}</span>
               </div>
               <div className="flex items-center gap-3 text-slate-600">
-                <Globe className="text-teal-500 w-5 h-5" />
+                <Globe className="text-primary w-5 h-5" />
                 <span className="text-sm font-medium">{t.trust.cases}</span>
               </div>
             </div>
@@ -602,7 +602,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-teal-600 font-semibold tracking-wider uppercase">{t.whyChina.badge}</span>
+              <span className="text-primary font-semibold tracking-wider uppercase">{t.whyChina.badge}</span>
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mt-3 mb-6">{t.whyChina.title}</h2>
               <p className="text-slate-600 text-lg mb-8">
                 {t.whyChina.desc}
@@ -610,19 +610,19 @@ function App() {
               
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
-                  <div className="text-4xl font-bold text-teal-600 mb-2">1/3</div>
+                  <div className="text-4xl font-bold text-primary mb-2">1/3</div>
                   <p className="text-slate-600">{t.whyChina.stat1}</p>
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
-                  <div className="text-4xl font-bold text-teal-600 mb-2">#1</div>
+                  <div className="text-4xl font-bold text-primary mb-2">#1</div>
                   <p className="text-slate-600">{t.whyChina.stat2}</p>
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
-                  <div className="text-4xl font-bold text-teal-600 mb-2">5000+</div>
+                  <div className="text-4xl font-bold text-primary mb-2">5000+</div>
                   <p className="text-slate-600">{t.whyChina.stat3}</p>
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
-                  <div className="text-4xl font-bold text-teal-600 mb-2">100%</div>
+                  <div className="text-4xl font-bold text-primary mb-2">100%</div>
                   <p className="text-slate-600">{t.whyChina.stat4}</p>
                 </div>
               </div>
@@ -654,7 +654,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-6">
           {/* Section Header */}
           <div className="text-center mb-20">
-            <span className="text-teal-600 font-semibold tracking-wider uppercase text-sm">{t.packages.badge}</span>
+            <span className="text-primary font-semibold tracking-wider uppercase text-sm">{t.packages.badge}</span>
             <h2 className="apple-headline text-slate-900 mt-4 mb-6">{t.packages.title}</h2>
             <p className="apple-subhead max-w-2xl mx-auto">
               {t.packages.desc}
@@ -672,20 +672,20 @@ function App() {
               </div>
               <div className="relative z-10 max-w-lg">
                 <h3 className="text-3xl md:text-4xl font-bold mb-4">{t.packages.package0.name}</h3>
-                <p className="text-teal-100 text-lg mb-6">{t.packages.package0.duration}</p>
+                <p className="text-text-primary-light text-lg mb-6">{t.packages.package0.duration}</p>
                 <div className="flex items-baseline gap-2 mb-8">
                   <span className="text-5xl md:text-6xl font-bold">{t.packages.package0.price}</span>
-                  <span className="text-teal-200">/month</span>
+                  <span className="text-text-primary-light">/month</span>
                 </div>
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {t.packages.package0.items.slice(0, 4).map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-2 text-sm text-teal-50">
+                    <div key={idx} className="flex items-start gap-2 text-sm text-text-primary/10">
                       <Check className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <span>{item.split(' - ')[0]}</span>
                     </div>
                   ))}
                 </div>
-                <a href={t.packages.package0.paypalUrl} className="inline-flex items-center gap-2 bg-white text-teal-700 px-6 py-3 rounded-full font-semibold hover:bg-teal-50 transition">
+                <a href={t.packages.package0.paypalUrl} className="inline-flex items-center gap-2 bg-white text-teal-700 px-6 py-3 rounded-full font-semibold hover:bg-primary/10 transition">
                   {t.packages.book} <ChevronRight className="w-4 h-4" />
                 </a>
               </div>
@@ -698,7 +698,7 @@ function App() {
             {/* Experience Package */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 card-hover">
               <div className="mb-6">
-                <span className="inline-block bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                <span className="inline-block bg-secondary/10 text-secondary-dark px-3 py-1 rounded-full text-sm font-medium mb-4">
                   {t.packages.package1.popular}
                 </span>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">{t.packages.package1.name}</h3>
@@ -710,7 +710,7 @@ function App() {
               <ul className="space-y-3 mb-8">
                 {t.packages.package1.items.slice(0, 3).map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-sm text-slate-600">
-                    <Check className="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" />
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                     <span>{item.replace('[Assessment]', '').replace('[Screening]', '').replace('[Therapy]', '').split(':')[0]}</span>
                   </li>
                 ))}
@@ -732,7 +732,7 @@ function App() {
               <ul className="space-y-3 mb-8">
                 {t.packages.package2.items.slice(1, 4).map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-sm text-slate-600">
-                    <Check className="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" />
+                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                     <span>{item.replace('+ ', '').split(':')[0]}</span>
                   </li>
                 ))}
@@ -746,7 +746,7 @@ function App() {
             <div className="md:col-span-2 bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden card-hover">
               <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
                 <div className="max-w-xl">
-                  <span className="inline-block bg-amber-500/20 text-amber-300 px-4 py-1 rounded-full text-sm font-medium mb-4">
+                  <span className="inline-block bg-secondary/10 text-text-secondary-light px-4 py-1 rounded-full text-sm font-medium mb-4">
                     {t.packages.package3.popular}
                   </span>
                   <h3 className="text-3xl md:text-4xl font-bold mb-4">{t.packages.package3.name}</h3>
@@ -759,7 +759,7 @@ function App() {
                   <ul className="space-y-3 mb-8">
                     {t.packages.package3.items.slice(2, 5).map((item, idx) => (
                       <li key={idx} className="flex items-start gap-3 text-sm text-slate-300">
-                        <Star className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                        <Star className="w-4 h-4 text-secondary-light mt-0.5 flex-shrink-0" />
                         <span>{item.replace('+ ', '').split(':')[0]}</span>
                       </li>
                     ))}

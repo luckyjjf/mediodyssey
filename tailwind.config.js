@@ -7,19 +7,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        // MediOdyssey Brand Palette - Teal Health Theme
-        primary: '#0d9488',
-        'primary-light': '#14b8a6',
-        'primary-dark': '#0f766e',
-        secondary: '#059669',
-        accent: '#d97706',
+        // MediOdyssey Brand Palette - Luxury Health Theme
+        primary: '#1B4332',        // 深翠绿 - 健康、自然、高端
+        'primary-light': '#2D6A4F',
+        'primary-dark': '#081C15',
+        secondary: '#D4AF37',      // 香槟金 - 奢华、中东客户偏好
+        'secondary-light': '#E5C76B',
+        'secondary-dark': '#B8960C',
         // Backgrounds
-        canvas: '#f8fafc',
-        'canvas-alt': '#f1f5f9',
+        canvas: '#FAF9F6',         // 暖白色
+        'canvas-alt': '#F5F5F0',
         // Functional colors
         success: '#15803D',
-        warning: '#d97706',
+        warning: '#D4AF37',
         error: '#DC2626',
+        // Neutral
+        ink: '#1a1a1a',
+        'ink-light': '#4a4a4a',
+        'ink-muted': '#7a7a7a',
       },
       fontFamily: {
         serif: ['Playfair Display', 'serif'],
