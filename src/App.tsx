@@ -453,76 +453,81 @@ function App() {
       </nav>
 
       {}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100">
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-40" style={{
-            backgroundImage: 'radial-gradient(circle at 50% 30%, rgba(45, 212, 191, 0.15) 0%, transparent 60%)',
-          }}></div>
-        </div>
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-slate-900">
+        {/* Dark Background Base */}
+        <div className="absolute inset-0 bg-slate-900"></div>
         
-        {/* Floating Elements */}
+        {/* Gradient Overlay - Deep Green */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-dark/40 via-slate-900 to-slate-900"></div>
+        
+        {/* Radial Glow - Gold Accent */}
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.15) 0%, transparent 50%)',
+        }}></div>
+        
+        {/* Floating Elements - Dark Theme */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-text-primary-light/30 rounded-full blur-3xl animate-float-apple"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl animate-float-apple" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float-apple"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-float-apple" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-dark/30 rounded-full blur-3xl"></div>
         </div>
         
         {/* Hero Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center pt-32 pb-20">
-          {/* Badge */}
+          {/* Badge - Dark Theme */}
           <div className="mb-8">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary border border-text-primary-light">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 rounded-full text-sm font-medium text-secondary border border-secondary/30">
               <Globe className="w-4 h-4" />
               {t.hero.badge}
             </span>
           </div>
           
-          {/* Main Title */}
-          <h1 className="apple-headline text-slate-900 mb-6 tracking-tight">
+          {/* Main Title - White Text for Dark Background */}
+          <h1 className="apple-headline text-white mb-6 tracking-tight">
             <span className="block">{t.hero.title}</span>
           </h1>
           
-          {/* Subtitle */}
-          <p className="apple-subhead text-slate-600 mb-6 max-w-3xl mx-auto">
+          {/* Subtitle - Light Text */}
+          <p className="apple-subhead text-white/70 mb-6 max-w-3xl mx-auto">
             {t.hero.subtitle}
           </p>
           
-          {/* Description */}
-          <p className="text-lg md:text-xl text-slate-500 mb-12 max-w-2xl mx-auto leading-relaxed">
+          {/* Description - Light Text */}
+          <p className="text-lg md:text-xl text-white/60 mb-12 max-w-2xl mx-auto leading-relaxed">
             {t.hero.description}
           </p>
           
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Dark Theme */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#packages" className="group bg-primary/100 hover:bg-primary text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 flex items-center shadow-lg shadow-text-primary/100/20 hover:shadow-text-primary/100/30">
+            <a href="#packages" className="group bg-secondary hover:bg-secondary-light text-slate-900 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center shadow-lg shadow-secondary/30 hover:shadow-secondary/50">
               {t.hero.viewPackages} 
               <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#contact" className="group bg-white hover:bg-slate-50 text-slate-700 px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 flex items-center border border-slate-200 shadow-sm">
+            <a href="#contact" className="group bg-white/10 hover:bg-white/20 text-white backdrop-blur px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 flex items-center border border-white/30">
               <Calendar className="mr-2 w-5 h-5" />
               {t.hero.bookConsult}
             </a>
           </div>
         </div>
 
-        {/* Trust Badges - Minimal */}
-        <div className="relative z-10 w-full bg-white/80 backdrop-blur border-t border-slate-200">
+        {/* Trust Badges - Dark Theme */}
+        <div className="relative z-10 w-full bg-slate-800/50 backdrop-blur border-t border-white/10">
           <div className="max-w-6xl mx-auto px-6 py-8">
             <div className="flex flex-wrap items-center justify-center gap-12">
-              <div className="flex items-center gap-3 text-slate-600">
-                <Star className="text-primary w-5 h-5" />
+              <div className="flex items-center gap-3 text-white/70">
+                <Star className="text-secondary w-5 h-5" />
                 <span className="text-sm font-medium">{t.trust.jci}</span>
               </div>
-              <div className="flex items-center gap-3 text-slate-600">
-                <Star className="text-primary w-5 h-5" />
+              <div className="flex items-center gap-3 text-white/70">
+                <Star className="text-secondary w-5 h-5" />
                 <span className="text-sm font-medium">{t.trust.gha}</span>
               </div>
-              <div className="flex items-center gap-3 text-slate-600">
-                <Heart className="text-primary w-5 h-5" />
+              <div className="flex items-center gap-3 text-white/70">
+                <Heart className="text-secondary w-5 h-5" />
                 <span className="text-sm font-medium">{t.trust.hospital}</span>
               </div>
-              <div className="flex items-center gap-3 text-slate-600">
-                <Globe className="text-primary w-5 h-5" />
+              <div className="flex items-center gap-3 text-white/70">
+                <Globe className="text-secondary w-5 h-5" />
                 <span className="text-sm font-medium">{t.trust.cases}</span>
               </div>
             </div>
