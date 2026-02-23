@@ -31,9 +31,9 @@ const translations = {
     },
     hero: {
       badge: 'Trusted Global Medical Tourism Brand',
-      title: 'MediOdyssey',
-      subtitle: 'Where Western Precision Meets Eastern Wisdom',
-      description: 'A journey to transform your quality of life · Precision Health Screening × TCM Wellness × Cultural Immersion',
+      title: 'Premium Preventive Care × Ancient Chinese Healing',
+      subtitle: 'World-Class Medical Diagnostics Meets 3,000 Years of Wellness Wisdom',
+      description: 'Transform your health with preventive precision · Advanced Diagnostics × Traditional Chinese Medicine × Holistic Wellness',
       viewPackages: 'View Packages',
       bookConsult: 'Book Free Consultation'
     },
