@@ -20,6 +20,20 @@ export interface Package {
   paypalUrl: string;
 }
 
+export interface SuccessCase {
+  id: number;
+  title: string;
+  hospital: string;
+  location: string;
+  summary: string;
+  duration: string;
+  outcome: string;
+  tags: string[];
+  stats: { doctors: number; surgeries: number; days: number };
+  image: string;
+  featured: boolean;
+}
+
 export interface Translation {
   nav: {
     services: string;
@@ -151,6 +165,7 @@ export interface Translation {
       value: string;
       label: string;
     }[];
+    cases: SuccessCase[];
   };
 }
 

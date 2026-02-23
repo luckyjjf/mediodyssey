@@ -6,61 +6,8 @@ interface SuccessCasesSectionProps {
 }
 
 export function SuccessCasesSection({ t }: SuccessCasesSectionProps) {
-  // 真实服务案例数据
-  const cases = [
-    {
-      id: 1,
-      title: '17岁少年罕见胸腺瘤赴美求医',
-      hospital: '美国妙佑医疗国际 (Mayo Clinic)',
-      location: '美国·罗切斯特',
-      summary: '国内评估手术风险极高，美国团队通过多学科协作成功切除肿瘤，5天出院',
-      duration: '治疗周期：21天',
-      outcome: '术后恢复良好，无并发症',
-      tags: ['罕见病', '胸外科', '多学科会诊'],
-      stats: { doctors: 6, surgeries: 1, days: 5 },
-      image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80',
-      featured: true
-    },
-    {
-      id: 2,
-      title: '乳腺癌患者日本精准治疗',
-      hospital: '日本癌研有明医院',
-      location: '日本·东京',
-      summary: '7个月系统治疗，保乳手术成功，现已回归正常生活',
-      duration: '治疗周期：7个月',
-      outcome: '肿瘤完全消除，乳房保留',
-      tags: ['乳腺癌', '保乳手术', '综合治疗'],
-      stats: { doctors: 4, surgeries: 1, days: 210 },
-      image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80',
-      featured: false
-    },
-    {
-      id: 3,
-      title: '胃癌患者德国质子治疗',
-      hospital: '德国海德堡大学医院',
-      location: '德国·海德堡',
-      summary: '质子重离子精准治疗，最大程度保护周围健康组织',
-      duration: '治疗周期：6周',
-      outcome: '肿瘤缩小60%，生活质量良好',
-      tags: ['胃癌', '质子治疗', '精准医疗'],
-      stats: { doctors: 5, surgeries: 0, days: 42 },
-      image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80',
-      featured: false
-    },
-    {
-      id: 4,
-      title: '儿童白血病美国新药临床试验',
-      hospital: '美国纪念斯隆凯特琳癌症中心',
-      location: '美国·纽约',
-      summary: '参与CAR-T细胞疗法临床试验，获得最新治疗方案',
-      duration: '治疗周期：12个月',
-      outcome: '病情完全缓解，持续随访中',
-      tags: ['儿童肿瘤', '临床试验', 'CAR-T疗法'],
-      stats: { doctors: 8, surgeries: 0, days: 365 },
-      image: 'https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=800&q=80',
-      featured: false
-    }
-  ];
+  // Get cases from translations
+  const cases = t.successCases.cases || [];
 
   return (
     <section id="cases" className="section-padding bg-slate-50">

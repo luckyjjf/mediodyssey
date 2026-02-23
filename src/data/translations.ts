@@ -202,6 +202,60 @@ export const translations: Translations = {
         { value: '98%', label: 'Success Rate' },
         { value: 'Top 10', label: 'Global Hospitals' },
         { value: '24/7', label: 'Medical Support' }
+      ],
+      cases: [
+        {
+          id: 1,
+          title: '17-Year-Old with Rare Thymoma Seeks Treatment in the US',
+          hospital: 'Mayo Clinic, USA',
+          location: 'Rochester, USA',
+          summary: 'Domestic evaluation indicated extremely high surgical risk. The US team successfully removed the tumor through multidisciplinary collaboration, discharged after 5 days.',
+          duration: 'Treatment: 21 days',
+          outcome: 'Good postoperative recovery, no complications',
+          tags: ['Rare Disease', 'Thoracic Surgery', 'Multidisciplinary'],
+          stats: { doctors: 6, surgeries: 1, days: 5 },
+          image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80',
+          featured: true
+        },
+        {
+          id: 2,
+          title: 'Breast Cancer Patient Receives Precision Treatment in Japan',
+          hospital: 'Cancer Institute Ariake Hospital, Japan',
+          location: 'Tokyo, Japan',
+          summary: '7 months of systematic treatment, successful breast-conserving surgery, now returned to normal life.',
+          duration: 'Treatment: 7 months',
+          outcome: 'Tumor completely eliminated, breast preserved',
+          tags: ['Breast Cancer', 'Breast Conservation', 'Combined Therapy'],
+          stats: { doctors: 4, surgeries: 1, days: 210 },
+          image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80',
+          featured: false
+        },
+        {
+          id: 3,
+          title: 'Gastric Cancer Patient Receives Proton Therapy in Germany',
+          hospital: 'Heidelberg University Hospital, Germany',
+          location: 'Heidelberg, Germany',
+          summary: 'Proton and heavy ion precision treatment, maximizing protection of surrounding healthy tissue.',
+          duration: 'Treatment: 6 weeks',
+          outcome: 'Tumor shrunk by 60%, good quality of life',
+          tags: ['Gastric Cancer', 'Proton Therapy', 'Precision Medicine'],
+          stats: { doctors: 5, surgeries: 0, days: 42 },
+          image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80',
+          featured: false
+        },
+        {
+          id: 4,
+          title: 'Child with Leukemia Enrolls in US Clinical Trial',
+          hospital: 'Memorial Sloan Kettering Cancer Center, USA',
+          location: 'New York, USA',
+          summary: 'Participated in CAR-T cell therapy clinical trial, accessing the latest treatment protocol.',
+          duration: 'Treatment: 12 months',
+          outcome: 'Complete remission, ongoing follow-up',
+          tags: ['Pediatric Cancer', 'Clinical Trial', 'CAR-T Therapy'],
+          stats: { doctors: 8, surgeries: 0, days: 365 },
+          image: 'https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=800&q=80',
+          featured: false
+        }
       ]
     }
   },
@@ -406,6 +460,60 @@ export const translations: Translations = {
         { value: '98%', label: 'معدل النجاح' },
         { value: 'أفضل 10', label: 'مستشفيات عالمية' },
         { value: '24/7', label: 'دعم طبي' }
+      ],
+      cases: [
+        {
+          id: 1,
+          title: 'شاب يبلغ 17 عامًا يعاني من ورم غدي نخاعي نادر يذهب للعلاج في الولايات المتحدة',
+          hospital: 'مايو كلينيك، الولايات المتحدة',
+          location: 'روتشستر، الولايات المتحدة',
+          summary: 'أشارت التقييمات المحلية إلى مخاطر جراحية عالية للغاية. نجح الفريق الأمريكي في إزالة الورم من خلال التعاون متعدد التخصصات، وخرج المريض بعد 5 أيام.',
+          duration: 'العلاج: 21 يومًا',
+          outcome: 'تعافٍ جيد بعد العملية، لا مضاعفات',
+          tags: ['أمراض نادرة', 'جراحة الصدر', 'متعدد التخصصات'],
+          stats: { doctors: 6, surgeries: 1, days: 5 },
+          image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80',
+          featured: true
+        },
+        {
+          id: 2,
+          title: 'مريضة سرطان الثدي تتلقى علاجًا دقيقًا في اليابان',
+          hospital: 'مستشفى كانسر إنستيتيوت أرياكي، اليابان',
+          location: 'طوكيو، اليابان',
+          summary: '7 أشهر من العلاج المنظم، عملية حفظ الثدي ناجحة، عادت الآن إلى الحياة الطبيعية.',
+          duration: 'العلاج: 7 أشهر',
+          outcome: 'القضاء التام على الورم، حفظ الثدي',
+          tags: ['سرطان الثدي', 'حفظ الثدي', 'علاج مشترك'],
+          stats: { doctors: 4, surgeries: 1, days: 210 },
+          image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80',
+          featured: false
+        },
+        {
+          id: 3,
+          title: 'مريض سرطان المعدة يتلقى علاج البروتونات في ألمانيا',
+          hospital: 'مستشفى جامعة هايدلبرغ، ألمانيا',
+          location: 'هايدلبرغ، ألمانيا',
+          summary: 'علاج البروتون والأيونات الثقيلة الدقيق، لحماية الأنسجة السليمة المحيطة بأقصى درجة.',
+          duration: 'العلاج: 6 أسابيع',
+          outcome: 'انكماش الورم بنسبة 60٪، جودة حياة جيدة',
+          tags: ['سرطان المعدة', 'علاج البروتونات', 'الطب الدقيق'],
+          stats: { doctors: 5, surgeries: 0, days: 42 },
+          image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80',
+          featured: false
+        },
+        {
+          id: 4,
+          title: 'طفل مصاب بسرطان الدم يلتحق بتجربة سريرية في الولايات المتحدة',
+          hospital: 'مركز ميموريال سلون كيترينج للسرطان، الولايات المتحدة',
+          location: 'نيويورك، الولايات المتحدة',
+          summary: 'شارك في تجربة علاج خلايا CAR-T السريرية، للوصول إلى أحدث بروتوكول علاج.',
+          duration: 'العلاج: 12 شهرًا',
+          outcome: 'تحقيق الشفاء التام، المتابعة المستمرة',
+          tags: ['سرطان الأطفال', 'تجربة سريرية', 'علاج CAR-T'],
+          stats: { doctors: 8, surgeries: 0, days: 365 },
+          image: 'https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=800&q=80',
+          featured: false
+        }
       ]
     }
   }
