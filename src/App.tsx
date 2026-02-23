@@ -204,189 +204,6 @@ const translations = {
       terms: 'Terms of Service'
     }
   },
-  zh: {
-    nav: {
-      services: '服务',
-      packages: '套餐',
-      stories: '故事',
-      contact: '联系',
-      freeConsult: '免费咨询'
-    },
-    hero: {
-      badge: '全球信赖的医疗旅游品牌',
-      title: '医疗奥德赛',
-      subtitle: '当西方精准遇见东方智慧',
-      description: '一次改变生命质量的旅程 · 精密体检 × 中医调理 × 文化沉浸',
-      viewPackages: '查看套餐',
-      bookConsult: '预约免费咨询'
-    },
-    trust: {
-      jci: 'JCI国际认证',
-      gha: 'GHA卓越认证',
-      hospital: '三甲医院合作',
-      cases: '10,000+服务案例'
-    },
-    services: {
-      badge: 'Our Services',
-      title: '四大健康支柱',
-      desc: '融合东西方医学精华，为您提供全方位的健康管理方案',
-      pillar1: {
-        title: '精密体检',
-        desc: 'PET-CT、MRI、基因检测等尖端设备，精准评估健康风险',
-        items: ['全身癌症筛查', '心脑血管评估', '基因检测分析']
-      },
-      pillar2: {
-        title: '中医调理',
-        desc: '传承千年的东方智慧，个性化体质调理方案',
-        items: ['体质辨识诊断', '针灸推拿治疗', '膏方调理']
-      },
-      pillar3: {
-        title: '文化沉浸',
-        desc: '茶道、太极、书法，身心合一的东方修行体验',
-        items: ['私人茶道品鉴', '太极气功课程', '古琴书法体验']
-      },
-      pillar4: {
-        title: '全程管家',
-        desc: '从签证到离境，24/7专属管家贴心服务',
-        items: ['签证协助办理', '机场贵宾接送', '多语言管家']
-      }
-    },
-    whyChina: {
-      badge: 'Why China',
-      title: '为什么选择中国？',
-      desc: '世界领先的医疗设备、经验丰富的专家团队，以及极具竞争力的价格，让中国成为全球医疗旅游的新兴目的地。',
-      stat1: '仅为欧美同等服务价格',
-      stat2: 'MRI/CT设备全球普及率',
-      stat3: '年服务国际患者',
-      stat4: '患者满意度',
-      testimonial: '"中国医疗水平让我惊讶"',
-      patient: '— Sarah M., 美国患者'
-    },
-    packages: {
-      badge: 'Packages',
-      title: '选择您的健康之旅',
-      desc: '三种精心设计的套餐，满足不同健康目标和预算',
-      package0: {
-        name: '会员订阅',
-        duration: '每月 · ¥199',
-        price: '¥199',
-        popular: '超值优选',
-        items: ['个性化养生茶包（30包）- 价值¥175', '在线中医咨询（15分钟）- 价值¥350', 'AI智能健康助手 - 价值¥140', '专属会员内容 - 价值¥105', '产品折扣权益 - 无上限', '健康档案管理 - 价值¥70', '总价值¥840+ · 节省76%'],
-        docUrl: '/docs/tea-subscription-zh.pdf',
-        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/99'
-      },
-      package1: {
-        name: '体验套餐',
-        duration: '半天 · 3-4小时',
-        price: '¥1,399',
-        popular: '最受欢迎',
-        items: ['【体质评估】中医体质评估（45分钟）：AI舌诊+智能脉诊+60+体质问卷', '【健康筛查】基础健康检查（30分钟）：10项血检+身体成分分析', '【理疗体验】中医理疗体验（60分钟）：医师咨询+针灸+推拿+拔罐', '【专属服务】医疗翻译+中医伴手礼+3张精修照片', '【特别福利】365天线上中医咨询服务'],
-        docUrl: '/docs/package-experience-zh.pdf',
-        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/199'
-      },
-      package2: {
-        name: '探索之旅',
-        duration: '3天2晚 · 初识东方医疗',
-        price: '¥28,000',
-        popular: '经典之选',
-        items: ['【包含体验套餐全部服务内容】', '+ 深度健康体检：MRI/CT + 全面血液检查', '+ 中医理疗升级：3次针灸推拿疗程', '+ 文化沉浸体验：茶道+太极+古琴课程', '+ 四星级酒店住宿（2晚）', '+ 机场专车接送服务', '+ 延长365天线上中医咨询'],
-        docUrl: '/docs/package-discovery-zh.pdf',
-        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/3900'
-      },
-      package3: {
-        name: '皇家之旅',
-        duration: '14天13晚 · 顶级定制体验',
-        price: '¥168,000',
-        popular: '奢华尊享',
-        items: ['【包含探索之旅全部服务内容】', '+ 顶级健康筛查：全基因组测序 + PET-CT', '+ 国医大师亲诊（顶级专家一对一）', '+ 皇室级文化体验：专属通道+贵宾礼遇', '+ 奢华套房酒店（13晚）', '+ 专车+私人管家全程陪同', '+ 私人飞机接送（可选）', '+ 终身VIP线上中医咨询'],
-        docUrl: '/docs/package-royal-zh.pdf',
-        paypalUrl: 'https://www.paypal.com/paypalme/mediodyssey/23500'
-      },
-      viewDetails: '查看详情',
-      book: '立即预订'
-    },
-    testimonials: {
-      badge: '体验官评价',
-      title: '体验官真实反馈',
-      desc: '来自我们认证体验官的真实评价',
-      rating: '4.8/5',
-      recommendRate: '94%',
-      officers: [
-        {
-          name: 'Sarah Mitchell',
-          country: '英国',
-          avatar: 'https://i.pravatar.cc/150?img=5',
-          rating: 5,
-          pros: 'AI舌诊的准确度令人惊讶。茶叶品质卓越，每月的健康建议非常实用。',
-          cons: '希望茶包能有更多口味选择。',
-          package: '会员订阅'
-        },
-        {
-          name: 'Hans Mueller',
-          country: '德国',
-          avatar: 'https://i.pravatar.cc/150?img=11',
-          rating: 5,
-          pros: '¥1,399的体验套餐物超所值。专业的医疗翻译、一流的设施，针灸治疗缓解了我的慢性背痛。',
-          cons: '半天体验有点仓促，希望能有全天选项。',
-          package: '体验套餐'
-        },
-        {
-          name: 'Fatima Al-Rashid',
-          country: '阿联酋',
-          avatar: 'https://i.pravatar.cc/150?img=9',
-          rating: 4,
-          pros: '太极和茶道的文化沉浸体验令人身心蜕变。全程VIP待遇，豪华住宿体验。',
-          cons: '探索之旅价格较高，但考虑到全面的医疗服务还是值得的。',
-          package: '探索之旅'
-        },
-        {
-          name: 'Omar Hassan',
-          country: '沙特阿拉伯',
-          avatar: 'https://i.pravatar.cc/150?img=13',
-          rating: 5,
-          pros: '性价比极高。365天线上咨询服务非常宝贵，相比当地的中医治疗节省了数千元。',
-          cons: '首次配送耗时较长，但现在每月都准时送达。',
-          package: '会员订阅'
-        }
-      ],
-      prosLabel: '满意之处',
-      consLabel: '改进建议',
-      stats: {
-        satisfaction: '4.8/5',
-        recommend: '94%',
-        renewal: '67%'
-      }
-    },
-    contact: {
-      badge: 'Contact Us',
-      title: '开启您的健康之旅',
-      desc: '填写表单，我们的健康顾问将在24小时内与您联系，为您定制专属的健康方案。',
-      phone: '电话咨询',
-      email: '电子邮件',
-      wechat: '微信咨询',
-      telegram: 'Telegram',
-      form: {
-        name: '姓名 *',
-        email: '邮箱 *',
-        countryCode: '国家区号',
-        phoneNumber: '电话号码',
-        package: '感兴趣的套餐',
-        placeholder: '请选择...',
-        options: ['养生茶饮订阅 (每月) - 超值优选', '探索之旅 (3天)', '体验套餐 (半天) - 最受欢迎', '皇家之旅 (14天)', '需要顾问推荐'],
-        message: '留言/联系方式',
-        submit: '提交咨询'
-      }
-    },
-    footer: {
-      tagline: '西方精准医疗 × 东方养生智慧',
-      tagline2: '为您开启改变生命质量的旅程',
-      links: '快速链接',
-      services: '服务项目',
-      contact: '联系我们',
-      privacy: '隐私政策',
-      terms: '服务条款'
-    }
-  },
   ar: {
     nav: {
       services: 'الخدمات',
@@ -573,12 +390,12 @@ const translations = {
 };
 
 function App() {
-  const [language, setLanguage] = React.useState<'en' | 'zh' | 'ar'>('en');
+  const [language, setLanguage] = React.useState<'en' | 'ar'>('en');
   
   const t = translations[language];
   const isRTL = language === 'ar';
 
-  const handleLanguageChange = (lang: 'en' | 'zh' | 'ar') => {
+  const handleLanguageChange = (lang: 'en' | 'ar') => {
     setLanguage(lang);
   };
 
@@ -619,13 +436,12 @@ function App() {
               <a href="#packages" style={{color: '#1f2937', textDecoration: 'none'}}>{t.nav.packages}</a>
               <a href="#stories" style={{color: '#1f2937', textDecoration: 'none'}}>{t.nav.stories}</a>
               <a href="#contact" style={{color: '#1f2937', textDecoration: 'none'}}>{t.nav.contact}</a>
-              <select 
-                value={language} 
-                onChange={(e) => handleLanguageChange(e.target.value as 'en' | 'zh' | 'ar')}
+              <select
+                value={language}
+                onChange={(e) => handleLanguageChange(e.target.value as 'en' | 'ar')}
                 style={{padding: '4px 8px', borderRadius: '4px', border: '1px solid #ccc'}}
               >
                 <option value="en">English</option>
-                <option value="zh">中文</option>
                 <option value="ar">العربية</option>
               </select>
               <a href="#contact" style={{backgroundColor: '#1e3a5f', color: 'white', padding: '10px 24px', borderRadius: '9999px', textDecoration: 'none'}}>
@@ -859,7 +675,7 @@ function App() {
                 <p className="text-teal-100 text-lg mb-6">{t.packages.package0.duration}</p>
                 <div className="flex items-baseline gap-2 mb-8">
                   <span className="text-5xl md:text-6xl font-bold">{t.packages.package0.price}</span>
-                  <span className="text-teal-200">{language === 'zh' ? '/月' : '/month'}</span>
+                  <span className="text-teal-200">/month</span>
                 </div>
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {t.packages.package0.items.slice(0, 4).map((item, idx) => (
@@ -1110,7 +926,7 @@ function App() {
                     <input 
                       type="text" 
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" 
-                      placeholder={language === 'ar' ? 'اسمك' : language === 'zh' ? '您的姓名' : 'Your name'}
+                      placeholder={language === 'ar' ? 'اسمك' : 'Your name'}
                     />
                   </div>
                   <div>
@@ -1136,7 +952,7 @@ function App() {
                     <input 
                       type="tel" 
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" 
-                      placeholder={language === 'ar' ? '123456789' : language === 'zh' ? '手机号码' : 'Phone number'}
+                      placeholder={language === 'ar' ? '123456789' : 'Phone number'}
                     />
                   </div>
                 </div>
@@ -1154,7 +970,7 @@ function App() {
                   <textarea 
                     rows={4} 
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" 
-                    placeholder={language === 'ar' ? 'أخبرنا عن احتياجاتك الصحية...' : language === 'zh' ? '请告诉我们您的健康需求或问题...' : 'Tell us about your health needs...'}
+                    placeholder={language === 'ar' ? 'أخبرنا عن احتياجاتك الصحية...' : 'Tell us about your health needs...'}
                   ></textarea>
                 </div>
                 <button 
@@ -1201,7 +1017,7 @@ function App() {
             <div>
               <h4 className="font-semibold text-lg mb-4">{t.footer.links}</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition">{language === 'en' ? 'About Us' : language === 'zh' ? '关于我们' : 'من نحن'}</a></li>
+                <li><a href="#" className="hover:text-white transition">{language === 'en' ? 'About Us' : 'من نحن'}</a></li>
                 <li><a href="#services" className="hover:text-white transition">{t.nav.services}</a></li>
                 <li><a href="#packages" className="hover:text-white transition">{t.nav.packages}</a></li>
                 <li><a href="#stories" className="hover:text-white transition">{t.nav.stories}</a></li>
@@ -1222,7 +1038,7 @@ function App() {
                 <li className="flex items-center"><Phone className="w-4 h-4 mr-2" />+86 133-9645-7967</li>
                 <li className="flex items-center"><Phone className="w-4 h-4 mr-2" />+852 4743-6719</li>
                 <li className="flex items-center"><Mail className="w-4 h-4 mr-2" />jiangjingfu@mediodyssey.com</li>
-                <li className="flex items-center"><MapPin className="w-4 h-4 mr-2" />{language === 'zh' ? '上海市徐汇区古宜路186号西岸创意园4号楼' : language === 'ar' ? 'مبنى 4، حديقة ويست بوند الإبداعية، رقم 186 شارع جوي، منطقة شيهوي، شنغهاي' : 'Building 4, West Bund Creative Park, 186 Guyi Road, Xuhui District, Shanghai'}</li>
+                <li className="flex items-center"><MapPin className="w-4 h-4 mr-2" />{language === 'ar' ? 'مبنى 4، حديقة ويست بوند الإبداعية، رقم 186 شارع جوي، منطقة شيهوي، شنغهاي' : 'Building 4, West Bund Creative Park, 186 Guyi Road, Xuhui District, Shanghai'}</li>
               </ul>
             </div>
           </div>
