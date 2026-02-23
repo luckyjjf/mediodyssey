@@ -536,7 +536,7 @@ function App() {
           <div className="text-center mb-16">
             <span className="text-secondary font-semibold tracking-wider uppercase">{t.services.badge}</span>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mt-3 mb-4">{t.services.title}</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
               {t.services.desc}
             </p>
           </div>
@@ -547,8 +547,8 @@ function App() {
                 <Microscope className="text-primary w-8 h-8" />
               </div>
               <h3 className="font-serif text-xl font-bold text-primary mb-3">{t.services.pillar1.title}</h3>
-              <p className="text-gray-600 mb-4">{t.services.pillar1.desc}</p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <p className="text-slate-600 mb-4">{t.services.pillar1.desc}</p>
+              <ul className="text-sm text-slate-500 space-y-2">
                 <li className="flex items-center"><Check className="text-secondary w-4 h-4 mr-2" />{t.services.pillar1.items[0]}</li>
                 <li className="flex items-center"><Check className="text-secondary w-4 h-4 mr-2" />{t.services.pillar1.items[1]}</li>
                 <li className="flex items-center"><Check className="text-secondary w-4 h-4 mr-2" />{t.services.pillar1.items[2]}</li>
@@ -560,8 +560,8 @@ function App() {
                 <Activity className="text-secondary w-8 h-8" />
               </div>
               <h3 className="font-serif text-xl font-bold text-primary mb-3">{t.services.pillar2.title}</h3>
-              <p className="text-gray-600 mb-4">{t.services.pillar2.desc}</p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <p className="text-slate-600 mb-4">{t.services.pillar2.desc}</p>
+              <ul className="text-sm text-slate-500 space-y-2">
                 <li className="flex items-center"><Check className="text-secondary w-4 h-4 mr-2" />{t.services.pillar2.items[0]}</li>
                 <li className="flex items-center"><Check className="text-secondary w-4 h-4 mr-2" />{t.services.pillar2.items[1]}</li>
                 <li className="flex items-center"><Check className="text-secondary w-4 h-4 mr-2" />{t.services.pillar2.items[2]}</li>
@@ -573,8 +573,8 @@ function App() {
                 <Landmark className="text-accent w-8 h-8" />
               </div>
               <h3 className="font-serif text-xl font-bold text-primary mb-3">{t.services.pillar3.title}</h3>
-              <p className="text-gray-600 mb-4">{t.services.pillar3.desc}</p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <p className="text-slate-600 mb-4">{t.services.pillar3.desc}</p>
+              <ul className="text-sm text-slate-500 space-y-2">
                 <li className="flex items-center"><Check className="text-secondary w-4 h-4 mr-2" />{t.services.pillar3.items[0]}</li>
                 <li className="flex items-center"><Check className="text-secondary w-4 h-4 mr-2" />{t.services.pillar3.items[1]}</li>
                 <li className="flex items-center"><Check className="text-secondary w-4 h-4 mr-2" />{t.services.pillar3.items[2]}</li>
@@ -586,8 +586,8 @@ function App() {
                 <ConciergeBell className="text-purple-600 w-8 h-8" />
               </div>
               <h3 className="font-serif text-xl font-bold text-primary mb-3">{t.services.pillar4.title}</h3>
-              <p className="text-gray-600 mb-4">{t.services.pillar4.desc}</p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <p className="text-slate-600 mb-4">{t.services.pillar4.desc}</p>
+              <ul className="text-sm text-slate-500 space-y-2">
                 <li className="flex items-center"><Check className="text-secondary w-4 h-4 mr-2" />{t.services.pillar4.items[0]}</li>
                 <li className="flex items-center"><Check className="text-secondary w-4 h-4 mr-2" />{t.services.pillar4.items[1]}</li>
                 <li className="flex items-center"><Check className="text-secondary w-4 h-4 mr-2" />{t.services.pillar4.items[2]}</li>
@@ -640,7 +640,7 @@ function App() {
                   </div>
                   <div>
                     <p className="text-dark font-medium">{t.whyChina.testimonial}</p>
-                    <p className="text-gray-500 text-sm">{t.whyChina.patient}</p>
+                    <p className="text-slate-500 text-sm">{t.whyChina.patient}</p>
                   </div>
                 </div>
               </div>
@@ -650,12 +650,12 @@ function App() {
       </section>
 
       {}
-      <section id="packages" className="py-32 bg-gray-50">
+      <section id="packages" className="py-32 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           {/* Section Header */}
           <div className="text-center mb-20">
             <span className="text-teal-600 font-semibold tracking-wider uppercase text-sm">{t.packages.badge}</span>
-            <h2 className="apple-headline text-gray-900 mt-4 mb-6">{t.packages.title}</h2>
+            <h2 className="apple-headline text-slate-900 mt-4 mb-6">{t.packages.title}</h2>
             <p className="apple-subhead max-w-2xl mx-auto">
               {t.packages.desc}
             </p>
@@ -696,20 +696,20 @@ function App() {
             </div>
 
             {/* Experience Package */}
-            <div className="bg-white rounded-3xl p-8 border border-gray-200 card-hover">
+            <div className="bg-white rounded-3xl p-8 border border-slate-200 card-hover">
               <div className="mb-6">
                 <span className="inline-block bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
                   {t.packages.package1.popular}
                 </span>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.packages.package1.name}</h3>
-                <p className="text-gray-500">{t.packages.package1.duration}</p>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">{t.packages.package1.name}</h3>
+                <p className="text-slate-500">{t.packages.package1.duration}</p>
               </div>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-gray-900">{t.packages.package1.price}</span>
+                <span className="text-4xl font-bold text-slate-900">{t.packages.package1.price}</span>
               </div>
               <ul className="space-y-3 mb-8">
                 {t.packages.package1.items.slice(0, 3).map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-gray-600">
+                  <li key={idx} className="flex items-start gap-3 text-sm text-slate-600">
                     <Check className="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" />
                     <span>{item.replace('[Assessment]', '').replace('[Screening]', '').replace('[Therapy]', '').split(':')[0]}</span>
                   </li>
@@ -721,23 +721,23 @@ function App() {
             </div>
 
             {/* Discovery Journey */}
-            <div className="bg-white rounded-3xl p-8 border border-gray-200 card-hover">
+            <div className="bg-white rounded-3xl p-8 border border-slate-200 card-hover">
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.packages.package2.name}</h3>
-                <p className="text-gray-500">{t.packages.package2.duration}</p>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">{t.packages.package2.name}</h3>
+                <p className="text-slate-500">{t.packages.package2.duration}</p>
               </div>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-gray-900">{t.packages.package2.price}</span>
+                <span className="text-4xl font-bold text-slate-900">{t.packages.package2.price}</span>
               </div>
               <ul className="space-y-3 mb-8">
                 {t.packages.package2.items.slice(1, 4).map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-gray-600">
+                  <li key={idx} className="flex items-start gap-3 text-sm text-slate-600">
                     <Check className="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" />
                     <span>{item.replace('+ ', '').split(':')[0]}</span>
                   </li>
                 ))}
               </ul>
-              <a href={t.packages.package2.paypalUrl} className="block w-full text-center border-2 border-gray-900 text-gray-900 py-3 rounded-full font-medium hover:bg-gray-50 transition">
+              <a href={t.packages.package2.paypalUrl} className="block w-full text-center border-2 border-gray-900 text-slate-900 py-3 rounded-full font-medium hover:bg-slate-50 transition">
                 {t.packages.viewDetails}
               </a>
             </div>
@@ -750,7 +750,7 @@ function App() {
                     {t.packages.package3.popular}
                   </span>
                   <h3 className="text-3xl md:text-4xl font-bold mb-4">{t.packages.package3.name}</h3>
-                  <p className="text-gray-400 mb-6">{t.packages.package3.duration}</p>
+                  <p className="text-slate-400 mb-6">{t.packages.package3.duration}</p>
                   <div className="flex items-baseline gap-2 mb-6">
                     <span className="text-4xl md:text-5xl font-bold">{t.packages.package3.price}</span>
                   </div>
@@ -758,13 +758,13 @@ function App() {
                 <div className="flex-1 max-w-md">
                   <ul className="space-y-3 mb-8">
                     {t.packages.package3.items.slice(2, 5).map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm text-gray-300">
+                      <li key={idx} className="flex items-start gap-3 text-sm text-slate-300">
                         <Star className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
                         <span>{item.replace('+ ', '').split(':')[0]}</span>
                       </li>
                     ))}
                   </ul>
-                  <a href={t.packages.package3.paypalUrl} className="inline-flex items-center gap-2 bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition">
+                  <a href={t.packages.package3.paypalUrl} className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition">
                     {t.packages.book} <ChevronRight className="w-5 h-5" />
                   </a>
                 </div>
@@ -782,21 +782,21 @@ function App() {
           <div className="text-center mb-16">
             <span className="text-secondary font-semibold tracking-wider uppercase text-sm">{t.testimonials.badge}</span>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mt-3 mb-4">{t.testimonials.title}</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">{t.testimonials.desc}</p>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">{t.testimonials.desc}</p>
             
             {/* Stats */}
             <div className="flex flex-wrap justify-center gap-8 mt-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">{t.testimonials.stats.satisfaction}</div>
-                <div className="text-gray-500 text-sm">Average Rating</div>
+                <div className="text-slate-500 text-sm">Average Rating</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-secondary">{t.testimonials.stats.recommend}</div>
-                <div className="text-gray-500 text-sm">Recommend Rate</div>
+                <div className="text-slate-500 text-sm">Recommend Rate</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-accent">{t.testimonials.stats.renewal}</div>
-                <div className="text-gray-500 text-sm">Renewal Rate</div>
+                <div className="text-slate-500 text-sm">Renewal Rate</div>
               </div>
             </div>
           </div>
@@ -814,15 +814,15 @@ function App() {
                   />
                   <div className="flex-1">
                     <h4 className="font-serif text-xl font-bold text-primary">{officer.name}</h4>
-                    <p className="text-gray-500 text-sm">{officer.country}</p>
+                    <p className="text-slate-500 text-sm">{officer.country}</p>
                     <div className="flex items-center gap-1 mt-1">
                       {[...Array(5)].map((_, i) => (
                         <Star 
                           key={i} 
-                          className={`w-4 h-4 ${i < officer.rating ? 'text-accent fill-accent' : 'text-gray-300'}`}
+                          className={`w-4 h-4 ${i < officer.rating ? 'text-accent fill-accent' : 'text-slate-300'}`}
                         />
                       ))}
-                      <span className="text-sm text-gray-600 ml-2">{officer.package}</span>
+                      <span className="text-sm text-slate-600 ml-2">{officer.package}</span>
                     </div>
                   </div>
                 </div>
@@ -834,14 +834,14 @@ function App() {
                       <Check className="w-4 h-4" />
                       {t.testimonials.prosLabel}
                     </h5>
-                    <p className="text-gray-600 text-sm leading-relaxed">{officer.pros}</p>
+                    <p className="text-slate-600 text-sm leading-relaxed">{officer.pros}</p>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-gray-400 mb-2 flex items-center gap-2">
+                    <h5 className="font-semibold text-slate-400 mb-2 flex items-center gap-2">
                       <span className="w-4 h-4 rounded-full border border-gray-400 flex items-center justify-center text-xs">!</span>
                       {t.testimonials.consLabel}
                     </h5>
-                    <p className="text-gray-500 text-sm leading-relaxed">{officer.cons}</p>
+                    <p className="text-slate-500 text-sm leading-relaxed">{officer.cons}</p>
                   </div>
                 </div>
               </div>
@@ -857,7 +857,7 @@ function App() {
             <div>
               <span className="text-secondary font-semibold tracking-wider uppercase">{t.contact.badge}</span>
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mt-3 mb-6">{t.contact.title}</h2>
-              <p className="text-gray-600 text-lg mb-8">
+              <p className="text-slate-600 text-lg mb-8">
                 {t.contact.desc}
               </p>
 
@@ -868,8 +868,8 @@ function App() {
                   </div>
                   <div>
                     <p className="font-semibold text-primary">{t.contact.phone}</p>
-                    <p className="text-gray-600">+86 133-9645-7967</p>
-                    <p className="text-gray-600">+852 4743-6719</p>
+                    <p className="text-slate-600">+86 133-9645-7967</p>
+                    <p className="text-slate-600">+852 4743-6719</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -878,7 +878,7 @@ function App() {
                   </div>
                   <div>
                     <p className="font-semibold text-primary">{t.contact.email}</p>
-                    <p className="text-gray-600">jiangjingfu@mediodyssey.com</p>
+                    <p className="text-slate-600">jiangjingfu@mediodyssey.com</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -891,7 +891,7 @@ function App() {
                       href="https://work.weixin.qq.com/kfid/kfc840a16d52318ed05" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-secondary transition"
+                      className="text-slate-600 hover:text-secondary transition"
                     >
                       stay7967
                     </a>
@@ -903,7 +903,7 @@ function App() {
                   </div>
                   <div>
                     <p className="font-semibold text-primary">{t.contact.telegram}</p>
-                    <p className="text-gray-600">
+                    <p className="text-slate-600">
                       <a 
                         href="https://t.me/MediOdyssey_bot" 
                         target="_blank" 
@@ -922,7 +922,7 @@ function App() {
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">{t.contact.form.name}</label>
+                    <label className="block text-slate-700 font-medium mb-2">{t.contact.form.name}</label>
                     <input 
                       type="text" 
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" 
@@ -930,7 +930,7 @@ function App() {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">{t.contact.form.email}</label>
+                    <label className="block text-slate-700 font-medium mb-2">{t.contact.form.email}</label>
                     <input 
                       type="email" 
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" 
@@ -940,7 +940,7 @@ function App() {
                 </div>
                 <div className="grid grid-cols-3 gap-4">
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">{t.contact.form.countryCode}</label>
+                    <label className="block text-slate-700 font-medium mb-2">{t.contact.form.countryCode}</label>
                     <input 
                       type="text" 
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" 
@@ -948,7 +948,7 @@ function App() {
                     />
                   </div>
                   <div className="col-span-2">
-                    <label className="block text-gray-700 font-medium mb-2">{t.contact.form.phoneNumber}</label>
+                    <label className="block text-slate-700 font-medium mb-2">{t.contact.form.phoneNumber}</label>
                     <input 
                       type="tel" 
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" 
@@ -957,7 +957,7 @@ function App() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">{t.contact.form.package}</label>
+                  <label className="block text-slate-700 font-medium mb-2">{t.contact.form.package}</label>
                   <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent">
                     <option>{t.contact.form.placeholder}</option>
                     {t.contact.form.options.map((opt, idx) => (
@@ -966,7 +966,7 @@ function App() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">{t.contact.form.message}</label>
+                  <label className="block text-slate-700 font-medium mb-2">{t.contact.form.message}</label>
                   <textarea 
                     rows={4} 
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" 
@@ -1009,14 +1009,14 @@ function App() {
                 </div>
                 <span className="font-serif text-2xl font-bold">MediOdyssey</span>
               </div>
-              <p className="text-gray-400 mb-4">
+              <p className="text-slate-400 mb-4">
                 {t.footer.tagline}<br />
                 {t.footer.tagline2}
               </p>
             </div>
             <div>
               <h4 className="font-semibold text-lg mb-4">{t.footer.links}</h4>
-              <ul className="space-y-2 text-gray-400">
+              <ul className="space-y-2 text-slate-400">
                 <li><a href="#" className="hover:text-white transition">{language === 'en' ? 'About Us' : 'من نحن'}</a></li>
                 <li><a href="#services" className="hover:text-white transition">{t.nav.services}</a></li>
                 <li><a href="#packages" className="hover:text-white transition">{t.nav.packages}</a></li>
@@ -1025,7 +1025,7 @@ function App() {
             </div>
             <div>
               <h4 className="font-semibold text-lg mb-4">{t.footer.services}</h4>
-              <ul className="space-y-2 text-gray-400">
+              <ul className="space-y-2 text-slate-400">
                 <li><a href="#" className="hover:text-white transition">{t.services.pillar1.title}</a></li>
                 <li><a href="#" className="hover:text-white transition">{t.services.pillar2.title}</a></li>
                 <li><a href="#" className="hover:text-white transition">{t.services.pillar3.title}</a></li>
@@ -1034,7 +1034,7 @@ function App() {
             </div>
             <div>
               <h4 className="font-semibold text-lg mb-4">{t.footer.contact}</h4>
-              <ul className="space-y-2 text-gray-400">
+              <ul className="space-y-2 text-slate-400">
                 <li className="flex items-center"><Phone className="w-4 h-4 mr-2" />+86 133-9645-7967</li>
                 <li className="flex items-center"><Phone className="w-4 h-4 mr-2" />+852 4743-6719</li>
                 <li className="flex items-center"><Mail className="w-4 h-4 mr-2" />jiangjingfu@mediodyssey.com</li>
@@ -1043,10 +1043,10 @@ function App() {
             </div>
           </div>
           <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-slate-400 text-sm">
               © 2026 MediOdyssey. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0 text-gray-400 text-sm">
+            <div className="flex space-x-6 mt-4 md:mt-0 text-slate-400 text-sm">
               <a href="#" className="hover:text-white transition">{t.footer.privacy}</a>
               <a href="#" className="hover:text-white transition">{t.footer.terms}</a>
             </div>

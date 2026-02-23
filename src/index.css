@@ -2,140 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Force nav visibility */
-nav {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-/* Smooth color transitions */
-* {
-  transition-property: background-color, border-color, color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
-}
-
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, #0d5c53 0%, #14b8a6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Glass morphism */
-.glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Shadow utilities */
-.shadow-3xl {
-  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.2);
-}
-
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-}
+/* Swiss International Style - Hard Shadows & Sharp Corners */
 
 @layer components {
-  /* Apple Style Components */
-  .hero-gradient {
-    background: linear-gradient(135deg, rgba(13,92,83,0.95) 0%, rgba(13,92,83,0.85) 50%, rgba(20,184,166,0.7) 100%);
-  }
-  
-  .glass-effect {
-    background: rgba(255,255,255,0.95);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-  }
-  
-  .text-shadow {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  }
-  
-  .card-hover {
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .card-hover:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
-  }
-  
-  .pillar-card {
-    background: linear-gradient(180deg, #fff 0%, #f0fdfa 100%);
+  /* Swiss Card - White bg, black border, hard shadow */
+  .swiss-card {
+    @apply bg-white border-2 border-ink rounded-none;
+    box-shadow: 4px 4px 0px 0px #000000;
   }
 
-  .package-card {
-    background: linear-gradient(180deg, #fff 0%, #faf9f6 100%);
+  /* Swiss Button - Square, hard shadow, press effect */
+  .swiss-button {
+    @apply bg-white border-2 border-ink text-ink font-mono text-sm uppercase tracking-wider px-6 py-3 rounded-none transition-transform;
+    box-shadow: 4px 4px 0px 0px #000000;
   }
 
-  .popular-badge {
-    background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+  .swiss-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px #000000;
   }
 
-  .btn-primary {
-    background-color: #0d5c53;
-    transition: all 0.3s ease;
+  .swiss-button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px 0px #000000;
   }
 
-  .btn-primary:hover {
-    background-color: #0a4a42;
+  /* Swiss Primary Button - Hyper Blue */
+  .swiss-button-primary {
+    @apply bg-hyper-blue border-2 border-ink text-white font-mono text-sm uppercase tracking-wider px-6 py-3 rounded-none transition-transform;
+    box-shadow: 4px 4px 0px 0px #000000;
   }
 
-  .btn-secondary {
-    background-color: #14b8a6;
-    transition: all 0.3s ease;
+  .swiss-button-primary:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px #000000;
   }
 
-  .btn-secondary:hover {
-    background-color: #0d9488;
+  .swiss-button-primary:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px 0px #000000;
   }
 
-  .btn-accent {
-    background-color: #d97706;
-    transition: all 0.3s ease;
+  /* Swiss Input */
+  .swiss-input {
+    @apply bg-white border-2 border-ink text-ink px-4 py-3 rounded-none w-full;
   }
 
-  .btn-accent:hover {
-    background-color: #b45309;
+  .swiss-input:focus {
+    @apply outline-none;
+    box-shadow: 4px 4px 0px 0px #000000;
   }
 
-  /* Apple Style Typography */
-  .apple-headline {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+  /* Swiss Label */
+  .swiss-label {
+    @apply font-mono text-sm uppercase tracking-wider text-ink;
   }
 
-  .apple-subhead {
-    font-size: clamp(1.25rem, 2vw, 1.75rem);
-    font-weight: 400;
-    line-height: 1.4;
-    color: #6b7280;
+  /* Swiss Section Title */
+  .swiss-section-title {
+    @apply font-serif text-4xl md:text-5xl font-bold text-ink;
   }
 
-  /* Floating Animation */
-  @keyframes float-apple {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(2deg); }
+  /* Swiss Badge */
+  .swiss-badge {
+    @apply font-mono text-xs uppercase tracking-wider border-2 border-ink px-3 py-1 rounded-none;
   }
+}
 
-  .animate-float-apple {
-    animation: float-apple 6s ease-in-out infinite;
-  }
+/* Typography - Swiss Style */
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
 
-  /* Glow Effect */
-  .glow-effect {
-    box-shadow: 0 0 60px rgba(20, 184, 166, 0.15);
-  }
+.font-sans {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
 /* RTL Support */

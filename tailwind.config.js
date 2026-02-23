@@ -7,27 +7,19 @@ export default {
   theme: {
     extend: {
       colors: {
+        // MediOdyssey Brand Palette - Teal Health Theme
         primary: '#0d9488',
-        secondary: '#2dd4bf',
-        accent: '#f59e0b',
-        cream: '#fafafa',
-        dark: '#1f2937',
-        jade: '#14b8a6',
-        amber: '#d97706',
-        sage: '#f0fdfa',
-        light: '#f8fafc',
-        teal: {
-          50: '#f0fdfa',
-          100: '#ccfbf1',
-          200: '#99f6e4',
-          300: '#5eead4',
-          400: '#2dd4bf',
-          500: '#14b8a6',
-          600: '#0d9488',
-          700: '#0f766e',
-          800: '#115e59',
-          900: '#134e4a',
-        }
+        'primary-light': '#14b8a6',
+        'primary-dark': '#0f766e',
+        secondary: '#059669',
+        accent: '#d97706',
+        // Backgrounds
+        canvas: '#f8fafc',
+        'canvas-alt': '#f1f5f9',
+        // Functional colors
+        success: '#15803D',
+        warning: '#d97706',
+        error: '#DC2626',
       },
       fontFamily: {
         serif: ['Playfair Display', 'serif'],
