@@ -20,6 +20,9 @@ dist-ssr/
 *.sln
 *.sw?
 
+# Vite cache
+.vite/
+
 # Logs
 logs/
 *.log

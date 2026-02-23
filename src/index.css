@@ -2,84 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Swiss International Style - Hard Shadows & Sharp Corners */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-canvas text-ink antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
 
 @layer components {
-  /* Swiss Card - White bg, black border, hard shadow */
-  .swiss-card {
-    @apply bg-white border-2 border-ink rounded-none;
-    box-shadow: 4px 4px 0px 0px #000000;
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-medium 
+           transition-all duration-300 hover:bg-primary-light
+           hover:shadow-lg hover:-translate-y-0.5;
   }
-
-  /* Swiss Button - Square, hard shadow, press effect */
-  .swiss-button {
-    @apply bg-white border-2 border-ink text-ink font-mono text-sm uppercase tracking-wider px-6 py-3 rounded-none transition-transform;
-    box-shadow: 4px 4px 0px 0px #000000;
+  
+  .btn-secondary {
+    @apply bg-secondary text-white px-6 py-3 rounded-lg font-medium 
+           transition-all duration-300 hover:bg-secondary-light
+           hover:shadow-lg hover:-translate-y-0.5;
   }
-
-  .swiss-button:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0px 0px #000000;
+  
+  .section-padding {
+    @apply py-16 md:py-24 px-4 sm:px-6 lg:px-8;
   }
-
-  .swiss-button:active {
-    transform: translate(4px, 4px);
-    box-shadow: 0px 0px 0px 0px #000000;
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-
-  /* Swiss Primary Button - Hyper Blue */
-  .swiss-button-primary {
-    @apply bg-hyper-blue border-2 border-ink text-white font-mono text-sm uppercase tracking-wider px-6 py-3 rounded-none transition-transform;
-    box-shadow: 4px 4px 0px 0px #000000;
-  }
-
-  .swiss-button-primary:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0px 0px #000000;
-  }
-
-  .swiss-button-primary:active {
-    transform: translate(4px, 4px);
-    box-shadow: 0px 0px 0px 0px #000000;
-  }
-
-  /* Swiss Input */
-  .swiss-input {
-    @apply bg-white border-2 border-ink text-ink px-4 py-3 rounded-none w-full;
-  }
-
-  .swiss-input:focus {
-    @apply outline-none;
-    box-shadow: 4px 4px 0px 0px #000000;
-  }
-
-  /* Swiss Label */
-  .swiss-label {
-    @apply font-mono text-sm uppercase tracking-wider text-ink;
-  }
-
-  /* Swiss Section Title */
-  .swiss-section-title {
-    @apply font-serif text-4xl md:text-5xl font-bold text-ink;
-  }
-
-  /* Swiss Badge */
-  .swiss-badge {
-    @apply font-mono text-xs uppercase tracking-wider border-2 border-ink px-3 py-1 rounded-none;
-  }
-}
-
-/* Typography - Swiss Style */
-.font-serif {
-  font-family: 'Playfair Display', Georgia, serif;
-}
-
-.font-sans {
-  font-family: 'Inter', Helvetica, Arial, sans-serif;
-}
-
-.font-mono {
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
 /* RTL Support */
