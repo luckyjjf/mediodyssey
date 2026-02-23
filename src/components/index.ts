@@ -6,3 +6,4 @@ export { WhyChinaSection } from './sections/WhyChinaSection';
 export { PackagesSection } from './sections/PackagesSection';
 export { TestimonialsSection } from './sections/TestimonialsSection';
 export { ContactSection } from './sections/ContactSection';
+export { SuccessCasesSection } from './sections/SuccessCasesSection';

@@ -31,10 +31,14 @@ export interface Translation {
   hero: {
     badge: string;
     title: string;
+    titleHighlight: string;
     subtitle: string;
     description: string;
     viewPackages: string;
     bookConsult: string;
+    trust1: string;
+    trust2: string;
+    trust3: string;
   };
   trust: {
     jci: string;
@@ -132,6 +136,21 @@ export interface Translation {
     contact: string;
     privacy: string;
     terms: string;
+  };
+  successCases: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    featured: string;
+    doctors: string;
+    outcome: string;
+    viewDetail: string;
+    ctaText: string;
+    ctaButton: string;
+    stats: {
+      value: string;
+      label: string;
+    }[];
   };
 }
 

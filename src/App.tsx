@@ -5,6 +5,7 @@ import {
   Navbar,
   HeroSection,
   ServicesSection,
+  SuccessCasesSection,
   WhyChinaSection,
   PackagesSection,
   TestimonialsSection,
@@ -46,6 +47,7 @@ function App() {
       <main>
         <HeroSection t={t} />
         <ServicesSection t={t} />
+        <SuccessCasesSection t={t} />
         <WhyChinaSection t={t} />
         <PackagesSection t={t} />
         <TestimonialsSection t={t} />

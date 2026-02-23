@@ -1,4 +1,4 @@
-import { Globe, ChevronRight, Calendar, Star, Heart } from 'lucide-react';
+import { Globe, ChevronRight, Calendar, Check } from 'lucide-react';
 import type { Translation } from '../../types';
 
 interface HeroSectionProps {
@@ -36,9 +36,10 @@ export function HeroSection({ t }: HeroSectionProps) {
           </span>
         </div>
         
-        {/* Main Title - White Text for Dark Background */}
+        {/* Main Title - Updated with Highlight */}
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
           <span className="block">{t.hero.title}</span>
+          <span className="block text-secondary mt-2">{t.hero.titleHighlight}</span>
         </h1>
         
         {/* Subtitle - Light Text */}
@@ -46,10 +47,23 @@ export function HeroSection({ t }: HeroSectionProps) {
           {t.hero.subtitle}
         </p>
         
-        {/* Description - Light Text */}
-        <p className="text-lg md:text-xl text-white/60 mb-12 max-w-2xl mx-auto leading-relaxed">
-          {t.hero.description}
-        </p>
+        {/* Trust Badges - New Section */}
+        <div className="flex flex-wrap items-center justify-center gap-6 mb-10">
+          <div className="flex items-center gap-2 text-white/90 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+            <Check className="text-secondary w-4 h-4" />
+            <span className="text-sm font-medium">{t.hero.trust1}</span>
+          </div>
+          
+          <div className="flex items-center gap-2 text-white/90 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+            <Check className="text-secondary w-4 h-4" />
+            <span className="text-sm font-medium">{t.hero.trust2}</span>
+          </div>
+          
+          <div className="flex items-center gap-2 text-white/90 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+            <Check className="text-secondary w-4 h-4" />
+            <span className="text-sm font-medium">{t.hero.trust3}</span>
+          </div>
+        </div>
         
         {/* CTA Buttons - Dark Theme */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -61,30 +75,6 @@ export function HeroSection({ t }: HeroSectionProps) {
             <Calendar className="mr-2 w-5 h-5" />
             {t.hero.bookConsult}
           </a>
-        </div>
-      </div>
-
-      {/* Trust Badges - Dark Theme */}
-      <div className="relative z-10 w-full bg-slate-800/50 backdrop-blur border-t border-white/10">
-        <div className="max-w-6xl mx-auto px-6 py-8">
-          <div className="flex flex-wrap items-center justify-center gap-12">
-            <div className="flex items-center gap-3 text-white/70">
-              <Star className="text-secondary w-5 h-5" />
-              <span className="text-sm font-medium">{t.trust.jci}</span>
-            </div>
-            <div className="flex items-center gap-3 text-white/70">
-              <Star className="text-secondary w-5 h-5" />
-              <span className="text-sm font-medium">{t.trust.gha}</span>
-            </div>
-            <div className="flex items-center gap-3 text-white/70">
-              <Heart className="text-secondary w-5 h-5" />
-              <span className="text-sm font-medium">{t.trust.hospital}</span>
-            </div>
-            <div className="flex items-center gap-3 text-white/70">
-              <Globe className="text-secondary w-5 h-5" />
-              <span className="text-sm font-medium">{t.trust.cases}</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>

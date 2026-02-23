@@ -11,11 +11,15 @@ export const translations: Translations = {
     },
     hero: {
       badge: 'Trusted Global Medical Tourism Brand',
-      title: 'Premium Preventive Care × Ancient Chinese Healing',
-      subtitle: 'World-Class Medical Diagnostics Meets 3,000 Years of Wellness Wisdom',
+      title: 'World-Class Medical Resources',
+      titleHighlight: 'One-Stop Medical Travel Service',
+      subtitle: 'Connecting You with Top Global Hospitals · Professional Medical Consultation · Full-Service Support',
       description: 'Transform your health with preventive precision · Advanced Diagnostics × Traditional Chinese Medicine × Holistic Wellness',
       viewPackages: 'View Packages',
-      bookConsult: 'Book Free Consultation'
+      bookConsult: 'Book Free Consultation',
+      trust1: '✓ Official Partner of Mayo Clinic',
+      trust2: '✓ Contracted with Cancer Institute Ariake Hospital',
+      trust3: '✓ 10+ Years Medical Travel Experience'
     },
     trust: {
       jci: 'JCI Certified',
@@ -182,6 +186,23 @@ export const translations: Translations = {
       contact: 'Contact',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service'
+    },
+    successCases: {
+      badge: 'Real Success Stories',
+      title: 'Real Service Cases',
+      subtitle: 'Ensuring every patient receives the most suitable medical treatment abroad',
+      featured: 'Featured Case',
+      doctors: 'Expert Doctors',
+      outcome: 'Treatment Outcome',
+      viewDetail: 'View Full Story',
+      ctaText: 'Every patient deserves the best medical care',
+      ctaButton: 'Get Free Consultation',
+      stats: [
+        { value: '2,000+', label: 'Successful Cases' },
+        { value: '98%', label: 'Success Rate' },
+        { value: 'Top 10', label: 'Global Hospitals' },
+        { value: '24/7', label: 'Medical Support' }
+      ]
     }
   },
   ar: {
@@ -194,11 +215,15 @@ export const translations: Translations = {
     },
     hero: {
       badge: 'علامة تجارية موثوقة للسياحة الطبية',
-      title: 'ميدي أوديسي',
-      subtitle: 'حيث الدقة الغربية تلتقي بالحكمة الشرقية',
+      title: 'موارد طبية عالمية المستوى',
+      titleHighlight: 'خدمة السفر الطبي المتكاملة',
+      subtitle: 'نوصلك بأفضل المستشفيات العالمية · استشارات طبية احترافية · دعم متكامل',
       description: 'رحلة لتحويل جودة حياتك · فحص صحي دقيق × العلاج الصيني التقليدي × غمر ثقافي',
       viewPackages: 'عرض الباقات',
-      bookConsult: 'حجز استشارة مجانية'
+      bookConsult: 'حجز استشارة مجانية',
+      trust1: '✓ شريك رسمي لعيادة مايو',
+      trust2: '✓ متعاقدون مع مستشفى كانسر إنستيتيوت أرياكي',
+      trust3: '✓ أكثر من 10 سنوات خبرة في السفر الطبي'
     },
     trust: {
       jci: 'معتمد JCI',
@@ -365,6 +390,23 @@ export const translations: Translations = {
       contact: 'اتصل بنا',
       privacy: 'سياسة الخصوصية',
       terms: 'شروط الخدمة'
+    },
+    successCases: {
+      badge: 'قصص نجاح حقيقية',
+      title: 'حالات خدمة حقيقية',
+      subtitle: 'ضمان حصول كل مريض على العلاج الطبي الأنسب في الخارج',
+      featured: 'حالة مميزة',
+      doctors: 'أطباء خبراء',
+      outcome: 'نتيجة العلاج',
+      viewDetail: 'عرض القصة الكاملة',
+      ctaText: 'كل مريض يستحق أفضل رعاية طبية',
+      ctaButton: 'احصل على استشارة مجانية',
+      stats: [
+        { value: '+2,000', label: 'حالة ناجحة' },
+        { value: '98%', label: 'معدل النجاح' },
+        { value: 'أفضل 10', label: 'مستشفيات عالمية' },
+        { value: '24/7', label: 'دعم طبي' }
+      ]
     }
   }
 };
