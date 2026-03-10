@@ -1,12 +1,11 @@
 import { Heart, Phone, Mail, MapPin } from 'lucide-react';
-import type { Translation, Language } from '../../types';
+import type { Translation } from '../../types';
 
 interface FooterProps {
   t: Translation;
-  language: Language;
 }
 
-export function Footer({ t, language }: FooterProps) {
+export function Footer({ t }: FooterProps) {
   return (
     <footer className="bg-slate-900 text-white py-16">
       <div className="container-custom">
@@ -27,7 +26,7 @@ export function Footer({ t, language }: FooterProps) {
           <div>
             <h4 className="font-semibold text-lg mb-4">{t.footer.links}</h4>
             <ul className="space-y-2 text-slate-400">
-              <li><a href="#" className="hover:text-white transition">{language === 'en' ? 'About Us' : 'من نحن'}</a></li>
+              <li><a href="#" className="hover:text-white transition">About Us</a></li>
               <li><a href="#services" className="hover:text-white transition">{t.nav.services}</a></li>
               <li><a href="#packages" className="hover:text-white transition">{t.nav.packages}</a></li>
               <li><a href="#stories" className="hover:text-white transition">{t.nav.stories}</a></li>
@@ -52,7 +51,7 @@ export function Footer({ t, language }: FooterProps) {
               <li className="flex items-center"><Mail className="w-4 h-4 mr-2" />jiangjingfu@mediodyssey.com</li>
               <li className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />
-                {language === 'ar' ? 'مبنى 4، حديقة ويست بوند الإبداعية، رقم 186 شارع جوي، منطقة شيهوي، شنغهاي' : 'Building 4, West Bund Creative Park, 186 Guyi Road, Xuhui District, Shanghai'}
+                Building 4, West Bund Creative Park, 186 Guyi Road, Xuhui District, Shanghai
               </li>
             </ul>
           </div>

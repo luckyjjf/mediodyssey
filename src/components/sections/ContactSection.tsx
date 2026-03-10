@@ -1,12 +1,11 @@
 import { Phone, Mail, MessageCircle, Send } from 'lucide-react';
-import type { Translation, Language } from '../../types';
+import type { Translation } from '../../types';
 
 interface ContactSectionProps {
   t: Translation;
-  language: Language;
 }
 
-export function ContactSection({ t, language }: ContactSectionProps) {
+export function ContactSection({ t }: ContactSectionProps) {
   return (
     <section id="contact" className="section-padding bg-canvas">
       <div className="container-custom">
@@ -86,7 +85,7 @@ export function ContactSection({ t, language }: ContactSectionProps) {
                   <input 
                     type="text" 
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" 
-                    placeholder={language === 'ar' ? 'اسمك' : 'Your name'}
+                    placeholder='Your name'
                   />
                 </div>
                 
@@ -115,7 +114,7 @@ export function ContactSection({ t, language }: ContactSectionProps) {
                   <input 
                     type="tel" 
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" 
-                    placeholder={language === 'ar' ? '123456789' : 'Phone number'}
+                    placeholder='Phone number'
                   />
                 </div>
               </div>
@@ -135,7 +134,7 @@ export function ContactSection({ t, language }: ContactSectionProps) {
                 <textarea 
                   rows={4} 
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" 
-                  placeholder={language === 'ar' ? 'أخبرنا عن احتياجاتك الصحية...' : 'Tell us about your health needs...'}
+                  placeholder='Tell us about your health needs...'
                 ></textarea>
               </div>
               

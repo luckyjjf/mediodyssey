@@ -14,7 +14,7 @@ import {
 } from './components';
 
 function App() {
-  const { language, setLanguage, t, isRTL } = useLanguage();
+  const { t } = useLanguage();
 
   // Load PayPal buttons
   useEffect(() => {
@@ -37,12 +37,8 @@ function App() {
   }, []);
 
   return (
-    <div className={`min-h-screen bg-canvas ${isRTL ? 'rtl' : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
-      <Navbar 
-        t={t} 
-        language={language} 
-        onLanguageChange={setLanguage} 
-      />
+    <div className="min-h-screen bg-canvas">
+      <Navbar t={t} />
       
       <main>
         <HeroSection t={t} />
@@ -51,10 +47,10 @@ function App() {
         <WhyChinaSection t={t} />
         <PackagesSection t={t} />
         <TestimonialsSection t={t} />
-        <ContactSection t={t} language={language} />
+        <ContactSection t={t} />
       </main>
       
-      <Footer t={t} language={language} />
+      <Footer t={t} />
     </div>
   );
 }

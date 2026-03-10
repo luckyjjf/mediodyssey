@@ -1,4 +1,8 @@
-export type Language = 'en' | 'ar';
+export type Language = 'en';
+
+export interface Translations {
+  en: Translation;
+}
 
 export interface TestimonialOfficer {
   name: string;
@@ -169,7 +173,4 @@ export interface Translation {
   };
 }
 
-export interface Translations {
-  en: Translation;
-  ar: Translation;
-}
+
