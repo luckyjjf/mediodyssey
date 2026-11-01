@@ -1,6 +1,6 @@
 # MediOdyssey Website
 
-基于 Vite + React + TypeScript + Tailwind CSS 构建的现代化医疗旅游网站。
+基于 Vite + React + TypeScript + Tailwind CSS 构建的医疗旅游网站。
 
 ## 技术栈
 
